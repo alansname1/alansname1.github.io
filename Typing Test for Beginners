@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Typing Test for Beginners</title>
+<meta name="description" content="Typing test for beginners to improve typing speed and accuracy step by step.">
+</head>
+<body style="font-family: Arial; max-width: 800px; margin: auto; padding: 20px;">
+
+<h1>Typing Test for Beginners</h1>
+
+<p>This typing test for beginners helps you learn basic typing skills and improve your typing speed step by step.</p>
+
+<h2>What Is a Good Typing Speed for Beginners?</h2>
+<p>Beginners usually type between 20–40 WPM. With practice, speed improves over time.</p>
+
+<h2>How to Improve Typing Speed</h2>
+<ul>
+<li>Practice daily</li>
+<li>Focus on accuracy first</li>
+<li>Use proper finger placement</li>
+</ul>
+
+<p>Try these tests:
+<a href="typing-test-1-minute.html">1 minute test</a> |
+<a href="typing-test-5-minute.html">5 minute test</a> |
+<a href="typing-test-10-minute.html">10 minute test</a>
+</p>
+
+<p><a href="index.html">Back to Typing Test</a></p>
+
+</body>
+</html>
