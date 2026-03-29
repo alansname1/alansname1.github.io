@@ -78,10 +78,33 @@ a:hover {
   align-items: center;
   margin-bottom: 15px;
 }
-button, select {
+select {
   padding: 10px 14px;
   font-size: 16px;
   cursor: pointer;
+}
+button {
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.primary-btn {
+  background: #1a5fd0;
+  color: #fff;
+}
+.primary-btn:hover {
+  background: #1349a4;
+}
+.secondary-btn {
+  background: #e9eef7;
+  color: #222;
+  border: 1px solid #cfd8e6;
+}
+.secondary-btn:hover {
+  background: #dde7f5;
 }
 .quick-starts {
   display: flex;
@@ -90,12 +113,8 @@ button, select {
   margin: 15px 0;
 }
 .quick-starts button {
-  padding: 10px 14px;
   background: #1a5fd0;
   color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
 }
 .quick-starts button:hover {
   background: #1349a4;
@@ -263,9 +282,9 @@ or simply improve your daily computer speed.
       <option value="600">10 Minutes</option>
     </select>
 
-    <button type="button" onclick="startTest()">Start Test</button>
-    <button type="button" onclick="resetTest()">Reset</button>
-    <button type="button" onclick="newPassage()">New Passage</button>
+    <button type="button" class="primary-btn" onclick="startTest()">Start Test</button>
+    <button type="button" class="secondary-btn" onclick="resetTest()">Reset</button>
+    <button type="button" class="secondary-btn" onclick="newPassage()">New Passage</button>
   </div>
 
   <div id="passage" aria-live="polite"></div>
@@ -419,10 +438,14 @@ const passages = [
   "A free typing test is a simple way to measure words per minute and improve keyboard skills over time.",
   "Job seekers often practice typing tests to prepare for data entry, customer service, and remote work opportunities.",
   "The best way to improve typing speed is to focus on accuracy first and practice regularly with timed tests.",
-  "Consistent typing practice can help beginners become faster and more comfortable using a computer every day."
+  "Consistent typing practice can help beginners become faster and more comfortable using a computer every day.",
+  "Daily keyboard practice can improve typing confidence for school assignments, office tasks, and remote job applications.",
+  "Typing accurately before chasing higher speed helps build stronger habits and better long term performance.",
+  "Short typing sessions repeated often can raise both words per minute and typing accuracy over time."
 ];
 
 let currentPassage = "";
+let currentPassageIndex = -1;
 let timer = null;
 let timeLeft = 60;
 let duration = 60;
@@ -447,7 +470,16 @@ function escapeHtml(str) {
 }
 
 function pickPassage() {
-  currentPassage = passages[Math.floor(Math.random() * passages.length)];
+  let newIndex = Math.floor(Math.random() * passages.length);
+
+  if (passages.length > 1) {
+    while (newIndex === currentPassageIndex) {
+      newIndex = Math.floor(Math.random() * passages.length);
+    }
+  }
+
+  currentPassageIndex = newIndex;
+  currentPassage = passages[newIndex];
   renderPassage("");
 }
 
@@ -466,7 +498,7 @@ function renderPassage(typed) {
 
 function setDurationOnly(seconds) {
   durationEl.value = String(seconds);
-  resetTest();
+  resetTest(true);
   typingTestEl.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -497,7 +529,7 @@ function startTest() {
   }, 1000);
 }
 
-function resetTest() {
+function resetTest(changePassage = true) {
   clearInterval(timer);
   duration = Number(durationEl.value);
   timeLeft = duration;
@@ -508,7 +540,12 @@ function resetTest() {
   charactersEl.textContent = "0";
   inputEl.value = "";
   inputEl.disabled = true;
-  pickPassage();
+
+  if (changePassage) {
+    pickPassage();
+  } else {
+    renderPassage("");
+  }
 }
 
 function finishTest() {
@@ -544,7 +581,7 @@ function updateStats() {
 
 inputEl.addEventListener("input", updateStats);
 
-resetTest();
+resetTest(true);
 </script>
 
 </body>
