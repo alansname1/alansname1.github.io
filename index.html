@@ -56,17 +56,21 @@ button, select {
   font-size: 16px;
   cursor: pointer;
 }
-.quick-starts a {
-  display: inline-block;
-  margin: 5px 8px 5px 0;
+.quick-starts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+.quick-starts button {
   padding: 10px 14px;
   background: #1a5fd0;
   color: white;
+  border: none;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
 }
-.quick-starts a:hover {
+.quick-starts button:hover {
   background: #1349a4;
 }
 #passage {
@@ -130,9 +134,9 @@ and performance in real time. Perfect for beginners, students, and job seekers.
 <h2>Start Your Live Typing Test</h2>
 
 <div class="quick-starts">
-  <a href="#typing-test" onclick="setDurationOnly(60)">1 Minute Test</a>
-  <a href="#typing-test" onclick="setDurationOnly(300)">5 Minute Test</a>
-  <a href="#typing-test" onclick="setDurationOnly(600)">10 Minute Test</a>
+  <button type="button" onclick="setDurationOnly(60)">1 Minute Test</button>
+  <button type="button" onclick="setDurationOnly(300)">5 Minute Test</button>
+  <button type="button" onclick="setDurationOnly(600)">10 Minute Test</button>
 </div>
 
 <div id="typing-test" class="test-box">
@@ -230,7 +234,7 @@ With consistent practice, most people improve within a few weeks.
 
 <p class="center" style="margin-top:20px;">
 <strong>Love Rescue Dogs? 🐶</strong><br>
-<a href="https://rescue-dogs-are-awesome-1.myspreadshop.com/" target="_blank">
+<a href="https://rescue-dogs-are-awesome-1.myspreadshop.com/" target="_blank" rel="noopener noreferrer">
 Rescue Dogs Are Awesome Shop
 </a>
 </p>
@@ -257,6 +261,7 @@ const wpmEl = document.getElementById("wpm");
 const accuracyEl = document.getElementById("accuracy");
 const charactersEl = document.getElementById("characters");
 const durationEl = document.getElementById("duration");
+const typingTestEl = document.getElementById("typing-test");
 
 function escapeHtml(str) {
   return str
@@ -288,6 +293,7 @@ function renderPassage(typed) {
 function setDurationOnly(seconds) {
   durationEl.value = String(seconds);
   resetTest();
+  typingTestEl.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function newPassage() {
@@ -304,11 +310,13 @@ function startTest() {
   inputEl.disabled = false;
   inputEl.focus();
   timeLeftEl.textContent = timeLeft;
+  updateStats();
 
   timer = setInterval(() => {
     timeLeft--;
     timeLeftEl.textContent = timeLeft;
     updateStats();
+
     if (timeLeft <= 0) {
       finishTest();
     }
@@ -341,7 +349,9 @@ function updateStats() {
   let correct = 0;
 
   for (let i = 0; i < typed.length; i++) {
-    if (typed[i] === currentPassage[i]) correct++;
+    if (typed[i] === currentPassage[i]) {
+      correct++;
+    }
   }
 
   const elapsedMinutes = (duration - timeLeft) / 60;
