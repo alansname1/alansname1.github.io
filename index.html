@@ -30,6 +30,13 @@ a:hover {
 .center {
   text-align: center;
 }
+.notice {
+  background: #eef5ff;
+  border: 1px solid #c9dcff;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
 .test-box {
   border: 1px solid #ccc;
   padding: 20px;
@@ -48,6 +55,19 @@ button, select {
   padding: 10px 14px;
   font-size: 16px;
   cursor: pointer;
+}
+.quick-starts a {
+  display: inline-block;
+  margin: 5px 8px 5px 0;
+  padding: 10px 14px;
+  background: #1a5fd0;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.quick-starts a:hover {
+  background: #1349a4;
 }
 #passage {
   border: 1px solid #ddd;
@@ -74,18 +94,8 @@ button, select {
   margin-top: 15px;
   font-weight: bold;
 }
-.quick-links a {
-  margin-right: 10px;
-}
 ul {
   padding-left: 20px;
-}
-.notice {
-  background: #eef5ff;
-  border: 1px solid #c9dcff;
-  padding: 12px;
-  border-radius: 8px;
-  margin: 15px 0;
 }
 .correct {
   color: green;
@@ -114,30 +124,18 @@ and performance in real time. Perfect for beginners, students, and job seekers.
 </p>
 
 <div class="notice">
-  <strong>Start here:</strong> the 1 Minute, 5 Minute, and 10 Minute links below now jump directly to the live typing test on this page.
+  <strong>Start your test here:</strong> choose 1, 5, or 10 minutes below, then click <strong>Start Test</strong>.
 </div>
 
-<h2>Popular Typing Tests</h2>
-<ul>
-<li><a href="#typing-test" onclick="setDurationAndScroll(60)">1 Minute Typing Test</a></li>
-<li><a href="#typing-test" onclick="setDurationAndScroll(300)">5 Minute Typing Test</a></li>
-<li><a href="#typing-test" onclick="setDurationAndScroll(600)">10 Minute Typing Test</a></li>
-<li><a href="typing-test-for-jobs.html">Typing Test for Jobs</a></li>
-<li><a href="typing-test-for-data-entry.html">Data Entry Typing Test</a></li>
-</ul>
+<h2>Start Your Live Typing Test</h2>
 
-<h2>New Typing Test Pages</h2>
-<ul>
-<li><a href="typing-test-for-call-center-jobs.html">Typing Test for Call Center Jobs</a></li>
-<li><a href="typing-speed-for-customer-service-jobs.html">Typing Speed for Customer Service Jobs</a></li>
-<li><a href="typing-test-for-chat-support-jobs.html">Typing Test for Chat Support Jobs</a></li>
-<li><a href="typing-test-for-billing-and-coding-jobs.html">Typing Test for Billing and Coding Jobs</a></li>
-<li><a href="typing-test-for-medical-transcription.html">Typing Test for Medical Transcription</a></li>
-</ul>
+<div class="quick-starts">
+  <a href="#typing-test" onclick="setDurationOnly(60)">1 Minute Test</a>
+  <a href="#typing-test" onclick="setDurationOnly(300)">5 Minute Test</a>
+  <a href="#typing-test" onclick="setDurationOnly(600)">10 Minute Test</a>
+</div>
 
-<h2 id="typing-test">Live Typing Test</h2>
-
-<div class="test-box">
+<div id="typing-test" class="test-box">
   <div class="controls">
     <label for="duration"><strong>Choose Time:</strong></label>
     <select id="duration">
@@ -146,9 +144,9 @@ and performance in real time. Perfect for beginners, students, and job seekers.
       <option value="600">10 Minutes</option>
     </select>
 
-    <button onclick="startTest()">Start Test</button>
-    <button onclick="resetTest()">Reset</button>
-    <button onclick="newPassage()">New Passage</button>
+    <button type="button" onclick="startTest()">Start Test</button>
+    <button type="button" onclick="resetTest()">Reset</button>
+    <button type="button" onclick="newPassage()">New Passage</button>
   </div>
 
   <div id="passage"></div>
@@ -163,19 +161,29 @@ and performance in real time. Perfect for beginners, students, and job seekers.
   </div>
 </div>
 
+<h2>Job and Practice Pages</h2>
+<ul>
+<li><a href="typing-test-for-jobs.html">Typing Test for Jobs</a></li>
+<li><a href="typing-test-for-data-entry.html">Data Entry Typing Test</a></li>
+<li><a href="typing-test-for-work-from-home-jobs.html">Work From Home Typing Test</a></li>
+<li><a href="typing-test-for-beginners.html">Typing Test for Beginners</a></li>
+<li><a href="typing-speed-for-jobs.html">Typing Speed for Jobs</a></li>
+</ul>
+
+<h2>New Typing Test Pages</h2>
+<ul>
+<li><a href="typing-test-for-call-center-jobs.html">Typing Test for Call Center Jobs</a></li>
+<li><a href="typing-speed-for-customer-service-jobs.html">Typing Speed for Customer Service Jobs</a></li>
+<li><a href="typing-test-for-chat-support-jobs.html">Typing Test for Chat Support Jobs</a></li>
+<li><a href="typing-test-for-billing-and-coding-jobs.html">Typing Test for Billing and Coding Jobs</a></li>
+<li><a href="typing-test-for-medical-transcription.html">Typing Test for Medical Transcription</a></li>
+</ul>
+
 <h2>Typing Practice</h2>
 <ul>
 <li><a href="typing-practice-for-beginners.html">Typing Practice for Beginners</a></li>
 <li><a href="typing-practice-for-seniors.html">Typing Practice for Seniors</a></li>
 <li><a href="typing-practice-paragraphs.html">Typing Practice Paragraphs</a></li>
-</ul>
-
-<h2>Typing for Jobs</h2>
-<ul>
-<li><a href="typing-test-for-work-from-home-jobs.html">Work From Home Typing Test</a></li>
-<li><a href="typing-speed-for-jobs.html">Typing Speed for Jobs</a></li>
-<li><a href="typing-speed-test-for-employment.html">Typing Speed Test for Employment</a></li>
-<li><a href="typing-test-for-hiring.html">Typing Test for Hiring</a></li>
 </ul>
 
 <h2>Typing Guides</h2>
@@ -210,14 +218,6 @@ Practice daily, focus on accuracy, and use timed typing tests to track your prog
 With consistent practice, most people improve within a few weeks.
 </p>
 
-<h2>Start Practicing Now</h2>
-<p class="quick-links">
-Try a quick test:
-<a href="#typing-test" onclick="setDurationAndScroll(60)">1 Minute</a> |
-<a href="#typing-test" onclick="setDurationAndScroll(300)">5 Minute</a> |
-<a href="#typing-test" onclick="setDurationAndScroll(600)">10 Minute</a>
-</p>
-
 <hr>
 
 <p class="center">
@@ -248,7 +248,6 @@ let currentPassage = "";
 let timer = null;
 let timeLeft = 60;
 let duration = 60;
-let started = false;
 let finished = false;
 
 const passageEl = document.getElementById("passage");
@@ -259,11 +258,6 @@ const accuracyEl = document.getElementById("accuracy");
 const charactersEl = document.getElementById("characters");
 const durationEl = document.getElementById("duration");
 
-function pickPassage() {
-  currentPassage = passages[Math.floor(Math.random() * passages.length)];
-  renderPassage("");
-}
-
 function escapeHtml(str) {
   return str
     .replace(/&/g, "&amp;")
@@ -271,6 +265,11 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function pickPassage() {
+  currentPassage = passages[Math.floor(Math.random() * passages.length)];
+  renderPassage("");
 }
 
 function renderPassage(typed) {
@@ -286,21 +285,25 @@ function renderPassage(typed) {
   passageEl.innerHTML = html;
 }
 
-function setDurationAndScroll(seconds) {
+function setDurationOnly(seconds) {
   durationEl.value = String(seconds);
   resetTest();
-  document.getElementById("typing-test").scrollIntoView({ behavior: "smooth" });
+}
+
+function newPassage() {
+  pickPassage();
+  inputEl.value = "";
+  updateStats();
 }
 
 function startTest() {
-  resetTest();
+  clearInterval(timer);
   duration = Number(durationEl.value);
   timeLeft = duration;
-  timeLeftEl.textContent = timeLeft;
+  finished = false;
   inputEl.disabled = false;
   inputEl.focus();
-  started = true;
-  finished = false;
+  timeLeftEl.textContent = timeLeft;
 
   timer = setInterval(() => {
     timeLeft--;
@@ -314,17 +317,15 @@ function startTest() {
 
 function resetTest() {
   clearInterval(timer);
-  timer = null;
   duration = Number(durationEl.value);
   timeLeft = duration;
+  finished = false;
   timeLeftEl.textContent = timeLeft;
   wpmEl.textContent = "0";
   accuracyEl.textContent = "100";
   charactersEl.textContent = "0";
   inputEl.value = "";
   inputEl.disabled = true;
-  started = false;
-  finished = false;
   pickPassage();
 }
 
@@ -350,7 +351,6 @@ function updateStats() {
   wpmEl.textContent = wpm;
   accuracyEl.textContent = accuracy;
   charactersEl.textContent = typed.length;
-
   renderPassage(typed);
 
   if (typed === currentPassage) {
@@ -360,7 +360,6 @@ function updateStats() {
 
 inputEl.addEventListener("input", updateStats);
 
-pickPassage();
 resetTest();
 </script>
 
