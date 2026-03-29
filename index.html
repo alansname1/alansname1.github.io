@@ -3,96 +3,105 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Typing practice for beginners with simple tips to improve typing speed, accuracy, and keyboard confidence." />
-<title>Typing Practice for Beginners | Improve Speed and Accuracy</title>
+<meta name="description" content="Free online typing speed test with WPM, accuracy tracking, typing practice, and keyboard skill improvement tools." />
+<title>Free Typing Speed Test | Check Your WPM & Accuracy Online</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   max-width: 900px;
   margin: auto;
   padding: 20px;
-  line-height: 1.6;
-  color: #222;
 }
-h1, h2 {
-  color: #111;
+.test-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
 }
-a {
-  color: #1a5fd0;
-  text-decoration: none;
+#passage {
+  margin-bottom: 15px;
+  font-size: 18px;
 }
-a:hover {
-  text-decoration: underline;
+textarea {
+  width: 100%;
+  height: 120px;
 }
-.button {
-  display: inline-block;
-  background: #1a5fd0;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-.button:hover {
-  background: #1349a4;
-}
-.center {
-  text-align: center;
+.stats {
+  margin-top: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Typing Practice for Beginners</h1>
+<h1>Free Typing Speed Test</h1>
 
-<p>
-Learning to type is an important computer skill. With regular typing practice, beginners can
-improve typing speed, increase accuracy, and build confidence using a keyboard.
-</p>
+<p>Start typing below to test your speed and accuracy.</p>
 
-<h2>Why Typing Practice Matters</h2>
-<p>
-Typing is used in school, work, and everyday online tasks. The better your typing skills,
-the faster and easier it becomes to complete emails, assignments, and job-related work.
-</p>
+<div id="typing-test" class="test-box">
 
-<h2>Beginner Typing Tips</h2>
-<ul>
-  <li>Practice typing for 5–10 minutes each day</li>
-  <li>Focus on accuracy before speed</li>
-  <li>Keep your fingers on the home row keys</li>
-  <li>Try to use all fingers when typing</li>
-  <li>Take short typing tests regularly</li>
-</ul>
+<select id="duration">
+<option value="60">1 Minute</option>
+<option value="300">5 Minutes</option>
+<option value="600">10 Minutes</option>
+</select>
 
-<h2>Test Your Typing Speed</h2>
-<p>
-Once you feel comfortable, you can measure your typing progress using a free online typing speed test.
-This will show your words per minute (WPM) and accuracy.
-</p>
+<button onclick="startTest()">Start</button>
+<button onclick="resetTest()">Reset</button>
 
-<div class="center" style="margin:30px 0;">
-  <a href="./" class="button">
-    Start the Typing Test
-  </a>
+<div id="passage"></div>
+
+<textarea id="input" disabled></textarea>
+
+<div class="stats">
+Time: <span id="time">60</span><br>
+WPM: <span id="wpm">0</span><br>
+Accuracy: <span id="accuracy">100</span>%
 </div>
 
-<h2>Keep Improving</h2>
-<p>
-Typing improvement takes consistency. Even a few minutes of daily practice can lead to
-noticeable improvements in just a few weeks.
-</p>
+</div>
 
-<hr>
+<script>
+const text = "Typing every day helps improve speed and accuracy.";
 
-<p class="center">
-<strong>More Resources:</strong><br>
-<a href="./">Typing Speed Test</a> |
-<a href="typing-practice-paragraphs.html">Typing Practice Paragraphs</a> |
-<a href="how-to-improve-typing-speed.html">Improve Typing Speed</a>
-</p>
+let timer;
+let timeLeft;
+let started = false;
+
+function startTest() {
+  if (started) return;
+
+  started = true;
+  timeLeft = document.getElementById("duration").value;
+
+  document.getElementById("input").disabled = false;
+  document.getElementById("input").focus();
+  document.getElementById("passage").innerText = text;
+
+  timer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("time").innerText = timeLeft;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      document.getElementById("input").disabled = true;
+    }
+  }, 1000);
+}
+
+function resetTest() {
+  clearInterval(timer);
+  started = false;
+
+  document.getElementById("input").value = "";
+  document.getElementById("input").disabled = true;
+
+  document.getElementById("time").innerText = 60;
+  document.getElementById("wpm").innerText = 0;
+  document.getElementById("accuracy").innerText = 100;
+  document.getElementById("passage").innerText = "";
+}
+</script>
 
 </body>
 </html>
