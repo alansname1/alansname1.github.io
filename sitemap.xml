@@ -1,96 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- MAIN -->
-  <url>
-    <loc>https://alansname1.github.io/</loc>
-  </url>
+  <url><loc>https://alansname1.github.io/</loc></url>
 
-  <!-- CORE TESTS -->
   <url><loc>https://alansname1.github.io/typing-test-1-minute.html</loc></url>
   <url><loc>https://alansname1.github.io/typing-test-5-minute.html</loc></url>
   <url><loc>https://alansname1.github.io/typing-test-10-minute.html</loc></url>
+
+  <url><loc>https://alansname1.github.io/typing-test-for-jobs.html</loc></url>
   <url><loc>https://alansname1.github.io/typing-test-for-data-entry.html</loc></url>
 
-  <!-- JOB / HIGH INTENT -->
-  <url><loc>https://alansname1.github.io/typing-test-for-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-work-from-home-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/data-entry-typing-speed-test.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-hiring.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-job-application.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-speed-test-for-employment.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-online-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-to-get-a-job.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-entry-level-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-freelance-work.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-home-based-jobs.html</loc></url>
-
-  <!-- NEW JOB PAGES (JUST ADDED) -->
-  <url><loc>https://alansname1.github.io/typing-test-for-call-center-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-speed-for-customer-service-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-chat-support-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-billing-and-coding-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-medical-transcription.html</loc></url>
-
-  <url><loc>https://alansname1.github.io/typing-test-for-email-support-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-remote-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-office-assistant-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-typing-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-no-experience-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-part-time-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-online-work.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-home-typing-jobs.html</loc></url>
-
-  <!-- OFFICE / SPECIFIC JOBS -->
-  <url><loc>https://alansname1.github.io/typing-test-for-office-work.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-admin-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-virtual-assistant-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-customer-service-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-transcription.html</loc></url>
-
-  <!-- BEGINNER / PRACTICE -->
-  <url><loc>https://alansname1.github.io/typing-test-for-beginner-adults.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-fast-typing-practice.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-quick-practice.html</loc></url>
-
-  <!-- GUIDES -->
-  <url><loc>https://alansname1.github.io/typing-speed-for-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc></url>
-  <url><loc>https://alansname1.github.io/how-to-type-faster.html</loc></url>
-
-  <!-- STATISTICS -->
-  <url><loc>https://alansname1.github.io/what-is-a-good-typing-speed.html</loc></url>
-  <url><loc>https://alansname1.github.io/average-typing-speed.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-wpm-chart.html</loc></url>
-  <url><loc>https://alansname1.github.io/average-typing-speed-by-age-group.html</loc></url>
-  <url><loc>https://alansname1.github.io/highest-typing-speed.html</loc></url>
-
-  <!-- PRACTICE -->
   <url><loc>https://alansname1.github.io/typing-practice-for-beginners.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-seniors.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-office-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-job-test.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-remote-work.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-email-work.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-students-free.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-teens.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-for-older-adults.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-practice-test-free.html</loc></url>
+  <url><loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc></url>
+  <url><loc>https://alansname1.github.io/what-is-a-good-typing-speed.html</loc></url>
 
-  <!-- ONLINE / TOOLS -->
-  <url><loc>https://alansname1.github.io/typing-wpm-test-online.html</loc></url>
-  <url><loc>https://alansname1.github.io/online-typing-speed-test-free.html</loc></url>
-  <url><loc>https://alansname1.github.io/free-online-typing-practice-test.html</loc></url>
-  <url><loc>https://alansname1.github.io/learn-typing-online-free.html</loc></url>
-  <url><loc>https://alansname1.github.io/free-typing-lessons-online.html</loc></url>
-  <url><loc>https://alansname1.github.io/beginner-typing-lessons-free.html</loc></url>
-  <url><loc>https://alansname1.github.io/easy-typing-test-online.html</loc></url>
-  <url><loc>https://alansname1.github.io/simple-typing-test.html</loc></url>
-  <url><loc>https://alansname1.github.io/online-typing-test-for-beginners.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-accuracy-test-online.html</loc></url>
-  <url><loc>https://alansname1.github.io/free-wpm-test.html</loc></url>
-
-  <!-- LEGAL -->
   <url><loc>https://alansname1.github.io/about.html</loc></url>
   <url><loc>https://alansname1.github.io/contact.html</loc></url>
   <url><loc>https://alansname1.github.io/privacy-policy.html</loc></url>
