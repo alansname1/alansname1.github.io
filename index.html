@@ -16,19 +16,29 @@ body {
   max-width: 1000px;
   margin: auto;
   padding: 20px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: #222;
+  background: #fff;
 }
-h1, h2, h3 { color: #111; }
-a { color: #1a5fd0; text-decoration: none; }
-a:hover { text-decoration: underline; }
-.center { text-align: center; }
+h1, h2, h3 {
+  color: #111;
+}
+a {
+  color: #1a5fd0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.center {
+  text-align: center;
+}
 .notice {
   background: #eef5ff;
   border: 1px solid #c9dcff;
   padding: 12px;
   border-radius: 8px;
-  margin: 15px 0;
+  margin: 15px 0 22px;
 }
 .test-box {
   border: 1px solid #ccc;
@@ -37,135 +47,432 @@ a:hover { text-decoration: underline; }
   margin-top: 25px;
   background: #f9f9f9;
 }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+select {
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
 button {
   padding: 10px 14px;
   font-size: 16px;
+  cursor: pointer;
+  border: none;
   border-radius: 8px;
   font-weight: bold;
   background: #1a5fd0;
   color: white;
-  border: none;
 }
-button:hover { background: #1349a4; }
-textarea {
+button:hover {
+  background: #1349a4;
+}
+.secondary-btn {
+  background: #e9eef7;
+  color: #222;
+  border: 1px solid #cfd8e6;
+}
+.secondary-btn:hover {
+  background: #dde7f5;
+}
+.quick-starts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+#passage {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 110px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#typingInput {
   width: 100%;
   min-height: 140px;
   padding: 12px;
+  font-size: 16px;
   border-radius: 8px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
 }
 .stats {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
   margin-top: 15px;
   font-weight: bold;
 }
-ul { padding-left: 20px; }
-hr { margin: 30px 0; }
+.content-box {
+  margin-top: 30px;
+}
+.resource-links {
+  margin-top: 20px;
+}
+.small {
+  font-size: 14px;
+  color: #555;
+}
+hr {
+  margin: 30px 0;
+}
+ul {
+  padding-left: 22px;
+}
+.card-note {
+  background: #fafcff;
+  border: 1px solid #d9e1ec;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 18px 0;
+}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free Typing Speed Test",
+  "url": "https://alansname1.github.io/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "description": "Free online typing speed test with live WPM, accuracy, and character tracking."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good typing speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A common average typing speed is around 40 words per minute. Regular practice can improve both speed and accuracy over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I improve typing speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Practice daily, focus on accuracy first, and use timed typing tests to track progress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I practice typing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Short daily practice sessions often work better than occasional long sessions. Even 5 to 10 minutes a day can lead to steady improvement."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
 
-<h1>Free Typing Speed Test – Check Your WPM & Accuracy</h1>
+<div class="center" style="margin-top:20px;">
+  <img src="typing-logo.png" alt="Typing Practice Website" style="width:600px; max-width:90%; height:auto;">
+</div>
+
+<h1>Free Typing Speed Test – Check Your WPM & Accuracy Online</h1>
 
 <p>
-Practice typing online for free. Measure your typing speed, improve accuracy,
-and build confidence using our simple typing test.
+This free typing speed test helps you measure your words per minute (WPM), typing accuracy, and overall keyboard performance. Whether you are a beginner, student, office worker, job seeker, or remote worker, this page gives you a simple way to practice and track your progress.
+</p>
+
+<p>
+Typing is one of the most useful computer skills you can develop. Faster and more accurate typing can save time, reduce frustration, and make everyday tasks easier. It can also help with school assignments, office work, customer support, data entry, and many work-from-home opportunities.
 </p>
 
 <div class="notice">
-Choose a test, click start, and begin typing.
+  <strong>How to use this page:</strong> choose a 1 minute, 5 minute, or 10 minute test, click <strong>Start Test</strong>, then begin typing in the box below.
 </div>
 
-<h2>Start Typing Test</h2>
+<h2>Why Use This Free Typing Test?</h2>
 
-<div class="test-box">
-  <button onclick="setDuration(60)">1 Minute</button>
-  <button onclick="setDuration(300)">5 Minutes</button>
-  <button onclick="setDuration(600)">10 Minutes</button>
+<p>
+This typing test is designed to be easy to use while still giving useful real-time feedback. As you type, you can see your time remaining, words per minute, and typing accuracy. This helps you understand not only how fast you type, but also how cleanly and consistently you type.
+</p>
 
-  <br><br>
+<p>
+Many free typing tools online focus only on speed. This page is built to encourage balanced improvement. Accuracy matters because employers, teachers, and real-world tasks all depend on correct typing, not just fast typing. A person who types slightly slower but makes fewer mistakes is often more productive than someone typing quickly with frequent errors.
+</p>
 
-  <button onclick="startTest()">Start Test</button>
-  <button onclick="resetTest()">Reset</button>
+<div class="card-note">
+  <strong>Why this matters:</strong> typing is not only useful for practice. It supports school work, office tasks, job applications, administrative work, online communication, and many entry-level remote positions.
+</div>
+
+<h2>Start Your Typing Test</h2>
+
+<div class="quick-starts">
+  <button type="button" onclick="setDurationOnly(60)">1 Minute Test</button>
+  <button type="button" onclick="setDurationOnly(300)">5 Minute Test</button>
+  <button type="button" onclick="setDurationOnly(600)">10 Minute Test</button>
+</div>
+
+<div id="typing-test" class="test-box">
+  <div class="controls">
+    <select id="duration" aria-label="Choose typing test duration">
+      <option value="60">1 Minute</option>
+      <option value="300">5 Minutes</option>
+      <option value="600">10 Minutes</option>
+    </select>
+
+    <button type="button" onclick="startTest()">Start Test</button>
+    <button type="button" class="secondary-btn" onclick="resetTest()">Reset</button>
+  </div>
 
   <div id="passage"></div>
-  <textarea id="typingInput" disabled></textarea>
+  <textarea id="typingInput" placeholder="Click Start Test, then begin typing here..." disabled aria-label="Typing input area"></textarea>
 
   <div class="stats">
-    <div>Time: <span id="timeLeft">60</span></div>
+    <div>Time Left: <span id="timeLeft">60</span></div>
     <div>WPM: <span id="wpm">0</span></div>
     <div>Accuracy: <span id="accuracy">100</span>%</div>
   </div>
 </div>
 
-<!-- 🔥 POWER LINK HUB -->
-<h2>Popular Typing Practice Guides</h2>
-<ul>
-<li><a href="typing-test-for-medical-transcription.html">Typing Test for Medical Transcription</a></li>
-<li><a href="typing-test-for-hiring.html">Typing Test for Hiring</a></li>
-<li><a href="typing-speed-test-for-seniors.html">Typing Speed Test for Seniors</a></li>
-<li><a href="how-to-increase-typing-speed.html">How to Increase Typing Speed</a></li>
-</ul>
+<div class="content-box">
+  <h2>What Is a Good Typing Speed?</h2>
+  <p>
+  A beginner often types between 20 and 40 words per minute. Many office and administrative roles look for at least 40 WPM, while jobs involving larger amounts of keyboard work may prefer 50 WPM or more. Advanced typists often reach 70 WPM or higher, especially when they practice regularly and type with strong accuracy.
+  </p>
 
-<h2>Related Resources</h2>
-<ul>
-<li><a href="typing-practice-for-beginners.html">Typing Practice for Beginners</a></li>
-<li><a href="typing-test-for-jobs.html">Typing Test for Jobs</a></li>
-<li><a href="typing-test-for-data-entry.html">Data Entry Typing Test</a></li>
-<li><a href="what-is-a-good-typing-speed.html">What Is a Good Typing Speed?</a></li>
-</ul>
+  <p>
+  The right goal depends on what you need typing for. If you are learning for personal use, steady improvement matters more than hitting a certain number quickly. If you are practicing for school, office work, customer support, or data entry jobs, raising your WPM while keeping your accuracy high can make a real difference.
+  </p>
+
+  <h2>Benefits of Improving Typing Speed</h2>
+  <p>
+  Improving typing speed can help you finish work faster, stay more focused, and feel more confident on the computer. People who type comfortably often spend less time correcting errors and less energy thinking about each key. That leaves more attention for the actual task, whether it is writing, answering emails, entering data, or completing applications.
+  </p>
+
+  <p>
+  Better typing can also support job readiness. Many beginner-friendly and remote jobs involve frequent keyboard use, including chat support, office work, billing, customer service, and data entry. Building this skill now can open more options later.
+  </p>
+
+  <h2>How to Improve Typing Speed</h2>
+  <p>
+  The fastest way to improve typing is to practice consistently and focus on accuracy before speed. When you try to force speed too early, mistakes rise and bad habits can form. When you practice accurately, your hands learn the keyboard more naturally and speed usually follows.
+  </p>
+
+  <ul>
+    <li>Practice typing a little every day instead of once in a while.</li>
+    <li>Focus on clean typing before trying to push your speed.</li>
+    <li>Use timed tests to measure progress and stay motivated.</li>
+    <li>Try not to look down at the keyboard constantly.</li>
+    <li>Use repeat practice to build comfort with common words and letter patterns.</li>
+  </ul>
+
+  <h2>Who This Typing Test Helps</h2>
+  <p>
+  This typing test is useful for beginners learning keyboard skills, students completing assignments, job seekers preparing for typing assessments, and adults who want to improve general computer confidence. It is also helpful for people returning to office work or starting to explore work-from-home opportunities.
+  </p>
+
+  <p>
+  Because the page is simple and direct, it works well for anyone who wants a no-friction way to practice typing online without downloading software or creating an account.
+  </p>
+
+  <h2>Why Accuracy Matters as Much as Speed</h2>
+  <p>
+  Many people focus only on WPM, but accuracy is just as important. Typing the wrong letters quickly does not help much in real-world tasks. Accurate typing reduces editing time, makes communication clearer, and helps you build stronger keyboard habits.
+  </p>
+
+  <p>
+  That is why this page is designed to show both speed and accuracy. Improving both together leads to better long-term results.
+  </p>
+
+  <h2>How Often Should You Practice?</h2>
+  <p>
+  For most people, short daily practice sessions work better than occasional long sessions. Practicing for 5 to 10 minutes a day can be enough to improve familiarity, confidence, and typing rhythm. The key is staying consistent.
+  </p>
+
+  <p>
+  Over time, those short sessions add up. Daily repetition helps your hands remember the keyboard layout more naturally and makes common words easier to type.
+  </p>
+
+  <h2>Can Typing Practice Help with Jobs?</h2>
+  <p>
+  Yes. Typing practice can be especially helpful for people applying for jobs that involve keyboard use. Many entry-level office jobs, customer service roles, administrative positions, online jobs, and data entry opportunities benefit from stronger WPM and cleaner accuracy.
+  </p>
+
+  <p>
+  Even when a job does not require a formal typing test, stronger typing skills can still improve your daily work performance. Faster, more accurate typing often means faster communication, quicker task completion, and less time spent fixing mistakes.
+  </p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>How can I improve my typing speed?</h3>
+  <p>
+  Practice daily, focus on accuracy first, and use timed typing tests to measure progress. Even short practice sessions can help when done consistently.
+  </p>
+
+  <h3>What is a good typing speed for jobs?</h3>
+  <p>
+  Many jobs consider around 40 WPM acceptable, while typing-heavy roles may prefer 50 WPM or more. Accuracy remains important alongside speed.
+  </p>
+
+  <h3>How often should I practice typing?</h3>
+  <p>
+  Daily practice is usually best. Even 5 to 10 minutes a day can help improve speed, confidence, and keyboard familiarity.
+  </p>
+
+  <h3>Can beginners use this typing test?</h3>
+  <p>
+  Yes. This page is built to be simple enough for beginners while still useful for more advanced typists who want to track speed and accuracy.
+  </p>
+
+  <div class="resource-links">
+    <h2>Related Typing Resources</h2>
+    <p class="center">
+      <a href="typing-practice-for-beginners.html">Typing Practice for Beginners</a> |
+      <a href="how-to-improve-typing-speed.html">How to Improve Typing Speed</a> |
+      <a href="typing-test-for-jobs.html">Typing Test for Jobs</a> |
+      <a href="typing-test-for-data-entry.html">Data Entry Typing Test</a> |
+      <a href="what-is-a-good-typing-speed.html">What Is a Good Typing Speed?</a>
+    </p>
+  </div>
+
+  <h2>Popular Typing Practice Guides</h2>
+  <ul>
+    <li><a href="typing-test-for-medical-transcription.html">Typing Test for Medical Transcription</a></li>
+    <li><a href="typing-test-for-hiring.html">Typing Test for Hiring</a></li>
+    <li><a href="typing-speed-test-for-seniors.html">Typing Speed Test for Seniors</a></li>
+    <li><a href="how-to-increase-typing-speed.html">How to Increase Typing Speed</a></li>
+  </ul>
+</div>
 
 <hr>
 
-<p class="center">
-<a href="about.html">About</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy-policy.html">Privacy Policy</a> |
-<a href="terms.html">Terms</a> |
-<a href="sitemap.xml">Sitemap</a>
+<p class="center small">
+This page provides a free typing speed test, typing practice guidance, and informational content for visitors who want to improve keyboard skills, increase typing accuracy, and build faster words-per-minute performance over time.
 </p>
 
-<!-- AdSense (bottom placement = SAFE) -->
+<p class="center">
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="privacy-policy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms</a> |
+  <a href="sitemap.xml">Sitemap</a>
+</p>
+
+<p class="center" style="margin-top:20px;">
+  <strong>Love Rescue Dogs? 🐶</strong><br>
+  <a href="https://rescue-dogs-are-awesome-1.myspreadshop.com/" target="_blank" rel="noopener noreferrer">
+    Rescue Dogs Are Awesome Shop
+  </a>
+</p>
+
+<!-- AdSense kept lower so content appears first -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5797894272119707" crossorigin="anonymous"></script>
 
 <script>
+const passages = [
+  "Typing every day helps improve speed and accuracy.",
+  "Practice regularly to become faster and more accurate.",
+  "Typing skills are useful for jobs and daily tasks.",
+  "Daily typing practice builds confidence and improves keyboard speed.",
+  "Free typing tests help track progress in words per minute and accuracy.",
+  "Consistent keyboard practice can make school and office work easier.",
+  "Accurate typing habits often lead to better speed over time."
+];
+
+let current = "";
+let currentIndex = -1;
 let timeLeft = 60;
-let timer;
+let timer = null;
 let duration = 60;
 
-const text = "Typing practice improves speed and accuracy over time.";
-
-function setDuration(sec){
-  duration = sec;
-  resetTest();
+function pickPassage() {
+  let newIndex = Math.floor(Math.random() * passages.length);
+  if (passages.length > 1) {
+    while (newIndex === currentIndex) {
+      newIndex = Math.floor(Math.random() * passages.length);
+    }
+  }
+  currentIndex = newIndex;
+  current = passages[newIndex];
+  document.getElementById("passage").innerText = current;
 }
 
-function startTest(){
+function setDurationOnly(seconds) {
+  document.getElementById("duration").value = String(seconds);
+  resetTest(true);
+  document.getElementById("typing-test").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function startTest() {
   clearInterval(timer);
+  duration = Number(document.getElementById("duration").value);
   timeLeft = duration;
   document.getElementById("timeLeft").innerText = timeLeft;
   document.getElementById("typingInput").disabled = false;
+  document.getElementById("typingInput").focus();
   document.getElementById("typingInput").value = "";
-  document.getElementById("passage").innerText = text;
+  pickPassage();
+  updateStats();
 
-  timer = setInterval(()=>{
+  timer = setInterval(() => {
     timeLeft--;
     document.getElementById("timeLeft").innerText = timeLeft;
-    if(timeLeft <= 0){
+    updateStats();
+    if (timeLeft <= 0) {
       clearInterval(timer);
       document.getElementById("typingInput").disabled = true;
     }
-  },1000);
+  }, 1000);
 }
 
-function resetTest(){
+function resetTest(changePassage = true) {
   clearInterval(timer);
+  duration = Number(document.getElementById("duration").value);
   timeLeft = duration;
   document.getElementById("timeLeft").innerText = timeLeft;
   document.getElementById("typingInput").value = "";
   document.getElementById("typingInput").disabled = true;
+  document.getElementById("wpm").innerText = "0";
+  document.getElementById("accuracy").innerText = "100";
+
+  if (changePassage || !current) {
+    pickPassage();
+  } else {
+    document.getElementById("passage").innerText = current;
+  }
 }
+
+function updateStats() {
+  const typed = document.getElementById("typingInput").value;
+  let correct = 0;
+
+  for (let i = 0; i < typed.length; i++) {
+    if (typed[i] === current[i]) correct++;
+  }
+
+  const elapsed = (duration - timeLeft) / 60;
+  const wpm = elapsed > 0 ? Math.round((correct / 5) / elapsed) : 0;
+  const accuracy = typed.length > 0 ? Math.round((correct / typed.length) * 100) : 100;
+
+  document.getElementById("wpm").innerText = wpm;
+  document.getElementById("accuracy").innerText = accuracy;
+}
+
+document.getElementById("typingInput").addEventListener("input", updateStats);
+
+resetTest(true);
 </script>
 
 </body>
