@@ -1,22 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://alansname1.github.io/</loc></url>
+  <url>
+    <loc>https://alansname1.github.io/</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
 
-  <url><loc>https://alansname1.github.io/typing-test-1-minute.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-5-minute.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-10-minute.html</loc></url>
+  <url>
+    <loc>https://alansname1.github.io/typing-test-1-minute.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
 
-  <url><loc>https://alansname1.github.io/typing-test-for-jobs.html</loc></url>
-  <url><loc>https://alansname1.github.io/typing-test-for-data-entry.html</loc></url>
+  <url>
+    <loc>https://alansname1.github.io/typing-test-5-minute.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
 
-  <url><loc>https://alansname1.github.io/typing-practice-for-beginners.html</loc></url>
-  <url><loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc></url>
-  <url><loc>https://alansname1.github.io/what-is-a-good-typing-speed.html</loc></url>
+  <url>
+    <loc>https://alansname1.github.io/typing-test-10-minute.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
 
-  <url><loc>https://alansname1.github.io/about.html</loc></url>
-  <url><loc>https://alansname1.github.io/contact.html</loc></url>
-  <url><loc>https://alansname1.github.io/privacy-policy.html</loc></url>
-  <url><loc>https://alansname1.github.io/terms.html</loc></url>
+  <url>
+    <loc>https://alansname1.github.io/typing-test-for-jobs.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-for-data-entry.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-practice-for-beginners.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/what-is-a-good-typing-speed.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/about.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/contact.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/privacy-policy.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/terms.html</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
 
 </urlset>
