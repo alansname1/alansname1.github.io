@@ -1,5 +1,3 @@
-<!-- THIS IS YOUR FULL FILE — NOTHING REMOVED -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +10,23 @@
 <link rel="canonical" href="https://alansname1.github.io/" />
 <title>Free Typing Speed Test | Improve Speed & Accuracy Online</title>
 
-<!-- KEEP YOUR ORIGINAL STYLE + ADD THIS -->
 <style>
-/* KEEP YOUR ORIGINAL CSS ABOVE */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.75;
+  color: #222;
+  background: #fff;
+}
+h1, h2, h3 { color: #111; }
+a { color: #1a5fd0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.center { text-align: center; }
 
-/* ADD THIS CTA STYLE */
+.hero { text-align:center; margin:10px 0 28px; }
+
 .cta-row {
   display:flex;
   flex-wrap:wrap;
@@ -31,7 +41,6 @@
   padding:14px 20px;
   border-radius:10px;
   font-weight:bold;
-  text-decoration:none;
 }
 .cta-btn:hover { background:#1349a4; }
 .cta-btn.secondary {
@@ -39,26 +48,144 @@
   color:#1a5fd0;
   border:1px solid #c9dcff;
 }
+
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+  margin:24px 0;
+}
+.card {
+  background:#fafcff;
+  border:1px solid #d9e1ec;
+  border-radius:12px;
+  padding:18px;
+}
+
+.notice {
+  background:#eef5ff;
+  border:1px solid #c9dcff;
+  padding:12px;
+  border-radius:8px;
+  margin:18px 0;
+}
+
+.resource-links { margin-top:24px; }
+.footer-links { text-align:center; margin-top:24px; }
+.small { font-size:14px; color:#555; }
 </style>
 
-<!-- KEEP YOUR SCHEMA EXACTLY AS IS -->
+<!-- Web App Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free Typing Speed Test",
+  "url": "https://alansname1.github.io/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any"
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good typing speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most people type around 40 WPM. Typing-heavy jobs may require 50 WPM or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I improve typing speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Practice daily, focus on accuracy, and use timed typing tests."
+      }
+    }
+  ]
+}
+</script>
 
 </head>
 
 <body>
 
-<!-- KEEP YOUR LOGO -->
 <div class="center">
-  <img src="typing-logo.png" alt="Typing Practice Website">
+  <img src="typing-logo.png" alt="Typing Practice Website" style="max-width:90%;">
 </div>
 
+<div class="hero">
 <h1>Free Typing Speed Test – Check Your WPM & Accuracy Online</h1>
 
-<!-- 🔥 ONLY CHANGE: BUTTON SECTION -->
+<p>
+Test your typing speed, improve accuracy, and build keyboard confidence with simple, free typing tests.
+</p>
+
 <div class="cta-row">
   <a class="cta-btn" href="typing-test-5-minute.html">Start 5 Minute Test</a>
   <a class="cta-btn secondary" href="typing-test-1-minute.html">Try 1 Minute Test</a>
 </div>
+</div>
 
-<!-- KEEP ALL YOUR ORIGINAL CONTENT BELOW -->
-<!-- DO NOT DELETE ANYTHING -->
+<div class="notice">
+<strong>Quick start:</strong> choose a test below and begin improving immediately.
+</div>
+
+<h2 class="center">Choose Your Typing Test</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>1 Minute Test</h3>
+    <a class="cta-btn" href="typing-test-1-minute.html">Start</a>
+  </div>
+  <div class="card">
+    <h3>5 Minute Test</h3>
+    <a class="cta-btn" href="typing-test-5-minute.html">Start</a>
+  </div>
+  <div class="card">
+    <h3>10 Minute Test</h3>
+    <a class="cta-btn" href="typing-test-10-minute.html">Start</a>
+  </div>
+</div>
+
+<h2>Why Improve Typing?</h2>
+<p>
+Typing faster and more accurately helps with school, jobs, and daily computer tasks. It saves time and reduces frustration.
+</p>
+
+<h2>Related Typing Resources</h2>
+
+<div class="resource-links">
+<p class="center">
+<a href="typing-test-for-jobs.html">Typing Test for Jobs</a> |
+<a href="typing-test-for-data-entry.html">Typing Test for Data Entry</a> |
+<a href="data-entry-typing-test.html">Data Entry Typing Test</a> |
+<a href="typing-test-requirements-by-job.html">Typing Requirements by Job</a> |
+<a href="typing-test-for-hiring.html">Typing Test for Hiring</a> |
+<a href="what-is-a-good-typing-speed.html">Good Typing Speed</a>
+</p>
+</div>
+
+<hr>
+
+<p class="center small">
+Free typing test and typing practice resources to improve speed and accuracy.
+</p>
+
+<p class="footer-links">
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy-policy.html">Privacy</a> |
+<a href="terms.html">Terms</a> |
+<a href="sitemap.xml">Sitemap</a>
+</p>
+
+</body>
+</html>
