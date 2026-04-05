@@ -20,10 +20,19 @@ body {
   color: #222;
   background: #fff;
 }
-h1, h2, h3 { color: #111; }
-a { color: #1a5fd0; text-decoration: none; }
-a:hover { text-decoration: underline; }
-.center { text-align: center; }
+h1, h2, h3 {
+  color: #111;
+}
+a {
+  color: #1a5fd0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.center {
+  text-align: center;
+}
 .notice {
   background: #eef5ff;
   border: 1px solid #c9dcff;
@@ -38,31 +47,171 @@ a:hover { text-decoration: underline; }
   margin-top: 25px;
   background: #f9f9f9;
 }
-.controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
-select { padding: 10px 14px; font-size: 16px; }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+select {
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
 button {
   padding: 10px 14px;
   font-size: 16px;
+  cursor: pointer;
+  border: none;
   border-radius: 8px;
+  font-weight: bold;
   background: #1a5fd0;
   color: white;
 }
-.secondary-btn { background: #e9eef7; color: #222; }
-.quick-starts { display: flex; gap: 10px; margin: 15px 0; }
-.quick-link-buttons { text-align:center; margin:20px 0; }
-.quick-link-buttons a {
-  background:#1a5fd0;color:#fff;padding:14px 20px;border-radius:10px;font-weight:bold;
+button:hover {
+  background: #1349a4;
 }
-#passage { border:1px solid #ddd;padding:15px;border-radius:8px; }
-#typingInput { width:100%; min-height:140px; padding:12px; }
-.stats { display:flex; gap:15px; margin-top:15px; font-weight:bold; }
+.secondary-btn {
+  background: #e9eef7;
+  color: #222;
+  border: 1px solid #cfd8e6;
+}
+.secondary-btn:hover {
+  background: #dde7f5;
+}
+.quick-starts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+.quick-link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 22px 0 12px;
+}
+.quick-link-buttons a {
+  display: inline-block;
+  background: #1a5fd0;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.quick-link-buttons a:hover {
+  background: #1349a4;
+  text-decoration: none;
+}
+#passage {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 110px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#typingInput {
+  width: 100%;
+  min-height: 140px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.content-box {
+  margin-top: 30px;
+}
+.resource-links {
+  margin-top: 20px;
+}
+.small {
+  font-size: 14px;
+  color: #555;
+}
+hr {
+  margin: 30px 0;
+}
+ul {
+  padding-left: 22px;
+}
+.card-note {
+  background: #fafcff;
+  border: 1px solid #d9e1ec;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 18px 0;
+}
+.more-tests {
+  margin-top: 28px;
+  background: #f7faff;
+  border: 1px solid #d6e4ff;
+  border-radius: 10px;
+  padding: 18px;
+}
+.more-tests ul {
+  margin-bottom: 0;
+}
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.jump-links a {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #eef5ff;
+  border: 1px solid #c9dcff;
+  border-radius: 8px;
+  color: #1a5fd0;
+  font-weight: bold;
+  text-decoration: none;
+}
+.jump-links a:hover {
+  background: #ddeaff;
+  text-decoration: none;
+}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free Typing Speed Test",
+  "url": "https://alansname1.github.io/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "description": "Free online typing speed test with live WPM, accuracy, and character tracking."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": []
+}
+</script>
+
 </head>
 
 <body>
 
-<div class="center">
-  <img src="typing-logo.png" alt="Typing Practice Website" style="max-width:90%;">
+<div class="center" style="margin-top:20px;">
+  <img src="typing-logo.png" alt="Typing Practice Website" style="width:600px; max-width:90%; height:auto;">
 </div>
 
 <h1>Free Typing Speed Test – Check Your WPM & Accuracy Online</h1>
@@ -72,29 +221,13 @@ button {
 <p>Typing is one of the most useful computer skills you can develop.</p>
 
 <p>
-Practicing typing regularly, even for just a few minutes a day, can steadily improve both speed and accuracy. Short daily sessions using timed typing tests help build muscle memory, reduce mistakes, and increase overall confidence on the keyboard.
+Practicing typing regularly, even for just a few minutes a day, can steadily improve both speed and accuracy.
 </p>
 
 <div class="quick-link-buttons">
   <a href="#typing-test" onclick="setDurationOnly(300)">Start the 5 Minute Typing Test Now</a>
 </div>
 
-<div id="typing-test" class="test-box">
-  <button onclick="setDurationOnly(60)">1 Minute</button>
-  <button onclick="setDurationOnly(300)">5 Minute</button>
-  <button onclick="setDurationOnly(600)">10 Minute</button>
-
-  <div id="passage"></div>
-  <textarea id="typingInput"></textarea>
-
-  <div class="stats">
-    <div>Time: <span id="timeLeft">60</span></div>
-    <div>WPM: <span id="wpm">0</span></div>
-    <div>Accuracy: <span id="accuracy">100</span>%</div>
-  </div>
-</div>
-
-<!-- ✅ UPDATED SECTION -->
 <div class="resource-links">
   <h2>Related Typing Resources</h2>
   <p class="center">
@@ -106,15 +239,6 @@ Practicing typing regularly, even for just a few minutes a day, can steadily imp
     <a href="what-is-a-good-typing-speed.html">What Is a Good Typing Speed?</a>
   </p>
 </div>
-
-<script>
-let timeLeft=60,timer=null,duration=60,current="typing test practice";
-function setDurationOnly(s){duration=s;timeLeft=s;}
-function startTest(){
-clearInterval(timer);
-timer=setInterval(()=>{timeLeft--;document.getElementById("timeLeft").innerText=timeLeft;if(timeLeft<=0)clearInterval(timer);},1000);
-}
-</script>
 
 </body>
 </html>
