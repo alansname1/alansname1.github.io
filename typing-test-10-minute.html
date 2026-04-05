@@ -151,6 +151,31 @@ ul {
   "description": "Free 10 minute typing test with WPM and accuracy tracking."
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why use a 10 minute typing test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 10 minute typing test helps measure endurance, consistency, and long-session typing accuracy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 10 minute typing test good for job practice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A 10 minute typing test is useful for longer work-style typing practice and stamina building."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -162,11 +187,11 @@ ul {
 <h1>10 Minute Typing Test</h1>
 
 <p>
-This free 10 minute typing test helps you improve typing endurance, accuracy, and long-session consistency. It is useful for building stamina and measuring how well you maintain typing speed over time.
+This free 10 minute typing test helps you improve typing endurance, accuracy, and long-session consistency. It is ideal for people who want to build stamina and measure how well they maintain typing speed over a longer period.
 </p>
 
 <div class="center">
-  <a href="#typing-test" class="cta-button" onclick="resetTest();">Start the 10 Minute Typing Test</a>
+  <a href="#typing-test" class="cta-button" onclick="resetTest(); return true;">Start the 10 Minute Typing Test</a>
 </div>
 
 <div class="notice">
@@ -212,6 +237,8 @@ A 10 minute typing test is useful for measuring endurance during longer sessions
     <li><a href="typing-test-1-minute.html">1 Minute Typing Test</a></li>
     <li><a href="typing-test-5-minute.html">5 Minute Typing Test</a></li>
     <li><a href="index.html">Typing Speed Test Homepage</a></li>
+    <li><a href="typing-test-for-jobs.html">Typing Test for Jobs</a></li>
+    <li><a href="typing-test-for-hiring.html">Typing Test for Hiring</a></li>
   </ul>
 </div>
 
@@ -219,6 +246,14 @@ A 10 minute typing test is useful for measuring endurance during longer sessions
 
 <p class="center small">
 This page provides a free 10 minute typing test for people who want to improve typing speed, build stamina, and strengthen accuracy over longer sessions.
+</p>
+
+<p class="center">
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="privacy-policy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms</a> |
+  <a href="sitemap.xml">Sitemap</a>
 </p>
 
 <script>
@@ -260,10 +295,11 @@ function startTest() {
   pickPassage();
   updateStats();
 
-  timer = setInterval(() => {
+  timer = setInterval(function () {
     timeLeft--;
     document.getElementById("timeLeft").innerText = timeLeft;
     updateStats();
+
     if (timeLeft <= 0) {
       clearInterval(timer);
       document.getElementById("typingInput").disabled = true;
@@ -287,7 +323,9 @@ function updateStats() {
   let correct = 0;
 
   for (let i = 0; i < typed.length; i++) {
-    if (typed[i] === current[i]) correct++;
+    if (typed[i] === current[i]) {
+      correct++;
+    }
   }
 
   const elapsed = (duration - timeLeft) / 60;
