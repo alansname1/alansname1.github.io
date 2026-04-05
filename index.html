@@ -33,67 +33,22 @@ a:hover {
 .center {
   text-align: center;
 }
-.notice {
-  background: #eef5ff;
-  border: 1px solid #c9dcff;
-  padding: 12px;
-  border-radius: 8px;
-  margin: 15px 0 22px;
+.hero {
+  text-align: center;
+  margin: 10px 0 28px;
 }
-.test-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 25px;
-  background: #f9f9f9;
+.hero p {
+  max-width: 760px;
+  margin: 12px auto;
 }
-.controls {
+.cta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 15px;
-}
-select {
-  padding: 10px 14px;
-  font-size: 16px;
-  cursor: pointer;
-}
-button {
-  padding: 10px 14px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  background: #1a5fd0;
-  color: white;
-}
-button:hover {
-  background: #1349a4;
-}
-.secondary-btn {
-  background: #e9eef7;
-  color: #222;
-  border: 1px solid #cfd8e6;
-}
-.secondary-btn:hover {
-  background: #dde7f5;
-}
-.quick-starts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 15px 0;
-}
-.quick-link-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
   justify-content: center;
-  margin: 22px 0 12px;
+  gap: 12px;
+  margin: 22px 0 10px;
 }
-.quick-link-buttons a {
+.cta-btn {
   display: inline-block;
   background: #1a5fd0;
   color: #fff;
@@ -102,40 +57,63 @@ button:hover {
   font-weight: bold;
   text-decoration: none;
 }
-.quick-link-buttons a:hover {
+.cta-btn:hover {
   background: #1349a4;
   text-decoration: none;
 }
-#passage {
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  min-height: 110px;
-  margin-bottom: 15px;
-  font-size: 18px;
+.cta-btn.secondary {
+  background: #eef5ff;
+  color: #1a5fd0;
+  border: 1px solid #c9dcff;
 }
-#typingInput {
-  width: 100%;
-  min-height: 140px;
+.cta-btn.secondary:hover {
+  background: #ddeaff;
+}
+.notice {
+  background: #eef5ff;
+  border: 1px solid #c9dcff;
   padding: 12px;
-  font-size: 16px;
   border-radius: 8px;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
+  margin: 15px 0 22px;
 }
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.card {
+  background: #fafcff;
+  border: 1px solid #d9e1ec;
+  border-radius: 12px;
+  padding: 18px;
+}
+.card h3 {
+  margin-top: 0;
+}
+.card .card-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #1a5fd0;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
   font-weight: bold;
+  text-decoration: none;
 }
-.content-box {
-  margin-top: 30px;
+.card .card-btn:hover {
+  background: #1349a4;
+  text-decoration: none;
+}
+.benefit-box {
+  background: #f7faff;
+  border: 1px solid #d6e4ff;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 24px 0;
 }
 .resource-links {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .small {
   font-size: 14px;
@@ -147,45 +125,56 @@ hr {
 ul {
   padding-left: 22px;
 }
-.card-note {
-  background: #fafcff;
-  border: 1px solid #d9e1ec;
-  border-radius: 10px;
-  padding: 16px;
-  margin: 18px 0;
-}
-.more-tests {
-  margin-top: 28px;
-  background: #f7faff;
-  border: 1px solid #d6e4ff;
-  border-radius: 10px;
-  padding: 18px;
-}
-.more-tests ul {
-  margin-bottom: 0;
-}
-.jump-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-}
-.jump-links a {
-  display: inline-block;
-  padding: 10px 14px;
-  background: #eef5ff;
-  border: 1px solid #c9dcff;
-  border-radius: 8px;
-  color: #1a5fd0;
-  font-weight: bold;
-  text-decoration: none;
-}
-.jump-links a:hover {
-  background: #ddeaff;
-  text-decoration: none;
+.footer-links {
+  text-align: center;
+  margin-top: 24px;
 }
 </style>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free Typing Speed Test",
+  "url": "https://alansname1.github.io/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "description": "Free online typing speed test with live WPM, accuracy, and character tracking."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good typing speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many people type around 40 words per minute, while typing-heavy jobs may prefer 50 WPM or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I improve typing speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Practice regularly, focus on accuracy first, and use timed typing tests to improve speed and consistency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which typing test should I start with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 1 minute test is good for quick speed checks, while a 5 minute test is better for building endurance and job-style practice."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -194,19 +183,86 @@ ul {
   <img src="typing-logo.png" alt="Typing Practice Website" style="width:600px; max-width:90%; height:auto;">
 </div>
 
-<h1>Free Typing Speed Test – Check Your WPM & Accuracy Online</h1>
+<div class="hero">
+  <h1>Free Typing Speed Test – Check Your WPM & Accuracy Online</h1>
 
-<p>This free typing speed test helps you measure your words per minute (WPM), typing accuracy, and overall keyboard performance.</p>
+  <p>
+    Test your typing speed, improve your accuracy, and build stronger keyboard skills with free online typing practice. Whether you are a beginner, job seeker, student, or office worker, this site helps you practice typing with clear, simple test options.
+  </p>
 
-<p>Typing is one of the most useful computer skills you can develop.</p>
+  <p>
+    Practicing typing regularly, even for just a few minutes a day, can steadily improve both speed and accuracy. Short daily sessions using timed typing tests help build muscle memory, reduce mistakes, and increase confidence.
+  </p>
 
+  <div class="cta-row">
+    <a class="cta-btn" href="typing-test-5-minute.html">Start the 5 Minute Typing Test</a>
+    <a class="cta-btn secondary" href="typing-test-1-minute.html">Try the 1 Minute Test</a>
+  </div>
+</div>
+
+<div class="notice">
+  <strong>Quick start:</strong> choose a test below to check your WPM, practice daily, and improve your typing speed over time.
+</div>
+
+<h2 class="center">Choose Your Typing Test</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>1 Minute Typing Test</h3>
+    <p>
+      Best for quick speed checks, short daily practice, and beginners who want a fast way to measure progress.
+    </p>
+    <a class="card-btn" href="typing-test-1-minute.html">Start 1 Minute Test</a>
+  </div>
+
+  <div class="card">
+    <h3>5 Minute Typing Test</h3>
+    <p>
+      Best for building typing endurance, improving consistency, and practicing for job-style typing tests.
+    </p>
+    <a class="card-btn" href="typing-test-5-minute.html">Start 5 Minute Test</a>
+  </div>
+
+  <div class="card">
+    <h3>10 Minute Typing Test</h3>
+    <p>
+      Best for longer sessions, focus training, and measuring how well you maintain speed and accuracy over time.
+    </p>
+    <a class="card-btn" href="typing-test-10-minute.html">Start 10 Minute Test</a>
+  </div>
+</div>
+
+<div class="benefit-box">
+  <h2>Why Use This Typing Practice Site?</h2>
+  <ul>
+    <li>Free typing tests with no download required</li>
+    <li>Good for beginners, students, office work, and job preparation</li>
+    <li>Supports practice for data entry, customer service, and remote work</li>
+    <li>Helps improve both typing speed and typing accuracy</li>
+  </ul>
+</div>
+
+<h2>What Is a Good Typing Speed?</h2>
 <p>
-Practicing typing regularly, even for just a few minutes a day, can steadily improve both speed and accuracy.
+  A common average typing speed is around 40 words per minute, but job-related typing goals often vary by role. Entry-level office jobs may look for 35 to 45 WPM, while data entry and transcription roles may prefer faster speeds and higher accuracy.
 </p>
 
-<div class="quick-link-buttons">
-  <a href="typing-test-5-minute.html">Start the 5 Minute Typing Test Now</a>
-</div>
+<h2>How to Improve Typing Speed</h2>
+<p>
+  The best way to improve typing is to practice consistently and focus on accuracy before pushing for speed. When you reduce mistakes and build better keyboard habits, your speed usually improves naturally over time.
+</p>
+
+<ul>
+  <li>Practice typing a little every day</li>
+  <li>Use timed typing tests to track progress</li>
+  <li>Focus on clean typing before trying to go faster</li>
+  <li>Practice longer tests when preparing for work-related typing tasks</li>
+</ul>
+
+<h2>Typing Practice for Jobs and Real-World Use</h2>
+<p>
+  Strong typing skills can help with office work, administrative tasks, data entry, online customer service, and many remote jobs. If you are practicing for employment, longer tests and role-specific pages can help you prepare more effectively.
+</p>
 
 <div class="resource-links">
   <h2>Related Typing Resources</h2>
@@ -217,9 +273,31 @@ Practicing typing regularly, even for just a few minutes a day, can steadily imp
     <a href="typing-test-for-data-entry.html">Data Entry Typing Test</a> |
     <a href="data-entry-typing-test.html">Data Entry Typing Test</a> |
     <a href="typing-test-requirements-by-job.html">Typing Test Requirements by Job</a> |
+    <a href="typing-test-for-hiring.html">Typing Test for Hiring</a> |
     <a href="what-is-a-good-typing-speed.html">What Is a Good Typing Speed?</a>
   </p>
 </div>
+
+<hr>
+
+<p class="center small">
+This page provides free typing tests and typing practice resources for visitors who want to improve typing speed, build accuracy, and strengthen keyboard skills for school, work, and everyday computer tasks.
+</p>
+
+<p class="footer-links">
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="privacy-policy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms</a> |
+  <a href="sitemap.xml">Sitemap</a>
+</p>
+
+<p class="center" style="margin-top:20px;">
+  <strong>Love Rescue Dogs? 🐶</strong><br>
+  <a href="https://rescue-dogs-are-awesome-1.myspreadshop.com/" target="_blank" rel="noopener noreferrer">
+    Rescue Dogs Are Awesome Shop
+  </a>
+</p>
 
 </body>
 </html>
