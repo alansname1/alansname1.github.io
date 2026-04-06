@@ -320,6 +320,13 @@ function resetTest() {
 
 function updateStats() {
   const typed = document.getElementById("typingInput").value;
+
+  if (typed.length >= current.length) {
+    document.getElementById("typingInput").value = "";
+    pickPassage();
+    return;
+  }
+
   let correct = 0;
 
   for (let i = 0; i < typed.length; i++) {
