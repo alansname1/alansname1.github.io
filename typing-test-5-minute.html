@@ -191,7 +191,7 @@ Take this free 5 minute typing test to measure your words per minute, improve yo
 </p>
 
 <div class="center">
-  <a href="#typing-test" class="cta-button" onclick="resetTest();">Start 5 Minute Typing Test</a>
+  <a href="#typing-test" class="cta-button" onclick="resetTest(); return true;">Start 5 Minute Typing Test</a>
 </div>
 
 <div class="notice">
@@ -341,6 +341,13 @@ function resetTest() {
 
 function updateStats() {
   const typed = document.getElementById("typingInput").value;
+
+  if (typed.length >= current.length) {
+    document.getElementById("typingInput").value = "";
+    pickPassage();
+    return;
+  }
+
   let correct = 0;
 
   for (let i = 0; i < typed.length; i++) {
