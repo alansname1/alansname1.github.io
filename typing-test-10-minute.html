@@ -319,13 +319,8 @@ function resetTest() {
 }
 
 function updateStats() {
-  const typed = document.getElementById("typingInput").value;
-
-  if (typed.length >= current.length) {
-    document.getElementById("typingInput").value = "";
-    pickPassage();
-    return;
-  }
+  const inputEl = document.getElementById("typingInput");
+  const typed = inputEl.value;
 
   let correct = 0;
 
@@ -341,6 +336,11 @@ function updateStats() {
 
   document.getElementById("wpm").innerText = wpm;
   document.getElementById("accuracy").innerText = accuracy;
+
+  if (typed === current) {
+    inputEl.value = "";
+    pickPassage();
+  }
 }
 
 document.getElementById("typingInput").addEventListener("input", updateStats);
