@@ -297,11 +297,13 @@ const duration = 300;
 
 function pickPassage() {
   let newIndex = Math.floor(Math.random() * passages.length);
+
   if (passages.length > 1) {
     while (newIndex === currentIndex) {
       newIndex = Math.floor(Math.random() * passages.length);
     }
   }
+
   currentIndex = newIndex;
   current = passages[newIndex];
   document.getElementById("passage").innerText = current;
@@ -310,17 +312,21 @@ function pickPassage() {
 function startTest() {
   clearInterval(timer);
   timeLeft = duration;
+
   document.getElementById("timeLeft").innerText = timeLeft;
   document.getElementById("typingInput").disabled = false;
   document.getElementById("typingInput").focus();
   document.getElementById("typingInput").value = "";
+
   pickPassage();
   updateStats();
 
   timer = setInterval(() => {
     timeLeft--;
     document.getElementById("timeLeft").innerText = timeLeft;
+
     updateStats();
+
     if (timeLeft <= 0) {
       clearInterval(timer);
       document.getElementById("typingInput").disabled = true;
@@ -331,22 +337,20 @@ function startTest() {
 function resetTest() {
   clearInterval(timer);
   timeLeft = duration;
+
   document.getElementById("timeLeft").innerText = timeLeft;
   document.getElementById("typingInput").value = "";
   document.getElementById("typingInput").disabled = true;
+
   document.getElementById("wpm").innerText = "0";
   document.getElementById("accuracy").innerText = "100";
+
   pickPassage();
 }
 
 function updateStats() {
-  const typed = document.getElementById("typingInput").value;
-
-  if (typed.length >= current.length) {
-    document.getElementById("typingInput").value = "";
-    pickPassage();
-    return;
-  }
+  const inputEl = document.getElementById("typingInput");
+  const typed = inputEl.value;
 
   let correct = 0;
 
@@ -360,6 +364,11 @@ function updateStats() {
 
   document.getElementById("wpm").innerText = wpm;
   document.getElementById("accuracy").innerText = accuracy;
+
+  if (typed === current) {
+    inputEl.value = "";
+    pickPassage();
+  }
 }
 
 document.getElementById("typingInput").addEventListener("input", updateStats);
