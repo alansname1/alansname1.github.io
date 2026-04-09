@@ -251,15 +251,25 @@
     let timer = null;
     let timeLeft = 60;
     let started = false;
-    let totalTyped = 0;
-    let correctTyped = 0;
+
+    let totalTypedChars = 0;
+    let totalCorrectChars = 0;
+    let totalTypedWords = 0;
 
     function getRandomPassage() {
       return passages[Math.floor(Math.random() * passages.length)];
     }
 
+    function loadNewPassage() {
+      currentText = getRandomPassage();
+      renderText("");
+      inputBox.value = "";
+      inputBox.focus();
+    }
+
     function renderText(userInput) {
       let html = "";
+
       for (let i = 0; i < currentText.length; i++) {
         let cls = "";
 
@@ -272,12 +282,44 @@
         const char = currentText[i] === " " ? "&nbsp;" : currentText[i];
         html += `<span class="${cls}">${char}</span>`;
       }
+
       sampleText.innerHTML = html;
     }
 
-    function updateStats() {
+    function updateStatsLive() {
+      const currentInput = inputBox.value;
+      const liveChars = totalTypedChars + currentInput.length;
+
+      let liveCorrect = 0;
+      for (let i = 0; i < currentInput.length; i++) {
+        if (currentInput[i] === currentText[i]) {
+          liveCorrect++;
+        }
+      }
+
+      const allCorrectChars = totalCorrectChars + liveCorrect;
+      const elapsed = 60 - timeLeft;
+
+      const wpm = elapsed > 0 ? Math.round(((totalTypedWords + countWords(currentInput)) / elapsed) * 60) : 0;
+      const accuracy = liveChars > 0 ? Math.round((allCorrectChars / liveChars) * 100) : 100;
+
+      wpmDisplay.textContent = wpm;
+      accuracyDisplay.textContent = accuracy + "%";
+      charsDisplay.textContent = liveChars;
+
+      renderText(currentInput);
+    }
+
+    function countWords(text) {
+      const trimmed = text.trim();
+      if (trimmed === "") return 0;
+      return trimmed.split(/\s+/).length;
+    }
+
+    function completeCurrentPassage() {
       const typed = inputBox.value;
-      totalTyped = typed.length;
+
+      totalTypedChars += typed.length;
 
       let correct = 0;
       for (let i = 0; i < typed.length; i++) {
@@ -285,18 +327,11 @@
           correct++;
         }
       }
-      correctTyped = correct;
+      totalCorrectChars += correct;
+      totalTypedWords += countWords(typed);
 
-      const wordsTyped = typed.trim().length > 0 ? typed.trim().split(/\s+/).length : 0;
-      const elapsed = 60 - timeLeft;
-      const wpm = elapsed > 0 ? Math.round((wordsTyped / elapsed) * 60) : 0;
-      const accuracy = totalTyped > 0 ? Math.round((correctTyped / totalTyped) * 100) : 100;
-
-      wpmDisplay.textContent = wpm;
-      accuracyDisplay.textContent = accuracy + "%";
-      charsDisplay.textContent = totalTyped;
-
-      renderText(typed);
+      loadNewPassage();
+      updateStatsLive();
     }
 
     function endTest() {
@@ -305,32 +340,49 @@
       started = false;
       inputBox.disabled = true;
 
-      const finalWpm = wpmDisplay.textContent;
-      const finalAccuracy = accuracyDisplay.textContent;
+      const finalInput = inputBox.value;
+      const finalChars = totalTypedChars + finalInput.length;
 
-      messageDisplay.textContent = `Test complete! Your speed was ${finalWpm} WPM with ${finalAccuracy} accuracy.`;
+      let finalCorrectLive = 0;
+      for (let i = 0; i < finalInput.length; i++) {
+        if (finalInput[i] === currentText[i]) {
+          finalCorrectLive++;
+        }
+      }
+
+      const finalCorrect = totalCorrectChars + finalCorrectLive;
+      const finalWords = totalTypedWords + countWords(finalInput);
+
+      const finalWpm = Math.round(finalWords);
+      const finalAccuracy = finalChars > 0 ? Math.round((finalCorrect / finalChars) * 100) : 100;
+
+      wpmDisplay.textContent = finalWpm;
+      accuracyDisplay.textContent = finalAccuracy + "%";
+      charsDisplay.textContent = finalChars;
+
+      messageDisplay.textContent = `Test complete! Your speed was ${finalWpm} WPM with ${finalAccuracy}% accuracy.`;
     }
 
     function startTest() {
       clearInterval(timer);
 
-      currentText = getRandomPassage();
       timeLeft = 60;
       started = true;
-      totalTyped = 0;
-      correctTyped = 0;
+      totalTypedChars = 0;
+      totalCorrectChars = 0;
+      totalTypedWords = 0;
 
-      inputBox.value = "";
       inputBox.disabled = false;
+      inputBox.value = "";
       inputBox.focus();
 
-      timeDisplay.textContent = timeLeft;
+      timeDisplay.textContent = "60";
       wpmDisplay.textContent = "0";
       accuracyDisplay.textContent = "100%";
       charsDisplay.textContent = "0";
       messageDisplay.textContent = "";
 
-      renderText("");
+      loadNewPassage();
 
       timer = setInterval(() => {
         timeLeft--;
@@ -343,24 +395,23 @@
     }
 
     function restartTest() {
-      currentText = getRandomPassage();
       clearInterval(timer);
       timer = null;
       started = false;
       timeLeft = 60;
-      totalTyped = 0;
-      correctTyped = 0;
+      totalTypedChars = 0;
+      totalCorrectChars = 0;
+      totalTypedWords = 0;
 
       inputBox.value = "";
       inputBox.disabled = true;
 
+      sampleText.textContent = "Click Start Test to begin.";
       timeDisplay.textContent = "60";
       wpmDisplay.textContent = "0";
       accuracyDisplay.textContent = "100%";
       charsDisplay.textContent = "0";
       messageDisplay.textContent = "Test reset. Click Start Test to try again.";
-
-      sampleText.textContent = "Click Start Test to begin.";
     }
 
     startBtn.addEventListener("click", startTest);
@@ -368,7 +419,12 @@
 
     inputBox.addEventListener("input", () => {
       if (!started) return;
-      updateStats();
+
+      updateStatsLive();
+
+      if (inputBox.value === currentText) {
+        completeCurrentPassage();
+      }
     });
   </script>
 </body>
