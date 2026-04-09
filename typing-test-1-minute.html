@@ -1,221 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="p:domain_verify" content="fc0cc26fada011ee5ffc8b75e7c5bc98"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Take a free 1 minute typing test online. Check your WPM, improve typing accuracy, and build keyboard speed in just 60 seconds." />
-<meta name="google-site-verification" content="Ttitx1hAyK4ksMRl8GDXhMmo1c71v9VDVBE5AhVQEkk" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://alansname1.github.io/typing-test-1-minute.html" />
-<title>1 Minute Typing Test | Free Online WPM and Accuracy Check</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.75;
-  color: #222;
-  background: #fff;
-}
-h1, h2, h3 {
-  color: #111;
-}
-a {
-  color: #1a5fd0;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.center {
-  text-align: center;
-}
-.notice {
-  background: #eef5ff;
-  border: 1px solid #c9dcff;
-  padding: 12px;
-  border-radius: 8px;
-  margin: 15px 0 22px;
-}
-.test-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 25px;
-  background: #f9f9f9;
-}
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 15px;
-}
-button {
-  padding: 10px 14px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  background: #1a5fd0;
-  color: white;
-}
-button:hover {
-  background: #1349a4;
-}
-.secondary-btn {
-  background: #e9eef7;
-  color: #222;
-  border: 1px solid #cfd8e6;
-}
-.secondary-btn:hover {
-  background: #dde7f5;
-}
-.cta-button {
-  display: inline-block;
-  background: #1a5fd0;
-  color: white;
-  padding: 14px 22px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 10px 0 20px;
-}
-.cta-button:hover {
-  background: #1349a4;
-  text-decoration: none;
-}
-#passage {
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  min-height: 110px;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-#typingInput {
-  width: 100%;
-  min-height: 140px;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
-}
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
-  font-weight: bold;
-}
-.card-note {
-  background: #fafcff;
-  border: 1px solid #d9e1ec;
-  border-radius: 10px;
-  padding: 16px;
-  margin: 18px 0;
-}
-.small {
-  font-size: 14px;
-  color: #555;
-}
-hr {
-  margin: 30px 0;
-}
-ul {
-  padding-left: 22px;
-}
-.related-links {
-  margin-top: 25px;
-  background: #f7faff;
-  border: 1px solid #d6e4ff;
-  border-radius: 10px;
-  padding: 18px;
-}
-</style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "1 Minute Typing Test",
-  "url": "https://alansname1.github.io/typing-test-1-minute.html",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Any",
-  "description": "Free 1 minute typing test with WPM and accuracy tracking."
-}
-</script>
-</head>
-
-<body>
-
-<div class="center" style="margin-top:20px;">
-  <img src="typing-logo.png" alt="1 Minute Typing Test Practice" style="width:600px; max-width:90%; height:auto;">
-</div>
-
-<h1>1 Minute Typing Test</h1>
-
-<p>
-This free 1 minute typing test helps you measure your typing speed in words per minute (WPM). The test lasts exactly 60 seconds and tracks both your typing speed and typing accuracy.
-</p>
-
-<div class="center">
-  <a href="#typing-test" class="cta-button" onclick="resetTest();">Start the 1 Minute Typing Test</a>
-</div>
-
-<div class="notice">
-  <strong>How it works:</strong> click <strong>Start Test</strong>, then begin typing in the box below.
-</div>
-
-<div id="typing-test" class="test-box">
-  <div class="controls">
-    <button type="button" onclick="startTest()">Start Test</button>
-    <button type="button" class="secondary-btn" onclick="resetTest()">Reset</button>
-  </div>
-
-  <div id="passage"></div>
-  <textarea id="typingInput" placeholder="Click Start Test, then begin typing here..." disabled aria-label="Typing input area"></textarea>
-
-  <div class="stats">
-    <div>Time Left: <span id="timeLeft">60</span></div>
-    <div>WPM: <span id="wpm">0</span></div>
-    <div>Accuracy: <span id="accuracy">100</span>%</div>
-  </div>
-</div>
-
-<div class="card-note">
-  <strong>Why use this test?</strong> A 1 minute typing test is ideal for quick daily practice and fast skill checks.
-</div>
-
-<h2>Average Typing Speeds</h2>
-<ul>
-  <li>Beginner: 20–30 WPM</li>
-  <li>Average: 40 WPM</li>
-  <li>Advanced: 60–80 WPM</li>
-  <li>Professional: 100+ WPM</li>
-</ul>
-
-<div class="related-links">
-  <h2>More Typing Practice Pages</h2>
-  <ul>
-    <li><a href="typing-test-5-minute.html">5 Minute Typing Test</a></li>
-    <li><a href="typing-test-10-minute.html">10 Minute Typing Test</a></li>
-    <li><a href="index.html">Typing Speed Test Homepage</a></li>
-  </ul>
-</div>
-
-<hr>
-
-<p class="center small">
-This page provides a free 1 minute typing test for people who want to improve typing speed, increase accuracy, and build keyboard confidence.
-</p>
-
 <script>
 const passages = [
   "Typing every day helps improve speed and accuracy over time.",
@@ -259,6 +41,7 @@ function startTest() {
     timeLeft--;
     document.getElementById("timeLeft").innerText = timeLeft;
     updateStats();
+
     if (timeLeft <= 0) {
       clearInterval(timer);
       document.getElementById("typingInput").disabled = true;
@@ -278,9 +61,10 @@ function resetTest() {
 }
 
 function updateStats() {
-  const typed = document.getElementById("typingInput").value;
-  let correct = 0;
+  const inputEl = document.getElementById("typingInput");
+  const typed = inputEl.value;
 
+  let correct = 0;
   for (let i = 0; i < typed.length; i++) {
     if (typed[i] === current[i]) correct++;
   }
@@ -291,12 +75,15 @@ function updateStats() {
 
   document.getElementById("wpm").innerText = wpm;
   document.getElementById("accuracy").innerText = accuracy;
+
+  // 🔥 KEY FIX: load new text automatically when finished
+  if (typed === current) {
+    inputEl.value = "";
+    pickPassage();
+  }
 }
 
 document.getElementById("typingInput").addEventListener("input", updateStats);
 
 resetTest();
 </script>
-
-</body>
-</html>
