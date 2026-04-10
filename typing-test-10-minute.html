@@ -409,13 +409,11 @@
 
     function getRandomPassage() {
       let newPassage = passages[Math.floor(Math.random() * passages.length)];
-
       if (passages.length > 1) {
         while (newPassage === currentText) {
           newPassage = passages[Math.floor(Math.random() * passages.length)];
         }
       }
-
       return newPassage;
     }
 
@@ -436,6 +434,18 @@
       }
 
       sampleText.innerHTML = html;
+    }
+
+    function showStartState() {
+      currentText = "";
+      inputBox.value = "";
+      inputBox.disabled = true;
+      sampleText.textContent = "Click Start Test to begin.";
+      timeDisplay.textContent = "600";
+      wpmDisplay.textContent = "0";
+      accuracyDisplay.textContent = "100%";
+      charsDisplay.textContent = "0";
+      messageDisplay.textContent = "";
     }
 
     function loadNewPassage() {
@@ -553,15 +563,7 @@
       totalTypedChars = 0;
       totalCorrectChars = 0;
       totalTypedWords = 0;
-
-      inputBox.value = "";
-      inputBox.disabled = true;
-      sampleText.textContent = "Click Start Test to begin.";
-      timeDisplay.textContent = "600";
-      wpmDisplay.textContent = "0";
-      accuracyDisplay.textContent = "100%";
-      charsDisplay.textContent = "0";
-      messageDisplay.textContent = "Test reset. Click Start Test to try again.";
+      showStartState();
     }
 
     startBtn.addEventListener("click", startTest);
@@ -578,6 +580,7 @@
     });
 
     loadBestWpm();
+    showStartState();
   </script>
 </body>
 </html>
