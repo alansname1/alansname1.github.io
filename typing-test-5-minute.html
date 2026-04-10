@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Take a free 5 minute typing test online. Improve typing speed, accuracy, and endurance with a longer typing challenge." />
+  <meta name="description" content="Free 5 minute typing test online. Measure your WPM, accuracy, and typing consistency with this longer typing speed test." />
   <title>5 Minute Typing Test | Free WPM Speed Test</title>
   <link rel="canonical" href="https://alansname1.github.io/typing-test-5-minute.html" />
 
@@ -30,7 +30,7 @@
       color: #1d3557;
     }
 
-    p, li {
+    p {
       line-height: 1.6;
     }
 
@@ -42,48 +42,17 @@
       background: #f9fbfd;
     }
 
-    #sampleText {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-      min-height: 110px;
-    }
-
     textarea {
       width: 100%;
       min-height: 140px;
-      font-size: 1rem;
       padding: 15px;
-      border: 2px solid #cbd5e1;
-      border-radius: 10px;
-      resize: vertical;
-      box-sizing: border-box;
-    }
-
-    textarea:disabled {
-      background: #eef2f7;
     }
 
     .controls {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
       justify-content: center;
+      gap: 12px;
       margin-top: 20px;
-    }
-
-    button {
-      background: #1d4ed8;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1e40af;
     }
 
     .stats {
@@ -93,64 +62,21 @@
       margin-top: 25px;
       text-align: center;
     }
-
-    .stat-card {
-      background: #eff6ff;
-      border-radius: 10px;
-      padding: 18px;
-      border: 1px solid #dbeafe;
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.4rem;
-      color: #1d4ed8;
-      margin-top: 8px;
-    }
-
-    .message {
-      text-align: center;
-      margin-top: 18px;
-      font-weight: bold;
-      color: #0f5132;
-    }
-
-    .nav-links {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .nav-links a {
-      color: #1d4ed8;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .content-section {
-      margin-top: 35px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 15px;
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    .correct { color: green; }
-    .incorrect { color: red; text-decoration: underline; }
-    .current { background: yellow; }
   </style>
 </head>
+
 <body>
 
 <div class="container">
   <h1>5 Minute Typing Test</h1>
+
+  <!-- 🔥 ADDED SEO BLOCK -->
+  <h2>Free Typing Speed Test</h2>
+
+  <p>
+    This free typing speed test helps you measure your typing speed in words per minute (WPM), improve accuracy,
+    and build better keyboard skills. Use this typing test regularly to increase speed and confidence.
+  </p>
 
   <p>
     Take this free 5 minute typing test to measure your typing speed, accuracy, and keyboard endurance.
@@ -167,14 +93,14 @@
     </div>
 
     <div class="stats">
-      <div class="stat-card">Time <strong id="time">300</strong></div>
-      <div class="stat-card">WPM <strong id="wpm">0</strong></div>
-      <div class="stat-card">Accuracy <strong id="accuracy">100%</strong></div>
-      <div class="stat-card">Chars <strong id="chars">0</strong></div>
-      <div class="stat-card">Best <strong id="bestWpm">0</strong></div>
+      <div>Time <strong id="time">300</strong></div>
+      <div>WPM <strong id="wpm">0</strong></div>
+      <div>Accuracy <strong id="accuracy">100%</strong></div>
+      <div>Chars <strong id="chars">0</strong></div>
+      <div>Best <strong id="bestWpm">0</strong></div>
     </div>
 
-    <div class="message" id="message"></div>
+    <div id="message"></div>
   </div>
 
   <div class="nav-links">
@@ -234,12 +160,12 @@ inputBox.addEventListener("input", () => {
 document.getElementById("startBtn").onclick = startTest;
 </script>
 
-<!-- 🔥 CRAWL LOOP ADDED -->
+<!-- 🔥 CRAWL LOOP -->
 <div style="margin-top:30px;text-align:center;">
-  <strong>Try Another Typing Test:</strong><br><br>
-  <a href="typing-test-1-minute.html">1 Minute Typing Test</a> |
-  <a href="typing-test-5-minute.html">5 Minute Typing Test</a> |
-  <a href="typing-test-10-minute.html">10 Minute Typing Test</a>
+<strong>Try Another Typing Test:</strong><br><br>
+<a href="typing-test-1-minute.html">1 Minute Typing Test</a> |
+<a href="typing-test-5-minute.html">5 Minute Typing Test</a> |
+<a href="typing-test-10-minute.html">10 Minute Typing Test</a>
 </div>
 
 </body>
