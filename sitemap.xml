@@ -33,7 +33,64 @@
 
   <url>
     <loc>https://alansname1.github.io/typing-test-online.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- NEW WPM PAGES -->
+  <url>
+    <loc>https://alansname1.github.io/typing-test-30-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-35-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-40-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-45-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-50-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-55-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-60-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-70-wpm.html</loc>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -81,80 +138,31 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- JOB PAGES -->
   <url>
-    <loc>https://alansname1.github.io/typing-practice-daily.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/typing-speed-goals.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- JOB INTENT CLUSTER -->
-  <url>
-    <loc>https://alansname1.github.io/typing-test-for-remote-jobs.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://alansname1.github.io/typing-test-for-call-center-jobs.html</loc>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-test-for-office-jobs.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://alansname1.github.io/typing-test-for-chat-support-jobs.html</loc>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-test-for-customer-service.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <loc>https://alansname1.github.io/typing-test-for-virtual-assistant-jobs.html</loc>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://alansname1.github.io/typing-test-for-admin-assistant.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/typing-test-for-students.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- LONG TAIL SEO PAGES -->
-  <url>
-    <loc>https://alansname1.github.io/typing-test-for-data-entry.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/data-entry-typing-test.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <!-- EXISTING LONG TAIL -->
   <url>
     <loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/how-to-increase-typing-speed.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -167,32 +175,14 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- LOW PRIORITY PAGES -->
+  <!-- LOW PRIORITY -->
   <url>
     <loc>https://alansname1.github.io/about.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/contact.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/privacy-policy.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/terms.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
