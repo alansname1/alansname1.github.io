@@ -1,172 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free 5 minute typing test online. Measure your WPM, accuracy, and typing consistency with this longer typing speed test." />
-  <title>5 Minute Typing Test | Free WPM Speed Test</title>
-  <link rel="canonical" href="https://alansname1.github.io/typing-test-5-minute.html" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Free 5 minute typing test online. Measure your WPM, accuracy, and typing consistency with this longer typing speed test." />
+<title>5 Minute Typing Test (Accurate WPM Test - Free & Online)</title>
+<link rel="canonical" href="https://alansname1.github.io/typing-test-5-minute.html" />
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 950px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #1d3557;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .typing-box {
-      margin-top: 25px;
-      padding: 20px;
-      border: 2px solid #d9e2ec;
-      border-radius: 10px;
-      background: #f9fbfd;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 140px;
-      padding: 15px;
-    }
-
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      margin-top: 25px;
-      text-align: center;
-    }
-  </style>
+<style>
+body {font-family: Arial; background:#f4f7fb; margin:0;}
+.container {max-width:950px;margin:40px auto;background:#fff;padding:30px;border-radius:14px;}
+textarea {width:100%;min-height:140px;padding:15px;}
+.controls {text-align:center;margin-top:20px;}
+.stats {display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:20px;text-align:center;}
+</style>
 </head>
 
 <body>
 
 <div class="container">
-  <h1>5 Minute Typing Test</h1>
+<h1>5 Minute Typing Test</h1>
 
-  <!-- 🔥 ADDED SEO BLOCK -->
-  <h2>Free Typing Speed Test</h2>
+<p>This 5 minute typing test helps you measure your typing speed (WPM), accuracy, and long-term typing performance. Longer tests give a more accurate result than short tests.</p>
 
-  <p>
-    This free typing speed test helps you measure your typing speed in words per minute (WPM), improve accuracy,
-    and build better keyboard skills. Use this typing test regularly to increase speed and confidence.
-  </p>
+<div class="typing-box">
+<div id="sampleText">Click Start Test to begin.</div>
+<textarea id="inputBox" disabled></textarea>
 
-  <p>
-    Take this free 5 minute typing test to measure your typing speed, accuracy, and keyboard endurance.
-  </p>
-
-  <div class="typing-box">
-    <div id="sampleText">Click Start Test to begin.</div>
-
-    <textarea id="inputBox" disabled></textarea>
-
-    <div class="controls">
-      <button id="startBtn">Start Test</button>
-      <button id="restartBtn">Restart</button>
-    </div>
-
-    <div class="stats">
-      <div>Time <strong id="time">300</strong></div>
-      <div>WPM <strong id="wpm">0</strong></div>
-      <div>Accuracy <strong id="accuracy">100%</strong></div>
-      <div>Chars <strong id="chars">0</strong></div>
-      <div>Best <strong id="bestWpm">0</strong></div>
-    </div>
-
-    <div id="message"></div>
-  </div>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="typing-test-1-minute.html">1 Minute</a>
-    <a href="typing-test-10-minute.html">10 Minute</a>
-  </div>
-
+<div class="controls">
+<button onclick="startTest()">Start Test</button>
+<button onclick="restartTest()">Restart</button>
 </div>
 
-<footer>© 2026 Free Typing Speed Test</footer>
+<div class="stats">
+<div>Time <strong id="time">300</strong></div>
+<div>WPM <strong id="wpm">0</strong></div>
+<div>Accuracy <strong id="accuracy">100%</strong></div>
+<div>Chars <strong id="chars">0</strong></div>
+</div>
+
+<div id="message"></div>
+</div>
+
+<h2>Why Use a 5 Minute Typing Test?</h2>
+<p>A 5 minute typing test gives a more realistic measure of your typing speed and consistency. It is ideal for job preparation and improving endurance.</p>
+
+<h2>Improve Your Typing Speed</h2>
+<p>Want to test your typing speed? Try a <a href="typing-test-1-minute.html">1 minute typing test</a> for quick results or a <a href="typing-test-10-minute.html">10 minute typing test</a> for longer practice.</p>
+
+</div>
 
 <script>
 const passages = [
-  "Typing every day helps improve speed and accuracy over time.",
-  "Short typing practice sessions can build confidence and stronger keyboard skills.",
-  "Typing with accuracy first often leads to better speed.",
-  "Consistent typing practice helps build rhythm and control."
+"Typing every day helps improve speed and accuracy over time.",
+"Practice improves typing consistency and speed.",
+"Accuracy is more important than speed when learning typing.",
+"Daily typing builds confidence and keyboard control."
 ];
 
-let currentText = "";
-let timeLeft = 300;
-let timer = null;
+let text = "";
+let time = 300;
+let timer;
 let started = false;
 
-const inputBox = document.getElementById("inputBox");
-const sampleText = document.getElementById("sampleText");
-const timeDisplay = document.getElementById("time");
-
-function getRandom() {
-  return passages[Math.floor(Math.random() * passages.length)];
+function getText() {
+return passages[Math.floor(Math.random()*passages.length)];
 }
 
-function loadNew() {
-  currentText = getRandom();
-  inputBox.value = "";
-  sampleText.textContent = currentText;
+function startTest(){
+started = true;
+time = 300;
+document.getElementById("inputBox").disabled=false;
+text = getText();
+document.getElementById("sampleText").innerText=text;
+
+timer=setInterval(()=>{
+time--;
+document.getElementById("time").innerText=time;
+calc();
+
+if(time<=0){
+clearInterval(timer);
+document.getElementById("message").innerText="Test Complete!";
+}
+},1000);
 }
 
-function startTest() {
-  started = true;
-  inputBox.disabled = false;
-  loadNew();
+function calc(){
+let input=document.getElementById("inputBox").value;
+let words=input.trim().split(" ").length;
+let wpm=Math.round(words/5);
 
-  timer = setInterval(() => {
-    timeLeft--;
-    timeDisplay.textContent = timeLeft;
-    if (timeLeft <= 0) clearInterval(timer);
-  }, 1000);
+document.getElementById("wpm").innerText=wpm;
+document.getElementById("chars").innerText=input.length;
+
+let correct=0;
+for(let i=0;i<input.length;i++){
+if(input[i]===text[i]) correct++;
+}
+let acc=input.length?Math.round((correct/input.length)*100):100;
+document.getElementById("accuracy").innerText=acc+"%";
 }
 
-inputBox.addEventListener("input", () => {
-  if (!started) return;
-  if (inputBox.value.trim() === currentText) loadNew();
-});
-
-document.getElementById("startBtn").onclick = startTest;
+function restartTest(){
+clearInterval(timer);
+document.getElementById("inputBox").value="";
+document.getElementById("inputBox").disabled=true;
+document.getElementById("time").innerText="300";
+document.getElementById("wpm").innerText="0";
+document.getElementById("accuracy").innerText="100%";
+document.getElementById("chars").innerText="0";
+document.getElementById("message").innerText="";
+}
 </script>
-
-<!-- 🔥 CRAWL LOOP -->
-<div style="margin-top:30px;text-align:center;">
-<strong>Try Another Typing Test:</strong><br><br>
-<a href="typing-test-1-minute.html">1 Minute Typing Test</a> |
-<a href="typing-test-5-minute.html">5 Minute Typing Test</a> |
-<a href="typing-test-10-minute.html">10 Minute Typing Test</a>
-</div>
 
 </body>
 </html>
