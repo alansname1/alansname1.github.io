@@ -1,380 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="p:domain_verify" content="fc0cc26fada011ee5ffc8b75e7c5bc98"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Take a free 5 minute typing test online. Measure WPM, improve typing accuracy, build endurance, and strengthen keyboard skills with this easy typing practice tool." />
-<meta name="google-site-verification" content="Ttitx1hAyK4ksMRl8GDXhMmo1c71v9VDVBE5AhVQEkk" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://alansname1.github.io/typing-test-5-minute.html" />
-<title>5 Minute Typing Test | Free Online WPM and Accuracy Practice</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Take a free 5 minute typing test online. Improve typing speed, accuracy, and endurance with a longer typing challenge." />
+  <title>5 Minute Typing Test | Free WPM Speed Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.75;
-  color: #222;
-  background: #fff;
-}
-h1, h2, h3 {
-  color: #111;
-}
-a {
-  color: #1a5fd0;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.center {
-  text-align: center;
-}
-.notice {
-  background: #eef5ff;
-  border: 1px solid #c9dcff;
-  padding: 12px;
-  border-radius: 8px;
-  margin: 15px 0 22px;
-}
-.test-box {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 25px;
-  background: #f9f9f9;
-}
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 15px;
-}
-button {
-  padding: 10px 14px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  background: #1a5fd0;
-  color: white;
-}
-button:hover {
-  background: #1349a4;
-}
-.secondary-btn {
-  background: #e9eef7;
-  color: #222;
-  border: 1px solid #cfd8e6;
-}
-.secondary-btn:hover {
-  background: #dde7f5;
-}
-.cta-button {
-  display: inline-block;
-  background: #1a5fd0;
-  color: white;
-  padding: 14px 22px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 10px 0 20px;
-}
-.cta-button:hover {
-  background: #1349a4;
-  text-decoration: none;
-}
-#passage {
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  min-height: 110px;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-#typingInput {
-  width: 100%;
-  min-height: 140px;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
-}
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
-  font-weight: bold;
-}
-.card-note {
-  background: #fafcff;
-  border: 1px solid #d9e1ec;
-  border-radius: 10px;
-  padding: 16px;
-  margin: 18px 0;
-}
-.small {
-  font-size: 14px;
-  color: #555;
-}
-hr {
-  margin: 30px 0;
-}
-ul {
-  padding-left: 22px;
-}
-.related-links {
-  margin-top: 25px;
-  background: #f7faff;
-  border: 1px solid #d6e4ff;
-  border-radius: 10px;
-  padding: 18px;
-}
-</style>
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "5 Minute Typing Test",
-  "url": "https://alansname1.github.io/typing-test-5-minute.html",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Any",
-  "description": "Free 5 minute typing test with WPM and accuracy tracking."
-}
-</script>
+    h1, h2 {
+      text-align: center;
+      color: #1d3557;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How does a 5 minute typing test help?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A 5 minute typing test helps measure typing endurance, speed, and consistency over a longer session."
+    p {
+      line-height: 1.6;
+    }
+
+    .typing-box {
+      margin-top: 25px;
+      padding: 20px;
+      border: 2px solid #d9e2ec;
+      border-radius: 10px;
+      background: #f9fbfd;
+    }
+
+    #sampleText {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      min-height: 100px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      font-size: 1rem;
+      padding: 15px;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+
+    textarea:disabled {
+      background: #eef2f7;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .stat-card {
+      background: #eff6ff;
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid #dbeafe;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.4rem;
+      color: #1d4ed8;
+      margin-top: 8px;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 18px;
+      font-weight: bold;
+      color: #0f5132;
+    }
+
+    .nav-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .nav-links a {
+      color: #1d4ed8;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+      text-decoration: underline;
+    }
+
+    .current {
+      background: yellow;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px 12px;
+        padding: 20px;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Is a 5 minute typing test good for job practice?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A 5 minute typing test can help job seekers practice for typing assessments and improve typing accuracy and speed."
+
+      #sampleText {
+        font-size: 1rem;
+      }
+
+      textarea {
+        min-height: 120px;
       }
     }
-  ]
-}
-</script>
+  </style>
 </head>
-
 <body>
 
-<div class="center" style="margin-top:20px;">
-  <img src="typing-logo.png" alt="5 Minute Typing Test Practice" style="width:600px; max-width:90%; height:auto;">
-</div>
+  <div class="container">
+    <h1>5 Minute Typing Test</h1>
+    <p>
+      Test your typing speed with this free 5 minute typing test. Measure your words per minute,
+      improve typing accuracy, and build stronger keyboard endurance with longer practice.
+    </p>
 
-<h1>5 Minute Typing Test</h1>
+    <div class="typing-box">
+      <div id="sampleText">Click Start Test to begin.</div>
 
-<p>
-Take this free 5 minute typing test to measure your words per minute, improve your typing accuracy, and build stronger keyboard skills. This longer typing session is useful for practicing consistency, endurance, and control.
-</p>
+      <textarea
+        id="inputBox"
+        placeholder="Start typing here once the test begins..."
+        disabled
+      ></textarea>
 
-<div class="center">
-  <a href="#typing-test" class="cta-button" onclick="resetTest(); return true;">Start 5 Minute Typing Test</a>
-</div>
+      <div class="controls">
+        <button id="startBtn">Start Test</button>
+        <button id="restartBtn">Restart</button>
+      </div>
 
-<div class="notice">
-  <strong>How to use this page:</strong> click <strong>Start Test</strong>, then begin typing in the box below. This page is set specifically for a 5 minute typing test.
-</div>
+      <div class="stats">
+        <div class="stat-card">
+          Time Left
+          <strong id="time">300</strong>
+        </div>
+        <div class="stat-card">
+          WPM
+          <strong id="wpm">0</strong>
+        </div>
+        <div class="stat-card">
+          Accuracy
+          <strong id="accuracy">100%</strong>
+        </div>
+        <div class="stat-card">
+          Characters
+          <strong id="chars">0</strong>
+        </div>
+      </div>
 
-<div id="typing-test" class="test-box">
-  <div class="controls">
-    <button type="button" onclick="startTest()">Start Test</button>
-    <button type="button" class="secondary-btn" onclick="resetTest()">Reset</button>
+      <div class="message" id="message"></div>
+    </div>
+
+    <h2>Why Use a Longer Typing Test?</h2>
+    <p>
+      A 5 minute typing test helps measure not only your typing speed, but also your endurance and
+      consistency. Longer tests can show how well you maintain rhythm, reduce mistakes, and stay
+      accurate over time.
+    </p>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="typing-test-1-minute.html">Try 1 Minute Test</a>
+    </div>
   </div>
 
-  <div id="passage"></div>
-  <textarea id="typingInput" placeholder="Click Start Test, then begin typing here..." disabled aria-label="Typing input area"></textarea>
+  <footer>
+    © 2026 Free Typing Speed Test
+  </footer>
 
-  <div class="stats">
-    <div>Time Left: <span id="timeLeft">300</span></div>
-    <div>WPM: <span id="wpm">0</span></div>
-    <div>Accuracy: <span id="accuracy">100</span>%</div>
-  </div>
-</div>
+  <script>
+    const passages = [
+      "Typing every day helps improve speed and accuracy over time.",
+      "Short typing practice sessions can build confidence and stronger keyboard skills.",
+      "A one minute typing test is a quick way to check your typing speed and accuracy.",
+      "Daily typing practice helps many people become faster and more comfortable on the keyboard.",
+      "Improving typing speed usually starts with careful practice and fewer typing mistakes.",
+      "Typing tests can help students, job seekers, and office workers measure their progress.",
+      "Consistent typing practice helps build rhythm, control, and confidence with common words."
+    ];
 
-<div class="card-note">
-  <strong>Why use this test?</strong> A 5 minute typing test is better for building typing stamina than a very short test. It helps you practice maintaining speed and accuracy over time.
-</div>
+    const sampleText = document.getElementById("sampleText");
+    const inputBox = document.getElementById("inputBox");
+    const timeDisplay = document.getElementById("time");
+    const wpmDisplay = document.getElementById("wpm");
+    const accuracyDisplay = document.getElementById("accuracy");
+    const charsDisplay = document.getElementById("chars");
+    const messageDisplay = document.getElementById("message");
+    const startBtn = document.getElementById("startBtn");
+    const restartBtn = document.getElementById("restartBtn");
 
-<h2>How This 5 Minute Typing Test Helps You</h2>
-<p>
-This 5 minute typing test is designed to improve your typing speed (WPM), accuracy, and overall keyboard skills. Practicing regularly helps you build consistency and reach stronger typing performance over longer sessions.
-</p>
+    let currentText = "";
+    let timer = null;
+    let timeLeft = 300;
+    let started = false;
 
-<h2>Who Should Use This Typing Test?</h2>
-<ul>
-  <li>Beginners learning to type faster</li>
-  <li>Job seekers preparing for typing tests</li>
-  <li>Data entry workers improving accuracy</li>
-  <li>Anyone wanting to increase WPM</li>
-</ul>
+    let totalTypedChars = 0;
+    let totalCorrectChars = 0;
+    let totalTypedWords = 0;
 
-<h2>Tips to Improve Your Typing Speed</h2>
-<ul>
-  <li>Focus on accuracy before speed</li>
-  <li>Practice daily for best results</li>
-  <li>Use proper finger placement with home row keys</li>
-  <li>Avoid looking at the keyboard too often</li>
-</ul>
-
-<h2>Why Practice With a 5 Minute Typing Test?</h2>
-<p>
-The 5 minute typing test is ideal for measuring endurance and consistency over longer typing sessions. It helps simulate real-world typing conditions used in jobs, office tasks, and online assessments. It is also useful for spotting when your accuracy drops as your hands get tired.
-</p>
-
-<h2>What Is a Good Score on a 5 Minute Typing Test?</h2>
-<p>
-Many people type around 40 words per minute on average. A score above that can be a solid sign of progress, especially when your accuracy stays high. For office work, data entry, and other typing-heavy tasks, both speed and accuracy matter.
-</p>
-
-<h2>How Often Should You Practice?</h2>
-<p>
-Short daily sessions can help, but using a 5 minute typing test a few times each week is also a strong way to build rhythm and endurance. The more consistently you practice, the more natural the keyboard becomes.
-</p>
-
-<div class="related-links">
-  <h2>More Typing Practice Pages</h2>
-  <ul>
-    <li><a href="typing-test-1-minute.html">1 Minute Typing Test</a></li>
-    <li><a href="index.html">Typing Speed Test Homepage</a></li>
-    <li><a href="how-to-improve-typing-speed.html">How to Improve Typing Speed</a></li>
-    <li><a href="what-is-a-good-typing-speed.html">What Is a Good Typing Speed?</a></li>
-  </ul>
-</div>
-
-<hr>
-
-<p class="center small">
-This page provides a free 5 minute typing test for people who want to improve words per minute, strengthen typing accuracy, and practice longer typing sessions online.
-</p>
-
-<p class="center">
-  <a href="about.html">About</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="privacy-policy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms</a> |
-  <a href="sitemap.xml">Sitemap</a>
-</p>
-
-<script>
-const passages = [
-  "Typing accurately for longer sessions helps build real confidence and stronger keyboard skills over time.",
-  "Consistent typing practice can improve speed, reduce mistakes, and make computer tasks feel easier each day.",
-  "A five minute typing test is a useful way to measure endurance, accuracy, and words per minute together.",
-  "Daily practice helps many people become more comfortable with typing for school, work, and online communication.",
-  "Improving typing speed usually starts with accuracy, patience, and regular repetition of common words and patterns.",
-  "Typing tests can help job seekers prepare for assessments while also building confidence with longer writing tasks.",
-  "The more often you practice typing with care, the easier it becomes to maintain rhythm and reduce unnecessary errors."
-];
-
-let current = "";
-let currentIndex = -1;
-let timeLeft = 300;
-let timer = null;
-const duration = 300;
-
-function pickPassage() {
-  let newIndex = Math.floor(Math.random() * passages.length);
-
-  if (passages.length > 1) {
-    while (newIndex === currentIndex) {
-      newIndex = Math.floor(Math.random() * passages.length);
+    function getRandomPassage() {
+      return passages[Math.floor(Math.random() * passages.length)];
     }
-  }
 
-  currentIndex = newIndex;
-  current = passages[newIndex];
-  document.getElementById("passage").innerText = current;
-}
+    function loadNewPassage() {
+      currentText = getRandomPassage();
+      renderText("");
+      inputBox.value = "";
+      inputBox.focus();
+    }
 
-function startTest() {
-  clearInterval(timer);
-  timeLeft = duration;
+    function renderText(userInput) {
+      let html = "";
 
-  document.getElementById("timeLeft").innerText = timeLeft;
-  document.getElementById("typingInput").disabled = false;
-  document.getElementById("typingInput").focus();
-  document.getElementById("typingInput").value = "";
+      for (let i = 0; i < currentText.length; i++) {
+        let cls = "";
 
-  pickPassage();
-  updateStats();
+        if (i < userInput.length) {
+          cls = userInput[i] === currentText[i] ? "correct" : "incorrect";
+        } else if (i === userInput.length) {
+          cls = "current";
+        }
 
-  timer = setInterval(() => {
-    timeLeft--;
-    document.getElementById("timeLeft").innerText = timeLeft;
+        const char = currentText[i] === " " ? "&nbsp;" : currentText[i];
+        html += `<span class="${cls}">${char}</span>`;
+      }
 
-    updateStats();
+      sampleText.innerHTML = html;
+    }
 
-    if (timeLeft <= 0) {
+    function countWords(text) {
+      const trimmed = text.trim();
+      if (trimmed === "") return 0;
+      return trimmed.split(/\s+/).length;
+    }
+
+    function updateStatsLive() {
+      const currentInput = inputBox.value;
+      const liveChars = totalTypedChars + currentInput.length;
+
+      let liveCorrect = 0;
+      for (let i = 0; i < currentInput.length; i++) {
+        if (currentInput[i] === currentText[i]) {
+          liveCorrect++;
+        }
+      }
+
+      const allCorrectChars = totalCorrectChars + liveCorrect;
+      const elapsed = 300 - timeLeft;
+
+      const wpm = elapsed > 0 ? Math.round(((totalTypedWords + countWords(currentInput)) / elapsed) * 60) : 0;
+      const accuracy = liveChars > 0 ? Math.round((allCorrectChars / liveChars) * 100) : 100;
+
+      wpmDisplay.textContent = wpm;
+      accuracyDisplay.textContent = accuracy + "%";
+      charsDisplay.textContent = liveChars;
+
+      renderText(currentInput);
+    }
+
+    function completeCurrentPassage() {
+      const typed = inputBox.value;
+
+      totalTypedChars += typed.length;
+
+      let correct = 0;
+      for (let i = 0; i < typed.length; i++) {
+        if (typed[i] === currentText[i]) {
+          correct++;
+        }
+      }
+
+      totalCorrectChars += correct;
+      totalTypedWords += countWords(typed);
+
+      loadNewPassage();
+      updateStatsLive();
+    }
+
+    function endTest() {
       clearInterval(timer);
-      document.getElementById("typingInput").disabled = true;
+      timer = null;
+      started = false;
+      inputBox.disabled = true;
+
+      const finalInput = inputBox.value;
+      const finalChars = totalTypedChars + finalInput.length;
+
+      let finalCorrectLive = 0;
+      for (let i = 0; i < finalInput.length; i++) {
+        if (finalInput[i] === currentText[i]) {
+          finalCorrectLive++;
+        }
+      }
+
+      const finalCorrect = totalCorrectChars + finalCorrectLive;
+      const finalWords = totalTypedWords + countWords(finalInput);
+
+      const finalWpm = Math.round((finalWords / 5));
+      const finalAccuracy = finalChars > 0 ? Math.round((finalCorrect / finalChars) * 100) : 100;
+
+      wpmDisplay.textContent = finalWpm;
+      accuracyDisplay.textContent = finalAccuracy + "%";
+      charsDisplay.textContent = finalChars;
+
+      messageDisplay.textContent = `Test complete! Your speed was ${finalWpm} WPM with ${finalAccuracy}% accuracy.`;
     }
-  }, 1000);
-}
 
-function resetTest() {
-  clearInterval(timer);
-  timeLeft = duration;
+    function startTest() {
+      clearInterval(timer);
 
-  document.getElementById("timeLeft").innerText = timeLeft;
-  document.getElementById("typingInput").value = "";
-  document.getElementById("typingInput").disabled = true;
+      timeLeft = 300;
+      started = true;
+      totalTypedChars = 0;
+      totalCorrectChars = 0;
+      totalTypedWords = 0;
 
-  document.getElementById("wpm").innerText = "0";
-  document.getElementById("accuracy").innerText = "100";
+      inputBox.disabled = false;
+      inputBox.value = "";
+      inputBox.focus();
 
-  pickPassage();
-}
+      timeDisplay.textContent = "300";
+      wpmDisplay.textContent = "0";
+      accuracyDisplay.textContent = "100%";
+      charsDisplay.textContent = "0";
+      messageDisplay.textContent = "";
 
-function updateStats() {
-  const inputEl = document.getElementById("typingInput");
-  const typed = inputEl.value;
+      loadNewPassage();
 
-  let correct = 0;
+      timer = setInterval(() => {
+        timeLeft--;
+        timeDisplay.textContent = timeLeft;
 
-  for (let i = 0; i < typed.length; i++) {
-    if (typed[i] === current[i]) correct++;
-  }
+        if (timeLeft <= 0) {
+          endTest();
+        }
+      }, 1000);
+    }
 
-  const elapsed = (duration - timeLeft) / 60;
-  const wpm = elapsed > 0 ? Math.round((correct / 5) / elapsed) : 0;
-  const accuracy = typed.length > 0 ? Math.round((correct / typed.length) * 100) : 100;
+    function restartTest() {
+      clearInterval(timer);
+      timer = null;
+      started = false;
+      timeLeft = 300;
+      totalTypedChars = 0;
+      totalCorrectChars = 0;
+      totalTypedWords = 0;
 
-  document.getElementById("wpm").innerText = wpm;
-  document.getElementById("accuracy").innerText = accuracy;
+      inputBox.value = "";
+      inputBox.disabled = true;
 
-  if (typed === current) {
-    inputEl.value = "";
-    pickPassage();
-  }
-}
+      sampleText.textContent = "Click Start Test to begin.";
+      timeDisplay.textContent = "300";
+      wpmDisplay.textContent = "0";
+      accuracyDisplay.textContent = "100%";
+      charsDisplay.textContent = "0";
+      messageDisplay.textContent = "Test reset. Click Start Test to try again.";
+    }
 
-document.getElementById("typingInput").addEventListener("input", updateStats);
+    startBtn.addEventListener("click", startTest);
+    restartBtn.addEventListener("click", restartTest);
 
-resetTest();
-</script>
+    inputBox.addEventListener("input", () => {
+      if (!started) return;
 
+      updateStatsLive();
+
+      if (inputBox.value === currentText) {
+        completeCurrentPassage();
+      }
+    });
+  </script>
 </body>
 </html>
