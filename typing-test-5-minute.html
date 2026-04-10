@@ -235,7 +235,10 @@
       "Daily typing practice helps many people become faster and more comfortable on the keyboard.",
       "Improving typing speed usually starts with careful practice and fewer typing mistakes.",
       "Typing tests can help students, job seekers, and office workers measure their progress.",
-      "Consistent typing practice helps build rhythm, control, and confidence with common words."
+      "Consistent typing practice helps build rhythm, control, and confidence with common words.",
+      "A longer typing test can reveal how well you maintain speed through several passages.",
+      "Typing with accuracy first often leads to better speed as your confidence improves.",
+      "Good keyboard habits can make writing, studying, and working much easier every day."
     ];
 
     const sampleText = document.getElementById("sampleText");
@@ -258,14 +261,15 @@
     let totalTypedWords = 0;
 
     function getRandomPassage() {
-      return passages[Math.floor(Math.random() * passages.length)];
-    }
+      let newPassage = passages[Math.floor(Math.random() * passages.length)];
 
-    function loadNewPassage() {
-      currentText = getRandomPassage();
-      renderText("");
-      inputBox.value = "";
-      inputBox.focus();
+      if (passages.length > 1) {
+        while (newPassage === currentText) {
+          newPassage = passages[Math.floor(Math.random() * passages.length)];
+        }
+      }
+
+      return newPassage;
     }
 
     function renderText(userInput) {
@@ -287,28 +291,38 @@
       sampleText.innerHTML = html;
     }
 
+    function loadNewPassage() {
+      currentText = getRandomPassage();
+      inputBox.value = "";
+      renderText("");
+      inputBox.focus();
+    }
+
     function countWords(text) {
       const trimmed = text.trim();
       if (trimmed === "") return 0;
       return trimmed.split(/\s+/).length;
     }
 
+    function getCorrectCharCount(text, target) {
+      let correct = 0;
+      for (let i = 0; i < text.length; i++) {
+        if (text[i] === target[i]) {
+          correct++;
+        }
+      }
+      return correct;
+    }
+
     function updateStatsLive() {
       const currentInput = inputBox.value;
       const liveChars = totalTypedChars + currentInput.length;
-
-      let liveCorrect = 0;
-      for (let i = 0; i < currentInput.length; i++) {
-        if (currentInput[i] === currentText[i]) {
-          liveCorrect++;
-        }
-      }
-
-      const allCorrectChars = totalCorrectChars + liveCorrect;
+      const liveCorrect = totalCorrectChars + getCorrectCharCount(currentInput, currentText);
       const elapsed = 300 - timeLeft;
 
-      const wpm = elapsed > 0 ? Math.round(((totalTypedWords + countWords(currentInput)) / elapsed) * 60) : 0;
-      const accuracy = liveChars > 0 ? Math.round((allCorrectChars / liveChars) * 100) : 100;
+      const liveWords = totalTypedWords + countWords(currentInput);
+      const wpm = elapsed > 0 ? Math.round((liveWords / elapsed) * 60) : 0;
+      const accuracy = liveChars > 0 ? Math.round((liveCorrect / liveChars) * 100) : 100;
 
       wpmDisplay.textContent = wpm;
       accuracyDisplay.textContent = accuracy + "%";
@@ -321,19 +335,15 @@
       const typed = inputBox.value;
 
       totalTypedChars += typed.length;
-
-      let correct = 0;
-      for (let i = 0; i < typed.length; i++) {
-        if (typed[i] === currentText[i]) {
-          correct++;
-        }
-      }
-
-      totalCorrectChars += correct;
+      totalCorrectChars += getCorrectCharCount(typed, currentText);
       totalTypedWords += countWords(typed);
 
       loadNewPassage();
       updateStatsLive();
+    }
+
+    function isPassageComplete(typed, target) {
+      return typed.trim() === target;
     }
 
     function endTest() {
@@ -344,18 +354,10 @@
 
       const finalInput = inputBox.value;
       const finalChars = totalTypedChars + finalInput.length;
-
-      let finalCorrectLive = 0;
-      for (let i = 0; i < finalInput.length; i++) {
-        if (finalInput[i] === currentText[i]) {
-          finalCorrectLive++;
-        }
-      }
-
-      const finalCorrect = totalCorrectChars + finalCorrectLive;
+      const finalCorrect = totalCorrectChars + getCorrectCharCount(finalInput, currentText);
       const finalWords = totalTypedWords + countWords(finalInput);
 
-      const finalWpm = Math.round((finalWords / 5));
+      const finalWpm = Math.round(finalWords / 5);
       const finalAccuracy = finalChars > 0 ? Math.round((finalCorrect / finalChars) * 100) : 100;
 
       wpmDisplay.textContent = finalWpm;
@@ -376,8 +378,6 @@
 
       inputBox.disabled = false;
       inputBox.value = "";
-      inputBox.focus();
-
       timeDisplay.textContent = "300";
       wpmDisplay.textContent = "0";
       accuracyDisplay.textContent = "100%";
@@ -407,7 +407,6 @@
 
       inputBox.value = "";
       inputBox.disabled = true;
-
       sampleText.textContent = "Click Start Test to begin.";
       timeDisplay.textContent = "300";
       wpmDisplay.textContent = "0";
@@ -424,7 +423,7 @@
 
       updateStatsLive();
 
-      if (inputBox.value === currentText) {
+      if (isPassageComplete(inputBox.value, currentText)) {
         completeCurrentPassage();
       }
     });
