@@ -142,352 +142,118 @@
       font-size: 0.95rem;
     }
 
-    .correct {
-      color: green;
-    }
-
-    .incorrect {
-      color: red;
-      text-decoration: underline;
-    }
-
-    .current {
-      background: yellow;
-    }
+    .correct { color: green; }
+    .incorrect { color: red; text-decoration: underline; }
+    .current { background: yellow; }
 
     @media (max-width: 600px) {
       .container {
         margin: 20px 12px;
         padding: 20px;
       }
-
-      #sampleText {
-        font-size: 1rem;
-      }
-
-      textarea {
-        min-height: 120px;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>1 Minute Typing Test</h1>
-    <p>
-      Take this free 1 minute typing test to measure your typing speed, accuracy, and quick keyboard performance.
-      It is a simple way to practice typing and track your words per minute over time.
-    </p>
+<div class="container">
+  <h1>1 Minute Typing Test</h1>
 
-    <div class="typing-box">
-      <div id="sampleText">Click Start Test to begin.</div>
+  <p>
+    Take this free 1 minute typing test to measure your typing speed, accuracy, and quick keyboard performance.
+  </p>
 
-      <textarea
-        id="inputBox"
-        placeholder="Start typing here once the test begins..."
-        disabled
-      ></textarea>
+  <div class="typing-box">
+    <div id="sampleText">Click Start Test to begin.</div>
 
-      <div class="controls">
-        <button id="startBtn">Start Test</button>
-        <button id="restartBtn">Restart</button>
-      </div>
+    <textarea id="inputBox" disabled></textarea>
 
-      <div class="stats">
-        <div class="stat-card">
-          Time Left
-          <strong id="time">60</strong>
-        </div>
-        <div class="stat-card">
-          WPM
-          <strong id="wpm">0</strong>
-        </div>
-        <div class="stat-card">
-          Accuracy
-          <strong id="accuracy">100%</strong>
-        </div>
-        <div class="stat-card">
-          Characters
-          <strong id="chars">0</strong>
-        </div>
-        <div class="stat-card">
-          Best WPM
-          <strong id="bestWpm">0</strong>
-        </div>
-      </div>
-
-      <div class="message" id="message"></div>
+    <div class="controls">
+      <button id="startBtn">Start Test</button>
+      <button id="restartBtn">Restart</button>
     </div>
 
-    <div class="nav-links">
-      <a href="index.html">Typing Test Home</a>
-      <a href="typing-test-5-minute.html">5 Minute Typing Test</a>
-      <a href="typing-test-10-minute.html">10 Minute Typing Test</a>
+    <div class="stats">
+      <div class="stat-card">Time <strong id="time">60</strong></div>
+      <div class="stat-card">WPM <strong id="wpm">0</strong></div>
+      <div class="stat-card">Accuracy <strong id="accuracy">100%</strong></div>
+      <div class="stat-card">Chars <strong id="chars">0</strong></div>
+      <div class="stat-card">Best <strong id="bestWpm">0</strong></div>
     </div>
 
-    <div class="content-section">
-      <h2>Why Practice with a 1 Minute Typing Test?</h2>
-      <p>
-        A 1 minute typing test is useful for fast practice sessions. It helps you check your typing speed,
-        measure accuracy, and build keyboard confidence without needing a long training session.
-      </p>
-      <p>
-        Short tests are helpful for students, office workers, job seekers, and anyone who wants to improve
-        typing performance a little at a time.
-      </p>
-    </div>
+    <div class="message" id="message"></div>
   </div>
 
-  <footer>
-    © 2026 Free Typing Speed Test
-  </footer>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="typing-test-5-minute.html">5 Minute</a>
+    <a href="typing-test-10-minute.html">10 Minute</a>
+  </div>
 
-  <script>
-    const passages = [
-      "Typing every day helps improve speed and accuracy over time.",
-      "Short typing practice sessions can build confidence and stronger keyboard skills.",
-      "A one minute typing test is a quick way to check your typing speed and accuracy.",
-      "Daily typing practice helps many people become faster and more comfortable on the keyboard.",
-      "Improving typing speed usually starts with careful practice and fewer typing mistakes.",
-      "Typing tests can help students, job seekers, and office workers measure their progress.",
-      "Consistent typing practice helps build rhythm, control, and confidence with common words.",
-      "A longer typing test can reveal how well you maintain speed through several passages.",
-      "Typing with accuracy first often leads to better speed as your confidence improves.",
-      "Good keyboard habits can make writing, studying, and working much easier every day.",
-      "Regular typing sessions help build stronger finger movement and better control.",
-      "Many people improve by focusing on accuracy before trying to increase speed.",
-      "Typing practice can support schoolwork, office tasks, and creative writing.",
-      "Better posture and hand placement can make typing feel smoother and easier.",
-      "Typing carefully can reduce mistakes and improve your overall performance.",
-      "Repeated practice with common words helps many typists build speed naturally.",
-      "Online typing tests offer a simple way to measure and improve keyboard skills.",
-      "Fast typing is useful for students, professionals, and anyone who writes often.",
-      "Consistent practice is one of the best ways to improve typing confidence.",
-      "Longer typing sessions can show how well you handle accuracy over time.",
-      "Typing with steady rhythm often leads to better control and fewer errors.",
-      "Building keyboard confidence takes patience, repetition, and focused practice.",
-      "Free typing tests make it easy to monitor speed and accuracy from any device.",
-      "Practicing often can improve both finger memory and typing comfort.",
-      "A typing test can help users see progress and set practical goals.",
-      "Better typing skills can save time during school, work, and everyday tasks.",
-      "Accuracy matters because fewer mistakes often lead to stronger overall speed.",
-      "Keyboard practice can help new typists become more relaxed and efficient.",
-      "Tracking your WPM over time can help you notice real improvement.",
-      "Typing at a comfortable pace can be better than rushing and making errors."
-    ];
+  <div class="content-section">
+    <h2>Why Practice with a 1 Minute Typing Test?</h2>
+    <p>Short tests are great for quick speed checks and daily improvement.</p>
+  </div>
 
-    const sampleText = document.getElementById("sampleText");
-    const inputBox = document.getElementById("inputBox");
-    const timeDisplay = document.getElementById("time");
-    const wpmDisplay = document.getElementById("wpm");
-    const accuracyDisplay = document.getElementById("accuracy");
-    const charsDisplay = document.getElementById("chars");
-    const bestWpmDisplay = document.getElementById("bestWpm");
-    const messageDisplay = document.getElementById("message");
-    const startBtn = document.getElementById("startBtn");
-    const restartBtn = document.getElementById("restartBtn");
+</div>
 
-    let currentText = "";
-    let timer = null;
-    let timeLeft = 60;
-    let started = false;
+<footer>© 2026 Free Typing Speed Test</footer>
 
-    let totalTypedChars = 0;
-    let totalCorrectChars = 0;
-    let totalTypedWords = 0;
+<script>
+const passages = [
+  "Typing every day helps improve speed and accuracy over time.",
+  "Short typing practice sessions can build confidence and stronger keyboard skills.",
+  "Typing with accuracy first often leads to better speed.",
+  "Consistent typing practice helps build rhythm and control."
+];
 
-    const BEST_WPM_KEY = "typingTestBestWpm1Minute";
+let currentText = "";
+let timeLeft = 60;
+let timer = null;
+let started = false;
 
-    function loadBestWpm() {
-      const saved = localStorage.getItem(BEST_WPM_KEY);
-      bestWpmDisplay.textContent = saved ? saved : "0";
-    }
+const inputBox = document.getElementById("inputBox");
+const sampleText = document.getElementById("sampleText");
+const timeDisplay = document.getElementById("time");
 
-    function saveBestWpm(score) {
-      const currentBest = parseInt(localStorage.getItem(BEST_WPM_KEY) || "0", 10);
-      if (score > currentBest) {
-        localStorage.setItem(BEST_WPM_KEY, score);
-        bestWpmDisplay.textContent = score;
-      }
-    }
+function getRandom() {
+  return passages[Math.floor(Math.random() * passages.length)];
+}
 
-    function getRandomPassage() {
-      let newPassage = passages[Math.floor(Math.random() * passages.length)];
+function loadNew() {
+  currentText = getRandom();
+  inputBox.value = "";
+  sampleText.textContent = currentText;
+}
 
-      if (passages.length > 1) {
-        while (newPassage === currentText) {
-          newPassage = passages[Math.floor(Math.random() * passages.length)];
-        }
-      }
+function startTest() {
+  started = true;
+  inputBox.disabled = false;
+  loadNew();
 
-      return newPassage;
-    }
+  timer = setInterval(() => {
+    timeLeft--;
+    timeDisplay.textContent = timeLeft;
+    if (timeLeft <= 0) clearInterval(timer);
+  }, 1000);
+}
 
-    function renderText(userInput) {
-      let html = "";
+inputBox.addEventListener("input", () => {
+  if (!started) return;
+  if (inputBox.value.trim() === currentText) loadNew();
+});
 
-      for (let i = 0; i < currentText.length; i++) {
-        let cls = "";
+document.getElementById("startBtn").onclick = startTest;
+</script>
 
-        if (i < userInput.length) {
-          cls = userInput[i] === currentText[i] ? "correct" : "incorrect";
-        } else if (i === userInput.length) {
-          cls = "current";
-        }
+<!-- 🔥 ADDED CRAWL LOOP -->
+<div style="margin-top:30px;text-align:center;">
+  <strong>Try Another Typing Test:</strong><br><br>
+  <a href="typing-test-1-minute.html">1 Minute Typing Test</a> |
+  <a href="typing-test-5-minute.html">5 Minute Typing Test</a> |
+  <a href="typing-test-10-minute.html">10 Minute Typing Test</a>
+</div>
 
-        const char = currentText[i] === " " ? "&nbsp;" : currentText[i];
-        html += `<span class="${cls}">${char}</span>`;
-      }
-
-      sampleText.innerHTML = html;
-    }
-
-    function showStartState() {
-      currentText = "";
-      inputBox.value = "";
-      inputBox.disabled = true;
-      sampleText.textContent = "Click Start Test to begin.";
-      timeDisplay.textContent = "60";
-      wpmDisplay.textContent = "0";
-      accuracyDisplay.textContent = "100%";
-      charsDisplay.textContent = "0";
-      messageDisplay.textContent = "";
-    }
-
-    function loadNewPassage() {
-      currentText = getRandomPassage();
-      inputBox.value = "";
-      renderText("");
-      inputBox.focus();
-    }
-
-    function countWords(text) {
-      const trimmed = text.trim();
-      if (trimmed === "") return 0;
-      return trimmed.split(/\s+/).length;
-    }
-
-    function getCorrectCharCount(text, target) {
-      let correct = 0;
-      for (let i = 0; i < text.length; i++) {
-        if (text[i] === target[i]) {
-          correct++;
-        }
-      }
-      return correct;
-    }
-
-    function updateStatsLive() {
-      const currentInput = inputBox.value;
-      const liveChars = totalTypedChars + currentInput.length;
-      const liveCorrect = totalCorrectChars + getCorrectCharCount(currentInput, currentText);
-      const elapsed = 60 - timeLeft;
-      const liveWords = totalTypedWords + countWords(currentInput);
-
-      const wpm = elapsed > 0 ? Math.round((liveWords / elapsed) * 60) : 0;
-      const accuracy = liveChars > 0 ? Math.round((liveCorrect / liveChars) * 100) : 100;
-
-      wpmDisplay.textContent = wpm;
-      accuracyDisplay.textContent = accuracy + "%";
-      charsDisplay.textContent = liveChars;
-
-      renderText(currentInput);
-    }
-
-    function completeCurrentPassage() {
-      const typed = inputBox.value;
-
-      totalTypedChars += typed.length;
-      totalCorrectChars += getCorrectCharCount(typed, currentText);
-      totalTypedWords += countWords(typed);
-
-      loadNewPassage();
-      updateStatsLive();
-    }
-
-    function isPassageComplete(typed, target) {
-      return typed.trim() === target;
-    }
-
-    function endTest() {
-      clearInterval(timer);
-      timer = null;
-      started = false;
-      inputBox.disabled = true;
-
-      const finalInput = inputBox.value;
-      const finalChars = totalTypedChars + finalInput.length;
-      const finalCorrect = totalCorrectChars + getCorrectCharCount(finalInput, currentText);
-      const finalWords = totalTypedWords + countWords(finalInput);
-
-      const finalWpm = Math.round(finalWords);
-      const finalAccuracy = finalChars > 0 ? Math.round((finalCorrect / finalChars) * 100) : 100;
-
-      wpmDisplay.textContent = finalWpm;
-      accuracyDisplay.textContent = finalAccuracy + "%";
-      charsDisplay.textContent = finalChars;
-
-      saveBestWpm(finalWpm);
-
-      messageDisplay.textContent = `Test complete! Your speed was ${finalWpm} WPM with ${finalAccuracy}% accuracy.`;
-    }
-
-    function startTest() {
-      clearInterval(timer);
-
-      timeLeft = 60;
-      started = true;
-      totalTypedChars = 0;
-      totalCorrectChars = 0;
-      totalTypedWords = 0;
-
-      inputBox.disabled = false;
-      inputBox.value = "";
-      timeDisplay.textContent = "60";
-      wpmDisplay.textContent = "0";
-      accuracyDisplay.textContent = "100%";
-      charsDisplay.textContent = "0";
-      messageDisplay.textContent = "";
-
-      loadNewPassage();
-
-      timer = setInterval(() => {
-        timeLeft--;
-        timeDisplay.textContent = timeLeft;
-
-        if (timeLeft <= 0) {
-          endTest();
-        }
-      }, 1000);
-    }
-
-    function restartTest() {
-      clearInterval(timer);
-      timer = null;
-      started = false;
-      timeLeft = 60;
-      totalTypedChars = 0;
-      totalCorrectChars = 0;
-      totalTypedWords = 0;
-      showStartState();
-    }
-
-    startBtn.addEventListener("click", startTest);
-    restartBtn.addEventListener("click", restartTest);
-
-    inputBox.addEventListener("input", () => {
-      if (!started) return;
-
-      updateStatsLive();
-
-      if (isPassageComplete(inputBox.value, currentText)) {
-        completeCurrentPassage();
-      }
-    });
-
-    loadBestWpm();
-    showStartState();
-  </script>
 </body>
 </html>
