@@ -175,7 +175,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- LOW PRIORITY -->
+  <!-- TRUST / LOW PRIORITY -->
   <url>
     <loc>https://alansname1.github.io/about.html</loc>
     <priority>0.3</priority>
@@ -183,6 +183,16 @@
 
   <url>
     <loc>https://alansname1.github.io/contact.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/privacy-policy.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/terms.html</loc>
     <priority>0.3</priority>
   </url>
 
