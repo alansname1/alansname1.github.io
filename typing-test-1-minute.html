@@ -157,8 +157,8 @@
     <textarea id="inputBox" disabled placeholder="Start the test and begin typing here..."></textarea>
 
     <div class="controls">
-      <button id="startBtn">Start Test</button>
-      <button id="restartBtn">Restart</button>
+      <button id="startBtn" type="button">Start Test</button>
+      <button id="restartBtn" type="button">Restart</button>
     </div>
 
     <div class="stats">
@@ -239,6 +239,7 @@ let currentText = "";
 let timeLeft = 60;
 let timer = null;
 let started = false;
+let bestWpm = parseInt(localStorage.getItem("bestWpm1Min"), 10) || 0;
 
 const inputBox = document.getElementById("inputBox");
 const sampleText = document.getElementById("sampleText");
@@ -248,24 +249,23 @@ const accuracyDisplay = document.getElementById("accuracy");
 const charsDisplay = document.getElementById("chars");
 const bestWpmDisplay = document.getElementById("bestWpm");
 const message = document.getElementById("message");
+const startBtn = document.getElementById("startBtn");
+const restartBtn = document.getElementById("restartBtn");
 
-let bestWpm = localStorage.getItem("bestWpm1Min") || 0;
 bestWpmDisplay.textContent = bestWpm;
 
-function getRandom() {
+function getRandomPassage() {
   return passages[Math.floor(Math.random() * passages.length)];
 }
 
-function loadNew() {
-  currentText = getRandom();
+function loadNewPassage() {
+  currentText = getRandomPassage();
   sampleText.textContent = currentText;
-  inputBox.value = "";
 }
 
 function calculateStats() {
   const typed = inputBox.value;
   const typedChars = typed.length;
-  const sampleChars = currentText.length;
 
   charsDisplay.textContent = typedChars;
 
@@ -279,24 +279,31 @@ function calculateStats() {
   const accuracy = typedChars > 0 ? Math.round((correctChars / typedChars) * 100) : 100;
   accuracyDisplay.textContent = accuracy + "%";
 
+  const elapsedSeconds = 60 - timeLeft;
+  const minutes = elapsedSeconds > 0 ? elapsedSeconds / 60 : 1 / 60;
   const wordsTyped = typed.trim().length > 0 ? typed.trim().split(/\s+/).length : 0;
-  const elapsed = 60 - timeLeft;
-  const minutes = elapsed > 0 ? elapsed / 60 : 1 / 60;
   const wpm = Math.round(wordsTyped / minutes);
 
   wpmDisplay.textContent = wpm;
 }
 
+function stopTimer() {
+  if (timer) {
+    clearInterval(timer);
+    timer = null;
+  }
+}
+
 function endTest() {
-  clearInterval(timer);
-  timer = null;
+  stopTimer();
   started = false;
   inputBox.disabled = true;
+  startBtn.disabled = false;
 
   const finalWpm = parseInt(wpmDisplay.textContent, 10) || 0;
   if (finalWpm > bestWpm) {
     bestWpm = finalWpm;
-    localStorage.setItem("bestWpm1Min", bestWpm);
+    localStorage.setItem("bestWpm1Min", String(bestWpm));
     bestWpmDisplay.textContent = bestWpm;
   }
 
@@ -304,16 +311,21 @@ function endTest() {
 }
 
 function startTest() {
-  clearInterval(timer);
-  timeLeft = 60;
+  stopTimer();
+
   started = true;
+  timeLeft = 60;
   inputBox.disabled = false;
-  timeDisplay.textContent = timeLeft;
+  inputBox.value = "";
+  startBtn.disabled = true;
+
+  timeDisplay.textContent = "60";
   wpmDisplay.textContent = "0";
   accuracyDisplay.textContent = "100%";
   charsDisplay.textContent = "0";
   message.textContent = "";
-  loadNew();
+
+  loadNewPassage();
   inputBox.focus();
 
   timer = setInterval(() => {
@@ -328,14 +340,16 @@ function startTest() {
 }
 
 function restartTest() {
-  clearInterval(timer);
-  timer = null;
+  stopTimer();
   started = false;
   timeLeft = 60;
   currentText = "";
+
   sampleText.textContent = "Click Start Test to begin.";
   inputBox.value = "";
   inputBox.disabled = true;
+  startBtn.disabled = false;
+
   timeDisplay.textContent = "60";
   wpmDisplay.textContent = "0";
   accuracyDisplay.textContent = "100%";
@@ -345,16 +359,11 @@ function restartTest() {
 
 inputBox.addEventListener("input", () => {
   if (!started) return;
-
   calculateStats();
-
-  if (inputBox.value === currentText) {
-    loadNew();
-  }
 });
 
-document.getElementById("startBtn").addEventListener("click", startTest);
-document.getElementById("restartBtn").addEventListener("click", restartTest);
+startBtn.addEventListener("click", startTest);
+restartBtn.addEventListener("click", restartTest);
 </script>
 
 <div class="crawl-links">
