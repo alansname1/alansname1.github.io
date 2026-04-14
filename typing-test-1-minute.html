@@ -1,274 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free 1 minute typing test online. Check your typing speed in WPM, measure accuracy, and improve fast with this quick 60 second typing speed test." />
-  <title>1 Minute Typing Test (60 Second Free Speed Test - Instant Results)</title>
-  <link rel="canonical" href="https://alansname1.github.io/typing-test-1-minute.html" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1 Minute Typing Test</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 950px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-    h1, h2, h3 {
-      text-align: center;
-      color: #1d3557;
-    }
-    p, li {
-      line-height: 1.6;
-    }
-    .typing-box {
-      margin-top: 25px;
-      padding: 20px;
-      border: 2px solid #d9e2ec;
-      border-radius: 10px;
-      background: #f9fbfd;
-    }
-    #sampleText {
-      font-size: 18px;
-      margin-bottom: 15px;
-      line-height: 1.7;
-      padding: 12px;
-      background: #ffffff;
-      border: 1px solid #d9e2ec;
-      border-radius: 8px;
-    }
-    textarea {
-      width: 100%;
-      min-height: 140px;
-      padding: 15px;
-      font-size: 16px;
-      box-sizing: border-box;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      resize: vertical;
-    }
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    button {
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      background: #1d3557;
-      color: #fff;
-      cursor: pointer;
-      font-size: 15px;
-    }
-    button:hover {
-      background: #16324f;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      margin-top: 25px;
-      text-align: center;
-    }
-    .stats div {
-      background: #fff;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #e2e8f0;
-    }
-    #message, #debug {
-      margin-top: 20px;
-      text-align: center;
-      font-weight: bold;
-      color: #1d3557;
-    }
-    .nav-links, .crawl-links {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .nav-links a, .crawl-links a {
-      margin: 0 10px;
-      color: #1d3557;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .nav-links a:hover, .crawl-links a:hover {
-      text-decoration: underline;
-    }
-    .content-section {
-      margin-top: 35px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #555;
-    }
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+    button { padding: 12px 20px; font-size: 16px; margin-right: 10px; }
+    textarea { width: 100%; min-height: 140px; margin-top: 15px; padding: 12px; font-size: 16px; }
+    #sampleText { margin: 20px 0; font-size: 18px; }
+    #status { margin-top: 15px; font-weight: bold; }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>1 Minute Typing Test</h1>
-  <h2>Free 60 Second Typing Speed Test</h2>
+<h1>1 Minute Typing Test</h1>
 
-  <p>
-    This free 1 minute typing test helps you check your typing speed in words per minute (WPM), measure accuracy,
-    and improve your keyboard skills.
-  </p>
+<div id="sampleText">Click Start Test</div>
 
-  <div class="typing-box">
-    <div id="sampleText">Click Start Test to begin.</div>
+<button onclick="startTest()">Start Test</button>
+<button onclick="restartTest()">Restart</button>
 
-    <textarea id="inputBox" disabled placeholder="Start the test and begin typing here..." oninput="handleTyping()"></textarea>
+<textarea id="inputBox" disabled placeholder="Type here..."></textarea>
 
-    <div class="controls">
-      <button type="button" onclick="startTest()">Start Test</button>
-      <button type="button" onclick="restartTest()">Restart</button>
-    </div>
-
-    <div class="stats">
-      <div>Time <strong id="time">60</strong></div>
-      <div>WPM <strong id="wpm">0</strong></div>
-      <div>Accuracy <strong id="accuracy">100%</strong></div>
-      <div>Chars <strong id="chars">0</strong></div>
-    </div>
-
-    <div id="message"></div>
-    <div id="debug"></div>
-  </div>
-
-  <div class="content-section">
-    <h2>Why Practice with a 1 Minute Typing Test?</h2>
-    <p>
-      A 1 minute typing test is perfect for quick speed checks and daily improvement.
-    </p>
-  </div>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="typing-test-5-minute.html">5 Minute</a>
-    <a href="typing-test-10-minute.html">10 Minute</a>
-  </div>
-</div>
-
-<footer>© 2026 Free Typing Speed Test</footer>
+<div id="status">Waiting</div>
 
 <script>
-var sample = "Typing every day helps improve speed and accuracy over time.";
-var timeLeft = 60;
-var timer = null;
-var started = false;
-
-function setText(id, value) {
-  document.getElementById(id).textContent = value;
-}
-
 function startTest() {
-  var input = document.getElementById("inputBox");
-  var sampleText = document.getElementById("sampleText");
-
-  clearInterval(timer);
-  timer = null;
-
-  started = true;
-  timeLeft = 60;
-
-  sampleText.textContent = sample;
-  input.disabled = false;
-  input.value = "";
-  input.focus();
-
-  setText("time", "60");
-  setText("wpm", "0");
-  setText("accuracy", "100%");
-  setText("chars", "0");
-  setText("message", "");
-  setText("debug", "Test started");
-
-  timer = setInterval(function () {
-    timeLeft--;
-    setText("time", String(timeLeft));
-    updateStats();
-
-    if (timeLeft <= 0) {
-      endTest();
-    }
-  }, 1000);
+  document.getElementById("sampleText").textContent = "Typing every day helps improve speed and accuracy over time.";
+  document.getElementById("inputBox").disabled = false;
+  document.getElementById("inputBox").value = "";
+  document.getElementById("inputBox").focus();
+  document.getElementById("status").textContent = "Start button worked";
 }
 
 function restartTest() {
-  clearInterval(timer);
-  timer = null;
-  started = false;
-  timeLeft = 60;
-
-  var input = document.getElementById("inputBox");
-  input.value = "";
-  input.disabled = true;
-
-  setText("sampleText", "Click Start Test to begin.");
-  setText("time", "60");
-  setText("wpm", "0");
-  setText("accuracy", "100%");
-  setText("chars", "0");
-  setText("message", "");
-  setText("debug", "Test reset");
-}
-
-function handleTyping() {
-  if (!started) return;
-  updateStats();
-}
-
-function updateStats() {
-  var typed = document.getElementById("inputBox").value;
-  var typedChars = typed.length;
-  var correctChars = 0;
-
-  for (var i = 0; i < typed.length; i++) {
-    if (typed.charAt(i) === sample.charAt(i)) {
-      correctChars++;
-    }
-  }
-
-  var accuracy = typedChars > 0 ? Math.round((correctChars / typedChars) * 100) : 100;
-  var elapsed = 60 - timeLeft;
-  var minutes = elapsed > 0 ? elapsed / 60 : 1 / 60;
-  var wordsTyped = typed.trim().length > 0 ? typed.trim().split(/\s+/).length : 0;
-  var wpm = Math.round(wordsTyped / minutes);
-
-  setText("chars", String(typedChars));
-  setText("accuracy", accuracy + "%");
-  setText("wpm", String(wpm));
-}
-
-function endTest() {
-  clearInterval(timer);
-  timer = null;
-  started = false;
+  document.getElementById("sampleText").textContent = "Click Start Test";
+  document.getElementById("inputBox").value = "";
   document.getElementById("inputBox").disabled = true;
-  setText("message", "Test complete! Great job.");
-  setText("debug", "Test ended");
+  document.getElementById("status").textContent = "Restart button worked";
 }
 </script>
-
-<div class="crawl-links">
-  <strong>Try Another Typing Test:</strong><br><br>
-  <a href="typing-test-1-minute.html">1 Minute Typing Test</a> |
-  <a href="typing-test-5-minute.html">5 Minute Typing Test</a> |
-  <a href="typing-test-10-minute.html">10 Minute Typing Test</a>
-</div>
 
 </body>
 </html>
