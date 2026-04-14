@@ -9,10 +9,14 @@
 
 <style>
 body {font-family: Arial; background:#f4f7fb; margin:0;}
-.container {max-width:950px;margin:40px auto;background:#fff;padding:30px;border-radius:14px;}
-textarea {width:100%;min-height:140px;padding:15px;}
-.controls {text-align:center;margin-top:20px;}
-.stats {display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:20px;text-align:center;}
+.container {max-width:950px; margin:40px auto; background:#fff; padding:30px; border-radius:14px;}
+#sampleText {font-size:18px; line-height:1.7; background:#f8fbff; border:1px solid #d9e6f5; padding:16px; border-radius:10px; margin-bottom:15px;}
+textarea {width:100%; min-height:140px; padding:15px; font-size:16px; box-sizing:border-box;}
+.controls {text-align:center; margin-top:20px;}
+.controls button {padding:12px 18px; margin:0 6px; cursor:pointer;}
+.stats {display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-top:20px; text-align:center;}
+.stats div {background:#f8fbff; padding:12px; border-radius:10px;}
+#message {margin-top:18px; font-weight:bold; text-align:center;}
 </style>
 </head>
 
@@ -25,7 +29,7 @@ textarea {width:100%;min-height:140px;padding:15px;}
 
 <div class="typing-box">
 <div id="sampleText">Click Start Test to begin.</div>
-<textarea id="inputBox" disabled></textarea>
+<textarea id="inputBox" disabled placeholder="Start typing here..."></textarea>
 
 <div class="controls">
 <button onclick="startTest()">Start Test</button>
@@ -52,66 +56,143 @@ textarea {width:100%;min-height:140px;padding:15px;}
 
 <script>
 const passages = [
-"Typing every day helps improve speed and accuracy over time.",
-"Practice improves typing consistency and speed.",
-"Accuracy is more important than speed when learning typing.",
-"Daily typing builds confidence and keyboard control."
+  "Typing every day helps improve speed and accuracy over time.",
+  "Practice improves typing consistency and speed.",
+  "Accuracy is more important than speed when learning typing.",
+  "Daily typing builds confidence and keyboard control.",
+  "Consistent typing practice helps you build speed and reduce mistakes.",
+  "Longer typing tests can give a better measure of true performance.",
+  "Strong typing skills are useful for school, work, and everyday tasks."
 ];
 
-let text = "";
+let currentText = "";
 let time = 300;
-let timer;
+let timer = null;
+let totalTypedChars = 0;
+let totalCorrectChars = 0;
 let started = false;
+let lastInputLength = 0;
+
+const inputBox = document.getElementById("inputBox");
+const sampleText = document.getElementById("sampleText");
+const timeEl = document.getElementById("time");
+const wpmEl = document.getElementById("wpm");
+const accuracyEl = document.getElementById("accuracy");
+const charsEl = document.getElementById("chars");
+const messageEl = document.getElementById("message");
 
 function getText() {
-return passages[Math.floor(Math.random()*passages.length)];
+  let next = passages[Math.floor(Math.random() * passages.length)];
+  if (passages.length > 1) {
+    while (next === currentText) {
+      next = passages[Math.floor(Math.random() * passages.length)];
+    }
+  }
+  return next;
 }
 
-function startTest(){
-started = true;
-time = 300;
-document.getElementById("inputBox").disabled=false;
-text = getText();
-document.getElementById("sampleText").innerText=text;
-
-timer=setInterval(()=>{
-time--;
-document.getElementById("time").innerText=time;
-calc();
-
-if(time<=0){
-clearInterval(timer);
-document.getElementById("message").innerText="Test Complete!";
-}
-},1000);
+function loadNewPassage() {
+  currentText = getText();
+  sampleText.innerText = currentText;
+  inputBox.value = "";
+  lastInputLength = 0;
 }
 
-function calc(){
-let input=document.getElementById("inputBox").value;
-let words=input.trim().split(" ").length;
-let wpm=Math.round(words/5);
+function startTest() {
+  if (started) return;
 
-document.getElementById("wpm").innerText=wpm;
-document.getElementById("chars").innerText=input.length;
+  started = true;
+  clearInterval(timer);
+  time = 300;
+  totalTypedChars = 0;
+  totalCorrectChars = 0;
+  lastInputLength = 0;
 
-let correct=0;
-for(let i=0;i<input.length;i++){
-if(input[i]===text[i]) correct++;
-}
-let acc=input.length?Math.round((correct/input.length)*100):100;
-document.getElementById("accuracy").innerText=acc+"%";
+  timeEl.innerText = time;
+  wpmEl.innerText = "0";
+  accuracyEl.innerText = "100%";
+  charsEl.innerText = "0";
+  messageEl.innerText = "";
+
+  inputBox.disabled = false;
+  inputBox.focus();
+
+  loadNewPassage();
+
+  timer = setInterval(() => {
+    time--;
+    timeEl.innerText = time;
+    updateStats();
+
+    if (time <= 0) {
+      endTest();
+    }
+  }, 1000);
 }
 
-function restartTest(){
-clearInterval(timer);
-document.getElementById("inputBox").value="";
-document.getElementById("inputBox").disabled=true;
-document.getElementById("time").innerText="300";
-document.getElementById("wpm").innerText="0";
-document.getElementById("accuracy").innerText="100%";
-document.getElementById("chars").innerText="0";
-document.getElementById("message").innerText="";
+function updateStats() {
+  const elapsedMinutes = (300 - time) / 60;
+  const wpm = elapsedMinutes > 0 ? Math.round((totalTypedChars / 5) / elapsedMinutes) : 0;
+  const accuracy = totalTypedChars > 0 ? Math.round((totalCorrectChars / totalTypedChars) * 100) : 100;
+
+  wpmEl.innerText = wpm;
+  accuracyEl.innerText = accuracy + "%";
+  charsEl.innerText = totalTypedChars;
 }
+
+function endTest() {
+  clearInterval(timer);
+  timer = null;
+  started = false;
+  inputBox.disabled = true;
+  messageEl.innerText = "Test Complete!";
+  updateStats();
+}
+
+function restartTest() {
+  clearInterval(timer);
+  timer = null;
+  started = false;
+  time = 300;
+  totalTypedChars = 0;
+  totalCorrectChars = 0;
+  lastInputLength = 0;
+  currentText = "";
+
+  inputBox.value = "";
+  inputBox.disabled = true;
+  sampleText.innerText = "Click Start Test to begin.";
+  timeEl.innerText = "300";
+  wpmEl.innerText = "0";
+  accuracyEl.innerText = "100%";
+  charsEl.innerText = "0";
+  messageEl.innerText = "";
+}
+
+inputBox.addEventListener("input", function () {
+  if (!started) return;
+
+  const input = inputBox.value;
+
+  if (input.length > lastInputLength) {
+    const newPart = input.slice(lastInputLength);
+    for (let i = 0; i < newPart.length; i++) {
+      const overallIndex = lastInputLength + i;
+      totalTypedChars++;
+      if (newPart[i] === currentText[overallIndex]) {
+        totalCorrectChars++;
+      }
+    }
+  }
+
+  lastInputLength = input.length;
+  updateStats();
+
+  if (input === currentText) {
+    loadNewPassage();
+    updateStats();
+  }
+});
 </script>
 
 </body>
