@@ -5,11 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1 Minute Typing Test</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
-    button { padding: 12px 20px; font-size: 16px; margin-right: 10px; }
-    textarea { width: 100%; min-height: 140px; margin-top: 15px; padding: 12px; font-size: 16px; }
-    #sampleText { margin: 20px 0; font-size: 18px; }
-    #status { margin-top: 15px; font-weight: bold; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      margin-top: 15px;
+      padding: 12px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    #sampleText {
+      margin: 20px 0;
+      font-size: 18px;
+      padding: 12px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    .stats {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-weight: bold;
+    }
+
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -18,27 +57,133 @@
 
 <div id="sampleText">Click Start Test</div>
 
-<button onclick="startTest()">Start Test</button>
-<button onclick="restartTest()">Restart</button>
+<button type="button" onclick="startTest()">Start Test</button>
+<button type="button" onclick="restartTest()">Restart</button>
 
-<textarea id="inputBox" disabled placeholder="Type here..."></textarea>
+<textarea id="inputBox" disabled placeholder="Type here..." oninput="handleTyping()"></textarea>
+
+<div class="stats">
+  <div>Time: <span id="time">60</span></div>
+  <div>WPM: <span id="wpm">0</span></div>
+  <div>Accuracy: <span id="accuracy">100%</span></div>
+  <div>Chars: <span id="chars">0</span></div>
+</div>
 
 <div id="status">Waiting</div>
 
 <script>
+var passages = [
+  "Typing every day helps improve speed and accuracy over time.",
+  "Short typing practice sessions can build confidence and stronger keyboard skills.",
+  "Typing with accuracy first often leads to better speed.",
+  "Consistent typing practice helps build rhythm and control.",
+  "Daily typing practice can improve both typing speed and typing accuracy.",
+  "A one minute typing test is a quick way to measure keyboard performance."
+];
+
+var currentText = "";
+var timeLeft = 60;
+var timer = null;
+var started = false;
+
+function getRandomPassage() {
+  return passages[Math.floor(Math.random() * passages.length)];
+}
+
+function loadNewPassage() {
+  var nextText = getRandomPassage();
+
+  while (nextText === currentText && passages.length > 1) {
+    nextText = getRandomPassage();
+  }
+
+  currentText = nextText;
+  document.getElementById("sampleText").textContent = currentText;
+  document.getElementById("inputBox").value = "";
+}
+
+function updateStats() {
+  var typed = document.getElementById("inputBox").value;
+  var typedChars = typed.length;
+  var correctChars = 0;
+
+  for (var i = 0; i < typed.length; i++) {
+    if (typed.charAt(i) === currentText.charAt(i)) {
+      correctChars++;
+    }
+  }
+
+  var accuracy = typedChars > 0 ? Math.round((correctChars / typedChars) * 100) : 100;
+  var elapsedSeconds = 60 - timeLeft;
+  var minutes = elapsedSeconds > 0 ? elapsedSeconds / 60 : 1 / 60;
+  var wordsTyped = typed.trim().length > 0 ? typed.trim().split(/\s+/).length : 0;
+  var wpm = Math.round(wordsTyped / minutes);
+
+  document.getElementById("chars").textContent = typedChars;
+  document.getElementById("accuracy").textContent = accuracy + "%";
+  document.getElementById("wpm").textContent = wpm;
+}
+
 function startTest() {
-  document.getElementById("sampleText").textContent = "Typing every day helps improve speed and accuracy over time.";
+  clearInterval(timer);
+  timer = null;
+
+  started = true;
+  timeLeft = 60;
+
   document.getElementById("inputBox").disabled = false;
   document.getElementById("inputBox").value = "";
   document.getElementById("inputBox").focus();
-  document.getElementById("status").textContent = "Start button worked";
+
+  document.getElementById("time").textContent = "60";
+  document.getElementById("wpm").textContent = "0";
+  document.getElementById("accuracy").textContent = "100%";
+  document.getElementById("chars").textContent = "0";
+  document.getElementById("status").textContent = "Test started";
+
+  loadNewPassage();
+
+  timer = setInterval(function () {
+    timeLeft--;
+    document.getElementById("time").textContent = String(timeLeft);
+    updateStats();
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      timer = null;
+      started = false;
+      document.getElementById("inputBox").disabled = true;
+      document.getElementById("status").textContent = "Test complete";
+    }
+  }, 1000);
 }
 
 function restartTest() {
+  clearInterval(timer);
+  timer = null;
+  started = false;
+  timeLeft = 60;
+  currentText = "";
+
   document.getElementById("sampleText").textContent = "Click Start Test";
   document.getElementById("inputBox").value = "";
   document.getElementById("inputBox").disabled = true;
+  document.getElementById("time").textContent = "60";
+  document.getElementById("wpm").textContent = "0";
+  document.getElementById("accuracy").textContent = "100%";
+  document.getElementById("chars").textContent = "0";
   document.getElementById("status").textContent = "Restart button worked";
+}
+
+function handleTyping() {
+  if (!started) return;
+
+  updateStats();
+
+  var typed = document.getElementById("inputBox").value;
+  if (typed === currentText) {
+    loadNewPassage();
+  }
 }
 </script>
 
