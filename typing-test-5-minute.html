@@ -3,32 +3,61 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Free 5 minute typing test online. Measure your WPM, accuracy, and typing consistency with this longer typing speed test." />
-<title>5 Minute Typing Test (Accurate WPM Test - Free & Online)</title>
+<meta name="description" content="Take a free 5 minute typing test online. Measure your WPM, typing accuracy, and consistency with this longer typing speed test.">
+<title>5 Minute Typing Test - Free Accurate WPM & Typing Speed Test</title>
 <link rel="canonical" href="https://alansname1.github.io/typing-test-5-minute.html" />
 
 <style>
 body {font-family: Arial; background:#f4f7fb; margin:0;}
 .container {max-width:950px; margin:40px auto; background:#fff; padding:30px; border-radius:14px;}
+
 #sampleText {font-size:18px; line-height:1.7; background:#f8fbff; border:1px solid #d9e6f5; padding:16px; border-radius:10px; margin-bottom:15px;}
+
 textarea {width:100%; min-height:140px; padding:15px; font-size:16px; box-sizing:border-box;}
+
 .controls {text-align:center; margin-top:20px;}
 .controls button {padding:12px 18px; margin:0 6px; cursor:pointer;}
+
 .stats {display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-top:20px; text-align:center;}
 .stats div {background:#f8fbff; padding:12px; border-radius:10px;}
+
 #message {margin-top:18px; font-weight:bold; text-align:center;}
+
+.content-section {margin-top:35px;}
+
+footer {
+  margin-top:40px;
+  padding:20px;
+  background:#f1f1f1;
+  text-align:center;
+  font-size:14px;
+}
+footer a {margin:0 6px; text-decoration:none; color:#1d3557;}
+footer a:hover {text-decoration:underline;}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-<h1>5 Minute Typing Test</h1>
 
-<p>This 5 minute typing test helps you measure your typing speed (WPM), accuracy, and long-term typing performance. Longer tests give a more accurate result than short tests.</p>
+<h1>5 Minute Typing Test</h1>
+<h2>Free 5 Minute Typing Speed & Accuracy Test</h2>
+
+<p>
+This free 5 minute typing test helps you measure your typing speed (WPM), accuracy,
+and consistency over a longer period of time. Compared to shorter tests, a 5 minute
+test gives a more realistic and reliable typing score.
+</p>
+
+<p>
+If you want to improve your typing for school, work, or everyday use, longer typing
+tests are one of the best ways to track progress and build real typing endurance.
+</p>
 
 <div class="typing-box">
 <div id="sampleText">Click Start Test to begin.</div>
+
 <textarea id="inputBox" disabled placeholder="Start typing here..."></textarea>
 
 <div class="controls">
@@ -43,16 +72,84 @@ textarea {width:100%; min-height:140px; padding:15px; font-size:16px; box-sizing
 <div>Chars <strong id="chars">0</strong></div>
 </div>
 
-<div id="message"></div>
+<div id="message">Waiting to start</div>
 </div>
 
+<div class="content-section">
 <h2>Why Use a 5 Minute Typing Test?</h2>
-<p>A 5 minute typing test gives a more realistic measure of your typing speed and consistency. It is ideal for job preparation and improving endurance.</p>
+<p>
+A 5 minute typing test is ideal for measuring real typing performance.
+Short tests can give fast results, but longer tests show how well you maintain
+speed and accuracy over time.
+</p>
 
+<p>
+This type of test is especially useful for job preparation, since many real-world
+tasks require sustained typing rather than quick bursts.
+</p>
+</div>
+
+<div class="content-section">
+<h2>What Does This Test Measure?</h2>
+<ul>
+<li><strong>WPM:</strong> Your typing speed in words per minute</li>
+<li><strong>Accuracy:</strong> How correctly you type the given text</li>
+<li><strong>Consistency:</strong> How well you maintain performance over time</li>
+</ul>
+
+<p>
+These metrics together give a much clearer picture of your actual typing ability.
+</p>
+</div>
+
+<div class="content-section">
+<h2>What Is a Good Typing Speed?</h2>
+<p>
+The average typing speed is around 40 WPM. A good typing speed is usually
+50 to 60 WPM, while 70 WPM and above is considered strong.
+</p>
+
+<p>
+If you are below average, focus on improving accuracy first. Speed will increase naturally over time.
+</p>
+</div>
+
+<div class="content-section">
 <h2>Improve Your Typing Speed</h2>
-<p>Want to test your typing speed? Try a <a href="typing-test-1-minute.html">1 minute typing test</a> for quick results or a <a href="typing-test-10-minute.html">10 minute typing test</a> for longer practice.</p>
+<ul>
+<li>Practice regularly with longer tests</li>
+<li>Focus on accuracy before speed</li>
+<li>Use proper finger placement</li>
+<li>Avoid looking at the keyboard</li>
+<li>Track your progress over time</li>
+</ul>
+</div>
+
+<div class="content-section">
+<h2>Try Other Typing Tests</h2>
+<p>
+You can also try different typing test lengths depending on your goals:
+</p>
+
+<p style="text-align:center;">
+<a href="/index.html">Home</a> |
+<a href="/typing-test-1-minute.html">1 Minute Test</a> |
+<a href="/typing-test-10-minute.html">10 Minute Test</a> |
+<a href="/typing-test-online.html">Typing Test Online</a>
+</p>
+</div>
 
 </div>
+
+<footer>
+<p>© 2026 Free Typing Speed Test</p>
+<p>
+<a href="/about.html">About</a> |
+<a href="/contact.html">Contact</a> |
+<a href="/privacy.html">Privacy Policy</a> |
+<a href="/terms.html">Terms of Service</a>
+</p>
+</footer>
 
 <script>
 const passages = [
@@ -112,7 +209,7 @@ function startTest() {
   wpmEl.innerText = "0";
   accuracyEl.innerText = "100%";
   charsEl.innerText = "0";
-  messageEl.innerText = "";
+  messageEl.innerText = "Test started";
 
   inputBox.disabled = false;
   inputBox.focus();
@@ -166,7 +263,7 @@ function restartTest() {
   wpmEl.innerText = "0";
   accuracyEl.innerText = "100%";
   charsEl.innerText = "0";
-  messageEl.innerText = "";
+  messageEl.innerText = "Waiting to start";
 }
 
 inputBox.addEventListener("input", function () {
