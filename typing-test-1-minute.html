@@ -135,18 +135,9 @@
       background: #f1f1f1;
       font-size: 14px;
     }
-
-    footer a {
-      color: #1d3557;
-      text-decoration: none;
-      margin: 0 6px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -155,12 +146,7 @@
 
   <p>
     Use this free 1 minute typing test to check your typing speed, words per minute (WPM), and accuracy.
-    A short typing test is one of the easiest ways to measure keyboard skills and build better typing habits.
-  </p>
-
-  <p>
-    This page is designed for quick daily practice. If you want a fast score without spending a lot of time,
-    the 60 second typing test is a simple way to track improvement and stay consistent.
+    This quick test is perfect for daily practice and tracking improvement over time.
   </p>
 
   <div class="typing-box">
@@ -169,8 +155,8 @@
     <textarea id="inputBox" disabled placeholder="Type here..." oninput="handleTyping()"></textarea>
 
     <div class="controls">
-      <button type="button" onclick="startTest()">Start Test</button>
-      <button type="button" onclick="restartTest()">Restart</button>
+      <button onclick="startTest()">Start Test</button>
+      <button onclick="restartTest()">Restart</button>
     </div>
 
     <div class="stats">
@@ -186,71 +172,52 @@
   <div class="content-section">
     <h2>Why Practice with a 1 Minute Typing Test?</h2>
     <p>
-      A 1 minute typing test is useful because it gives you a quick snapshot of your current typing ability.
-      You can fit it into a short break, repeat it often, and compare your results from day to day.
+      A 1 minute typing test gives you a quick and repeatable way to measure your typing performance. Because it only takes 60 seconds, it is easy to practice multiple times per day and track your progress.
     </p>
     <p>
-      Short tests are also helpful for beginners because they feel less overwhelming than longer sessions.
-      Instead of worrying about endurance, you can focus on building clean, accurate typing habits first.
+      Short tests are especially helpful for building habits and improving accuracy without feeling overwhelmed.
     </p>
   </div>
 
   <div class="content-section">
-    <h2>What Does This Typing Test Measure?</h2>
-    <p>
-      This typing test measures three main things: your typing speed in words per minute, your typing accuracy,
-      and the total number of characters you typed during the test.
-    </p>
+    <h2>What This Typing Test Measures</h2>
     <ul>
-      <li><strong>WPM:</strong> Shows how many words you can type in one minute.</li>
-      <li><strong>Accuracy:</strong> Shows how closely your typed text matches the passage.</li>
-      <li><strong>Characters:</strong> Shows how much text you entered during the test.</li>
+      <li><strong>Words Per Minute (WPM):</strong> your typing speed</li>
+      <li><strong>Accuracy:</strong> how correctly you type the text</li>
+      <li><strong>Character Count:</strong> total characters typed</li>
     </ul>
     <p>
-      Together, these numbers give you a better picture of your real typing performance. Fast typing is useful,
-      but accurate typing is what makes that speed meaningful.
+      Improving both speed and accuracy leads to better real-world typing performance.
     </p>
   </div>
 
   <div class="content-section">
-    <h2>What Is a Good 1 Minute Typing Test Score?</h2>
-    <p>
-      Many people type around 40 WPM on average. Reaching 50 to 60 WPM is generally considered good,
-      while 70 WPM and above is often seen as strong or advanced for everyday work.
-    </p>
-    <p>
-      Your best target depends on your starting point. If you are currently at 25 to 35 WPM, focus on steady
-      improvement and better accuracy before trying to type much faster.
-    </p>
-  </div>
-
-  <div class="content-section">
-    <h2>How to Improve Your Typing Speed</h2>
+    <h2>What Is a Good Typing Speed?</h2>
     <ul>
-      <li>Practice daily, even for just a few minutes</li>
-      <li>Focus on accuracy before speed</li>
-      <li>Use proper finger placement</li>
-      <li>Avoid looking at the keyboard too often</li>
-      <li>Repeat short tests and track your progress over time</li>
+      <li>20–30 WPM: Beginner</li>
+      <li>40 WPM: Average</li>
+      <li>50–60 WPM: Good</li>
+      <li>60–80 WPM: Strong</li>
+      <li>80+ WPM: Advanced</li>
     </ul>
-    <p>
-      The best results usually come from regular practice. Small improvements in speed and accuracy can add up
-      quickly over time.
-    </p>
   </div>
 
   <div class="content-section">
-    <h2>Try Other Typing Tests</h2>
-    <p>
-      If you want a longer and more realistic typing score, you can also try one of these pages:
-    </p>
-    <div class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/typing-test-5-minute.html">5 Minute Test</a>
-      <a href="/typing-test-10-minute.html">10 Minute Test</a>
-      <a href="/typing-test-online.html">Typing Test Online</a>
-    </div>
+    <h2>How to Improve Typing Speed</h2>
+    <ul>
+      <li>Practice daily</li>
+      <li>Focus on accuracy first</li>
+      <li>Use correct finger placement</li>
+      <li>Avoid looking at the keyboard</li>
+    </ul>
   </div>
+
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/typing-test-5-minute.html">5 Minute Test</a>
+    <a href="/typing-test-10-minute.html">10 Minute Test</a>
+  </div>
+
 </div>
 
 <footer>
@@ -268,82 +235,34 @@ var passages = [
   "Typing every day helps improve speed and accuracy over time.",
   "Short typing practice sessions can build confidence and stronger keyboard skills.",
   "Typing with accuracy first often leads to better speed.",
-  "Consistent typing practice helps build rhythm and control.",
-  "Daily typing practice can improve both typing speed and typing accuracy.",
-  "A one minute typing test is a quick way to measure keyboard performance."
+  "Consistent typing practice helps build rhythm and control."
 ];
 
 var currentText = "";
 var timeLeft = 60;
 var timer = null;
-var started = false;
 
 function getRandomPassage() {
   return passages[Math.floor(Math.random() * passages.length)];
 }
 
-function loadNewPassage() {
-  var nextText = getRandomPassage();
-
-  while (nextText === currentText && passages.length > 1) {
-    nextText = getRandomPassage();
-  }
-
-  currentText = nextText;
-  document.getElementById("sampleText").textContent = currentText;
-  document.getElementById("inputBox").value = "";
-}
-
-function updateStats() {
-  var typed = document.getElementById("inputBox").value;
-  var typedChars = typed.length;
-  var correctChars = 0;
-
-  for (var i = 0; i < typed.length; i++) {
-    if (typed.charAt(i) === currentText.charAt(i)) {
-      correctChars++;
-    }
-  }
-
-  var accuracy = typedChars > 0 ? Math.round((correctChars / typedChars) * 100) : 100;
-  var elapsedSeconds = 60 - timeLeft;
-  var minutes = elapsedSeconds > 0 ? elapsedSeconds / 60 : 1 / 60;
-  var wordsTyped = typed.trim().length > 0 ? typed.trim().split(/\s+/).length : 0;
-  var wpm = Math.round(wordsTyped / minutes);
-
-  document.getElementById("chars").textContent = typedChars;
-  document.getElementById("accuracy").textContent = accuracy + "%";
-  document.getElementById("wpm").textContent = wpm;
-}
-
 function startTest() {
   clearInterval(timer);
-  timer = null;
-
-  started = true;
   timeLeft = 60;
 
   document.getElementById("inputBox").disabled = false;
   document.getElementById("inputBox").value = "";
   document.getElementById("inputBox").focus();
 
-  document.getElementById("time").textContent = "60";
-  document.getElementById("wpm").textContent = "0";
-  document.getElementById("accuracy").textContent = "100%";
-  document.getElementById("chars").textContent = "0";
-  document.getElementById("status").textContent = "Test started";
-
-  loadNewPassage();
+  currentText = getRandomPassage();
+  document.getElementById("sampleText").textContent = currentText;
 
   timer = setInterval(function () {
     timeLeft--;
-    document.getElementById("time").textContent = String(timeLeft);
-    updateStats();
+    document.getElementById("time").textContent = timeLeft;
 
     if (timeLeft <= 0) {
       clearInterval(timer);
-      timer = null;
-      started = false;
       document.getElementById("inputBox").disabled = true;
       document.getElementById("status").textContent = "Test complete!";
     }
@@ -352,31 +271,10 @@ function startTest() {
 
 function restartTest() {
   clearInterval(timer);
-  timer = null;
-  started = false;
-  timeLeft = 60;
-  currentText = "";
-
-  document.getElementById("sampleText").textContent = "Click Start Test to begin.";
   document.getElementById("inputBox").value = "";
   document.getElementById("inputBox").disabled = true;
   document.getElementById("time").textContent = "60";
-  document.getElementById("wpm").textContent = "0";
-  document.getElementById("accuracy").textContent = "100%";
-  document.getElementById("chars").textContent = "0";
   document.getElementById("status").textContent = "Waiting to start";
-}
-
-function handleTyping() {
-  if (!started) return;
-
-  updateStats();
-
-  var typed = document.getElementById("inputBox").value;
-
-  if (typed === currentText) {
-    loadNewPassage();
-  }
 }
 </script>
 
