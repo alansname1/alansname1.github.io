@@ -1,120 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOMEPAGE -->
   <url>
     <loc>https://alansname1.github.io/</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- MAIN TYPING TEST PAGES -->
   <url>
     <loc>https://alansname1.github.io/typing-test-1-minute.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/typing-test-5-minute.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/typing-test-10-minute.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/typing-test-online.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
-  <!-- GUIDES / EDUCATIONAL CONTENT -->
   <url>
     <loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/average-typing-speed.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.86</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/typing-practice-paragraphs.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.84</priority>
+    <priority>0.92</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/typing-practice-for-beginners.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-speed-for-jobs.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-practice-paragraphs.html</loc>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/typing-accuracy-practice.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-speed-for-jobs.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
     <loc>https://alansname1.github.io/what-is-a-good-typing-speed.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
+    <priority>0.82</priority>
   </url>
 
-  <!-- TRUST / POLICY PAGES -->
   <url>
     <loc>https://alansname1.github.io/about.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.55</priority>
+    <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/contact.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.55</priority>
+    <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/privacy-policy.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.55</priority>
+    <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/terms.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.55</priority>
+    <priority>0.60</priority>
   </url>
 
 </urlset>
