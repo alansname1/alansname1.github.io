@@ -5,7 +5,35 @@
     <loc>https://alansname1.github.io/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/average-typing-speed.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-practice-for-beginners.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-speed-for-jobs.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
@@ -37,31 +65,38 @@
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/how-to-improve-typing-speed.html</loc>
+    <loc>https://alansname1.github.io/free-typing-test.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/average-typing-speed.html</loc>
+    <loc>https://alansname1.github.io/typing-test-for-jobs.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.84</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-practice-for-beginners.html</loc>
+    <loc>https://alansname1.github.io/typing-test-for-data-entry.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.84</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-speed-for-jobs.html</loc>
+    <loc>https://alansname1.github.io/typing-test-for-beginners.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-speed-test-for-employment.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
   </url>
 
   <url>
