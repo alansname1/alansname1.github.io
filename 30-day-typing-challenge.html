@@ -1,0 +1,1101 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>30-Day Typing Challenge | Improve Speed and Accuracy</title>
+
+<meta name="description" content="Follow a free 30-day typing challenge with daily practice activities, weekly milestones, progress tracking, typing tests, accuracy goals, and printable checklists.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://alansname1.github.io/30-day-typing-challenge.html">
+
+<style>
+:root{
+--blue:#0d47a1;
+--dark:#16324f;
+--light:#f4f7fb;
+--border:#d9e0ea;
+--success:#e8f5e9;
+--warning:#fff8e1;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+max-width:1050px;
+margin:auto;
+padding:0;
+line-height:1.7;
+color:#222;
+background:#ffffff;
+}
+
+header{
+background:var(--blue);
+color:white;
+padding:36px 24px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:38px;
+}
+
+header p{
+max-width:780px;
+margin:12px auto 0;
+font-size:18px;
+}
+
+nav{
+background:#f4f4f4;
+padding:14px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+nav a{
+margin:0 9px;
+text-decoration:none;
+color:var(--blue);
+font-weight:bold;
+display:inline-block;
+}
+
+main{
+padding:28px;
+}
+
+section{
+margin-bottom:44px;
+}
+
+h2{
+color:var(--blue);
+margin-bottom:10px;
+}
+
+h3{
+color:var(--dark);
+}
+
+a{
+color:var(--blue);
+}
+
+.cta{
+display:inline-block;
+background:var(--blue);
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+margin:8px 8px 8px 0;
+}
+
+.secondary-cta{
+display:inline-block;
+background:#eeeeee;
+color:var(--blue);
+padding:12px 20px;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+margin:8px 8px 8px 0;
+}
+
+.box{
+background:var(--light);
+border-left:4px solid var(--blue);
+padding:20px;
+margin:20px 0;
+}
+
+.success-box{
+background:var(--success);
+border-left:4px solid #2e7d32;
+padding:18px;
+margin:20px 0;
+}
+
+.warning-box{
+background:var(--warning);
+border-left:4px solid #f9a825;
+padding:18px;
+margin:20px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:16px;
+}
+
+.card{
+border:1px solid var(--border);
+background:#fafafa;
+padding:18px;
+border-radius:8px;
+}
+
+.progress-panel{
+border:1px solid var(--border);
+background:#ffffff;
+padding:20px;
+border-radius:8px;
+margin:20px 0;
+}
+
+.progress-bar{
+width:100%;
+height:24px;
+background:#e5e7eb;
+border-radius:12px;
+overflow:hidden;
+margin:12px 0;
+}
+
+.progress-fill{
+height:100%;
+width:0%;
+background:var(--blue);
+transition:width .25s ease;
+}
+
+.progress-text{
+font-weight:bold;
+}
+
+.challenge-table{
+width:100%;
+border-collapse:collapse;
+margin-top:18px;
+}
+
+.challenge-table th,
+.challenge-table td{
+border:1px solid var(--border);
+padding:12px;
+text-align:left;
+vertical-align:top;
+}
+
+.challenge-table th{
+background:#eef3f9;
+}
+
+.day-row.completed{
+background:#edf8ee;
+}
+
+.day-check{
+width:20px;
+height:20px;
+cursor:pointer;
+}
+
+.week-heading{
+background:#dbe9fb !important;
+color:var(--dark);
+font-weight:bold;
+}
+
+input[type="number"]{
+width:90px;
+padding:7px;
+border:1px solid #bbb;
+border-radius:4px;
+}
+
+button{
+background:var(--blue);
+color:white;
+border:none;
+padding:11px 16px;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+margin:6px 6px 6px 0;
+}
+
+button.secondary{
+background:#666;
+}
+
+button.danger{
+background:#9b1c1c;
+}
+
+.tracker-table{
+width:100%;
+border-collapse:collapse;
+margin-top:16px;
+}
+
+.tracker-table th,
+.tracker-table td{
+border:1px solid var(--border);
+padding:10px;
+text-align:left;
+}
+
+.tracker-table th{
+background:#eef3f9;
+}
+
+.small{
+font-size:14px;
+color:#555;
+}
+
+footer{
+margin-top:40px;
+padding:25px;
+background:#f1f1f1;
+text-align:center;
+font-size:14px;
+}
+
+@media(max-width:700px){
+header h1{
+font-size:30px;
+}
+
+main{
+padding:20px;
+}
+
+.challenge-table{
+font-size:14px;
+}
+
+.challenge-table th,
+.challenge-table td{
+padding:8px;
+}
+
+nav a{
+margin:5px 7px;
+}
+}
+
+@media print{
+nav,
+.no-print,
+button,
+.cta,
+.secondary-cta{
+display:none !important;
+}
+
+body{
+max-width:none;
+font-size:12pt;
+}
+
+header{
+background:white;
+color:black;
+padding:10px 0;
+text-align:left;
+}
+
+main{
+padding:0;
+}
+
+section{
+page-break-inside:avoid;
+}
+
+.challenge-table th,
+.challenge-table td,
+.tracker-table th,
+.tracker-table td{
+border:1px solid #555;
+}
+
+.progress-panel,
+.card,
+.box,
+.success-box,
+.warning-box{
+border:1px solid #777;
+background:white;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>30-Day Typing Challenge</h1>
+<p>Build speed, accuracy, rhythm, confidence, and keyboard control with a structured daily plan you can follow, track, and print.</p>
+</header>
+
+<nav>
+<a href="/">Home</a>
+<a href="/typing-test-1-minute.html">1 Min Test</a>
+<a href="/typing-test-5-minute.html">5 Min Test</a>
+<a href="/typing-test-10-minute.html">10 Min Test</a>
+<a href="/typing-practice-paragraphs.html">Paragraphs</a>
+<a href="/typing-exercises.html">Exercises</a>
+<a href="/how-to-increase-typing-accuracy.html">Accuracy Guide</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+</nav>
+
+<main>
+
+<section>
+<h2>How the 30-Day Challenge Works</h2>
+
+<p>
+This challenge gives you one focused typing activity for each day. Most sessions take about 10 to 20 minutes. The plan begins with accuracy and keyboard control, then gradually adds speed, endurance, and longer practice.
+</p>
+
+<p>
+You can use the checkboxes to mark completed days. Your progress is saved automatically in your browser, so you can return later and continue where you stopped.
+</p>
+
+<div class="box">
+<strong>Main goal:</strong> build reliable typing habits first, then increase speed without losing accuracy.
+</div>
+
+<a class="cta" href="#challenge">Start the Challenge</a>
+<button class="no-print" type="button" onclick="window.print()">Print This Challenge</button>
+</section>
+
+<section>
+<h2>Before You Begin</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Record Your Starting WPM</h3>
+<p>Take a short test and write down your speed before Day 1.</p>
+<a href="/typing-test-1-minute.html">Take the 1 Minute Test</a>
+</div>
+
+<div class="card">
+<h3>Record Your Accuracy</h3>
+<p>Write down your accuracy percentage so you can compare it again on Day 30.</p>
+<a href="/typing-accuracy-practice.html">Practice Typing Accuracy</a>
+</div>
+
+<div class="card">
+<h3>Choose a Daily Time</h3>
+<p>Practicing at about the same time each day can make the routine easier to maintain.</p>
+<a href="/best-daily-typing-practice-routine.html">View a Daily Routine</a>
+</div>
+</div>
+
+<div class="progress-panel">
+<h3>Starting Results</h3>
+
+<label for="startWpm"><strong>Starting WPM:</strong></label>
+<input id="startWpm" type="number" min="0" max="250">
+
+<label for="startAccuracy"><strong>Starting accuracy:</strong></label>
+<input id="startAccuracy" type="number" min="0" max="100"> %
+
+<div>
+<button type="button" onclick="saveStartingResults()">Save Starting Results</button>
+</div>
+
+<p id="startingMessage" class="small"></p>
+</div>
+</section>
+
+<section id="challenge">
+<h2>Your 30-Day Challenge</h2>
+
+<div class="progress-panel">
+<div class="progress-text" id="progressText">0 of 30 days completed</div>
+<div class="progress-bar" aria-label="Challenge progress">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+<p class="small">Check a box after finishing each day. Your progress is saved automatically on this device.</p>
+</div>
+
+<div class="table-wrapper">
+<table class="challenge-table">
+<thead>
+<tr>
+<th>Done</th>
+<th>Day</th>
+<th>Daily Activity</th>
+<th>Main Goal</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td colspan="4" class="week-heading">Week 1: Build Accuracy and Keyboard Control</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="1"></td>
+<td><strong>Day 1</strong></td>
+<td>Take a 1 minute typing test. Record your WPM and accuracy. Then type one short paragraph slowly.</td>
+<td>Establish a starting point.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="2"></td>
+<td><strong>Day 2</strong></td>
+<td>Practice home-row keys for 5 minutes, then type two beginner paragraphs.</td>
+<td>Improve finger placement.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="3"></td>
+<td><strong>Day 3</strong></td>
+<td>Type for 10 minutes without rushing. Correct errors carefully instead of ignoring them.</td>
+<td>Build accuracy awareness.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="4"></td>
+<td><strong>Day 4</strong></td>
+<td>Practice common letter combinations such as th, ing, tion, er, and re.</td>
+<td>Improve common movement patterns.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="5"></td>
+<td><strong>Day 5</strong></td>
+<td>Type one paragraph twice. On the second attempt, try to reduce mistakes.</td>
+<td>Learn through repetition.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="6"></td>
+<td><strong>Day 6</strong></td>
+<td>Practice punctuation, capital letters, commas, periods, apostrophes, and question marks.</td>
+<td>Improve real-world typing accuracy.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="7"></td>
+<td><strong>Day 7</strong></td>
+<td>Take a 1 minute test and compare it with Day 1. Review your most common mistakes.</td>
+<td>Complete the first weekly check.</td>
+</tr>
+
+<tr>
+<td colspan="4" class="week-heading">Week 2: Build Rhythm and Consistency</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="8"></td>
+<td><strong>Day 8</strong></td>
+<td>Type continuously for 5 minutes at a comfortable pace.</td>
+<td>Develop steady rhythm.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="9"></td>
+<td><strong>Day 9</strong></td>
+<td>Practice difficult words you often mistype. Repeat each word five times.</td>
+<td>Strengthen weak spots.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="10"></td>
+<td><strong>Day 10</strong></td>
+<td>Take a 5 minute typing test. Focus on maintaining accuracy from beginning to end.</td>
+<td>Measure consistency.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="11"></td>
+<td><strong>Day 11</strong></td>
+<td>Practice typing numbers, dates, and simple punctuation for 10 minutes.</td>
+<td>Improve practical keyboard control.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="12"></td>
+<td><strong>Day 12</strong></td>
+<td>Type two work-style paragraphs involving emails, reports, or office communication.</td>
+<td>Practice realistic text.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="13"></td>
+<td><strong>Day 13</strong></td>
+<td>Practice typing without looking down at the keyboard for short periods.</td>
+<td>Build keyboard memory.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="14"></td>
+<td><strong>Day 14</strong></td>
+<td>Take a 1 minute test and a 5 minute test. Compare speed, accuracy, and consistency.</td>
+<td>Complete the second weekly check.</td>
+</tr>
+
+<tr>
+<td colspan="4" class="week-heading">Week 3: Increase Speed Carefully</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="15"></td>
+<td><strong>Day 15</strong></td>
+<td>Complete three 1 minute tests with a short break between each test.</td>
+<td>Practice controlled speed.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="16"></td>
+<td><strong>Day 16</strong></td>
+<td>Type one paragraph at normal speed, then repeat it slightly faster while keeping accuracy high.</td>
+<td>Increase speed gradually.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="17"></td>
+<td><strong>Day 17</strong></td>
+<td>Practice words containing letters you commonly miss.</td>
+<td>Reduce repeated errors.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="18"></td>
+<td><strong>Day 18</strong></td>
+<td>Take a 5 minute test and try to keep a steady pace instead of starting too fast.</td>
+<td>Control pacing.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="19"></td>
+<td><strong>Day 19</strong></td>
+<td>Practice typing a realistic email, short report, or school paragraph.</td>
+<td>Apply typing skills to everyday tasks.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="20"></td>
+<td><strong>Day 20</strong></td>
+<td>Complete a 10 minute practice session with relaxed hands and shoulders.</td>
+<td>Improve comfort and endurance.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="21"></td>
+<td><strong>Day 21</strong></td>
+<td>Take a 1 minute test. Compare your result with Days 1, 7, and 14.</td>
+<td>Complete the third weekly check.</td>
+</tr>
+
+<tr>
+<td colspan="4" class="week-heading">Week 4: Build Endurance and Reach Your Goal</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="22"></td>
+<td><strong>Day 22</strong></td>
+<td>Type for 10 minutes with consistent accuracy and minimal pauses.</td>
+<td>Build endurance.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="23"></td>
+<td><strong>Day 23</strong></td>
+<td>Repeat your most difficult paragraph from the previous weeks.</td>
+<td>Measure improvement on familiar text.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="24"></td>
+<td><strong>Day 24</strong></td>
+<td>Complete two 5 minute tests and compare consistency.</td>
+<td>Strengthen repeatable performance.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="25"></td>
+<td><strong>Day 25</strong></td>
+<td>Practice numbers, symbols, punctuation, and capital letters.</td>
+<td>Improve complete keyboard control.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="26"></td>
+<td><strong>Day 26</strong></td>
+<td>Type one long paragraph without looking at the keyboard.</td>
+<td>Strengthen touch typing habits.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="27"></td>
+<td><strong>Day 27</strong></td>
+<td>Take a 10 minute typing test and focus on maintaining form.</td>
+<td>Measure endurance.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="28"></td>
+<td><strong>Day 28</strong></td>
+<td>Review all recorded scores. Identify your biggest improvement and one remaining weakness.</td>
+<td>Evaluate progress honestly.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="29"></td>
+<td><strong>Day 29</strong></td>
+<td>Complete a relaxed practice session without chasing a score.</td>
+<td>Reinforce comfortable technique.</td>
+</tr>
+
+<tr class="day-row">
+<td><input class="day-check" type="checkbox" data-day="30"></td>
+<td><strong>Day 30</strong></td>
+<td>Take a final 1 minute test and 5 minute test. Record your final WPM and accuracy.</td>
+<td>Complete the challenge and measure results.</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="no-print">
+<button type="button" onclick="markAllComplete()">Mark All Complete</button>
+<button type="button" class="danger" onclick="resetChallenge()">Reset Challenge</button>
+</div>
+</section>
+
+<section>
+<h2>Weekly Milestones</h2>
+
+<div class="grid">
+<div class="card">
+<h3>End of Week 1</h3>
+<p>You should feel more aware of errors, finger placement, and accuracy.</p>
+</div>
+
+<div class="card">
+<h3>End of Week 2</h3>
+<p>Your typing rhythm should feel steadier during longer practice.</p>
+</div>
+
+<div class="card">
+<h3>End of Week 3</h3>
+<p>You may begin seeing faster WPM without forcing speed.</p>
+</div>
+
+<div class="card">
+<h3>End of Week 4</h3>
+<p>You should have clearer evidence of your improvement and future goals.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Typing Progress Log</h2>
+
+<p>
+Use this simple log to record weekly scores. These values are also saved in your browser.
+</p>
+
+<table class="tracker-table">
+<thead>
+<tr>
+<th>Check-In</th>
+<th>WPM</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Starting score</td>
+<td><input id="logStartWpm" type="number" min="0" max="250"></td>
+<td><input id="logStartAccuracy" type="number" min="0" max="100"> %</td>
+</tr>
+
+<tr>
+<td>Day 7</td>
+<td><input id="log7Wpm" type="number" min="0" max="250"></td>
+<td><input id="log7Accuracy" type="number" min="0" max="100"> %</td>
+</tr>
+
+<tr>
+<td>Day 14</td>
+<td><input id="log14Wpm" type="number" min="0" max="250"></td>
+<td><input id="log14Accuracy" type="number" min="0" max="100"> %</td>
+</tr>
+
+<tr>
+<td>Day 21</td>
+<td><input id="log21Wpm" type="number" min="0" max="250"></td>
+<td><input id="log21Accuracy" type="number" min="0" max="100"> %</td>
+</tr>
+
+<tr>
+<td>Day 30</td>
+<td><input id="log30Wpm" type="number" min="0" max="250"></td>
+<td><input id="log30Accuracy" type="number" min="0" max="100"> %</td>
+</tr>
+</tbody>
+</table>
+
+<div class="no-print">
+<button type="button" onclick="saveProgressLog()">Save Progress Log</button>
+</div>
+
+<p id="logMessage" class="small"></p>
+</section>
+
+<section>
+<h2>Final Results</h2>
+
+<div class="progress-panel">
+<label for="finalWpm"><strong>Final WPM:</strong></label>
+<input id="finalWpm" type="number" min="0" max="250">
+
+<label for="finalAccuracy"><strong>Final accuracy:</strong></label>
+<input id="finalAccuracy" type="number" min="0" max="100"> %
+
+<div class="no-print">
+<button type="button" onclick="calculateImprovement()">Calculate Improvement</button>
+</div>
+
+<div id="resultBox"></div>
+</div>
+</section>
+
+<section>
+<h2>What To Do After Day 30</h2>
+
+<p>
+Finishing this challenge does not mean your typing practice has to stop. Use your results to choose the next goal.
+</p>
+
+<ul>
+<li>If your accuracy is below your goal, continue slower accuracy practice.</li>
+<li>If your accuracy is strong but your speed is low, add short timed tests.</li>
+<li>If your speed drops during longer tests, continue endurance practice.</li>
+<li>If certain letters or words cause mistakes, practice those patterns directly.</li>
+</ul>
+
+<div class="success-box">
+<strong>Recommended next step:</strong> repeat the challenge with a slightly higher WPM goal while keeping accuracy at 95% or better.
+</div>
+</section>
+
+<section>
+<h2>Helpful Typing Resources</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Improve Accuracy</h3>
+<p>Learn practical methods for reducing mistakes.</p>
+<a href="/how-to-increase-typing-accuracy.html">How to Increase Typing Accuracy</a>
+</div>
+
+<div class="card">
+<h3>Practice Paragraphs</h3>
+<p>Use realistic text to improve rhythm and punctuation.</p>
+<a href="/typing-practice-paragraphs.html">Typing Practice Paragraphs</a>
+</div>
+
+<div class="card">
+<h3>Typing Exercises</h3>
+<p>Practice short drills for control and speed.</p>
+<a href="/typing-exercises.html">Typing Exercises</a>
+</div>
+
+<div class="card">
+<h3>Daily Routine</h3>
+<p>Follow a shorter routine after finishing the challenge.</p>
+<a href="/best-daily-typing-practice-routine.html">Best Daily Typing Practice Routine</a>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long should I practice each day?</h3>
+<p>
+Most sessions in this challenge take about 10 to 20 minutes. You can shorten a session if your hands become tired or your concentration drops.
+</p>
+
+<h3>What accuracy should I aim for?</h3>
+<p>
+A useful goal is at least 95% accuracy. Beginners may need time to reach that level, so steady improvement matters more than perfection.
+</p>
+
+<h3>What happens if I miss a day?</h3>
+<p>
+Continue with the next unfinished day. You do not need to restart the entire challenge.
+</p>
+
+<h3>Should I repeat the same typing test?</h3>
+<p>
+Yes. Repeating the same test length makes it easier to compare results, but you should also practice varied text.
+</p>
+
+<h3>Will this challenge guarantee a certain WPM?</h3>
+<p>
+No. Improvement depends on your starting level, accuracy, consistency, technique, and practice habits. The challenge provides structure, not a guaranteed score.
+</p>
+</section>
+
+<section>
+<h2>About This Challenge</h2>
+
+<p>
+This 30-day typing challenge was created for Free Typing Test Online as a practical, reusable resource for beginners, students, job seekers, remote workers, adults, and everyday computer users.
+</p>
+
+<p>
+The challenge combines typing tests, paragraph practice, accuracy exercises, progress tracking, and weekly milestones so visitors can follow a clear improvement plan instead of practicing randomly.
+</p>
+
+<p><em>Created by Alan. Last updated: July 2026.</em></p>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Free Typing Test Online</p>
+
+<p>
+<a href="/">Home</a> |
+<a href="/about.html">About</a> |
+<a href="/contact.html">Contact</a> |
+<a href="/privacy-policy.html">Privacy Policy</a> |
+<a href="/terms.html">Terms of Service</a> |
+<a href="/sitemap.xml">Sitemap</a>
+</p>
+</footer>
+
+<script>
+const challengeKey = "typingChallenge30Days";
+const startingKey = "typingChallengeStartingResults";
+const logKey = "typingChallengeProgressLog";
+
+function getCompletedDays(){
+try{
+return JSON.parse(localStorage.getItem(challengeKey)) || [];
+}catch(error){
+return [];
+}
+}
+
+function saveCompletedDays(days){
+localStorage.setItem(challengeKey, JSON.stringify(days));
+}
+
+function updateProgress(){
+const checks = document.querySelectorAll(".day-check");
+const completed = [];
+
+checks.forEach(check => {
+const row = check.closest(".day-row");
+
+if(check.checked){
+completed.push(Number(check.dataset.day));
+row.classList.add("completed");
+}else{
+row.classList.remove("completed");
+}
+});
+
+saveCompletedDays(completed);
+
+const percent = Math.round((completed.length / 30) * 100);
+
+document.getElementById("progressText").textContent =
+completed.length + " of 30 days completed (" + percent + "%)";
+
+document.getElementById("progressFill").style.width = percent + "%";
+}
+
+function loadChallenge(){
+const completed = getCompletedDays();
+
+document.querySelectorAll(".day-check").forEach(check => {
+check.checked = completed.includes(Number(check.dataset.day));
+check.addEventListener("change", updateProgress);
+});
+
+updateProgress();
+loadStartingResults();
+loadProgressLog();
+}
+
+function markAllComplete(){
+document.querySelectorAll(".day-check").forEach(check => {
+check.checked = true;
+});
+updateProgress();
+}
+
+function resetChallenge(){
+const confirmed = window.confirm(
+"Reset all challenge checkboxes and saved progress?"
+);
+
+if(!confirmed){
+return;
+}
+
+localStorage.removeItem(challengeKey);
+
+document.querySelectorAll(".day-check").forEach(check => {
+check.checked = false;
+});
+
+updateProgress();
+}
+
+function saveStartingResults(){
+const wpm = document.getElementById("startWpm").value;
+const accuracy = document.getElementById("startAccuracy").value;
+
+localStorage.setItem(startingKey, JSON.stringify({
+wpm:wpm,
+accuracy:accuracy
+}));
+
+document.getElementById("startingMessage").textContent =
+"Starting results saved on this device.";
+
+document.getElementById("logStartWpm").value = wpm;
+document.getElementById("logStartAccuracy").value = accuracy;
+saveProgressLog();
+}
+
+function loadStartingResults(){
+try{
+const data = JSON.parse(localStorage.getItem(startingKey));
+
+if(data){
+document.getElementById("startWpm").value = data.wpm || "";
+document.getElementById("startAccuracy").value = data.accuracy || "";
+}
+}catch(error){
+return;
+}
+}
+
+function saveProgressLog(){
+const fields = [
+"logStartWpm",
+"logStartAccuracy",
+"log7Wpm",
+"log7Accuracy",
+"log14Wpm",
+"log14Accuracy",
+"log21Wpm",
+"log21Accuracy",
+"log30Wpm",
+"log30Accuracy"
+];
+
+const data = {};
+
+fields.forEach(id => {
+data[id] = document.getElementById(id).value;
+});
+
+localStorage.setItem(logKey, JSON.stringify(data));
+
+document.getElementById("logMessage").textContent =
+"Progress log saved on this device.";
+}
+
+function loadProgressLog(){
+try{
+const data = JSON.parse(localStorage.getItem(logKey));
+
+if(!data){
+return;
+}
+
+Object.keys(data).forEach(id => {
+const field = document.getElementById(id);
+
+if(field){
+field.value = data[id];
+}
+});
+}catch(error){
+return;
+}
+}
+
+function calculateImprovement(){
+const startWpm = Number(document.getElementById("startWpm").value);
+const startAccuracy = Number(document.getElementById("startAccuracy").value);
+const finalWpm = Number(document.getElementById("finalWpm").value);
+const finalAccuracy = Number(document.getElementById("finalAccuracy").value);
+const resultBox = document.getElementById("resultBox");
+
+if(
+!Number.isFinite(startWpm) ||
+!Number.isFinite(startAccuracy) ||
+!Number.isFinite(finalWpm) ||
+!Number.isFinite(finalAccuracy) ||
+startWpm < 0 ||
+finalWpm < 0 ||
+startAccuracy < 0 ||
+startAccuracy > 100 ||
+finalAccuracy < 0 ||
+finalAccuracy > 100
+){
+resultBox.innerHTML =
+'<div class="warning-box"><strong>Please enter valid starting and final WPM and accuracy values.</strong></div>';
+return;
+}
+
+const wpmChange = finalWpm - startWpm;
+const accuracyChange = finalAccuracy - startAccuracy;
+
+let wpmText = "";
+let accuracyText = "";
+
+if(wpmChange > 0){
+wpmText = "Your speed increased by " + wpmChange.toFixed(1) + " WPM.";
+}else if(wpmChange < 0){
+wpmText = "Your speed changed by " + wpmChange.toFixed(1) + " WPM.";
+}else{
+wpmText = "Your WPM stayed the same.";
+}
+
+if(accuracyChange > 0){
+accuracyText =
+"Your accuracy increased by " + accuracyChange.toFixed(1) + " percentage points.";
+}else if(accuracyChange < 0){
+accuracyText =
+"Your accuracy changed by " + accuracyChange.toFixed(1) + " percentage points.";
+}else{
+accuracyText = "Your accuracy stayed the same.";
+}
+
+resultBox.innerHTML =
+'<div class="success-box"><strong>Challenge results:</strong><br>' +
+wpmText + "<br>" + accuracyText +
+"<br><br>Use these results to choose your next typing goal.</div>";
+}
+
+document.addEventListener("DOMContentLoaded", loadChallenge);
+</script>
+
+</body>
+</html>
+```
