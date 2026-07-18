@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typing Progress Dashboard | Track WPM and Accuracy</title>
+<meta name="description" content="Track your typing speed, accuracy, practice time, and improvement over time with a free browser-based typing progress dashboard.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alansname1.github.io/typing-progress-dashboard.html">
+
+<style>
+:root{
+  --blue:#0d47a1;
+  --dark:#16324f;
+  --light:#f4f7fb;
+  --border:#d9e0ea;
+  --success:#e8f5e9;
+  --danger:#9b1c1c;
+}
+*{box-sizing:border-box;}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  max-width:1050px;
+  margin:auto;
+  line-height:1.7;
+  color:#222;
+  background:#fff;
+}
+header{
+  background:var(--blue);
+  color:#fff;
+  padding:36px 24px;
+  text-align:center;
+}
+header h1{margin:0;font-size:38px;}
+header p{max-width:780px;margin:12px auto 0;font-size:18px;}
+nav{
+  background:#f4f4f4;
+  padding:14px;
+  text-align:center;
+  border-bottom:1px solid #ddd;
+}
+nav a{
+  margin:5px 9px;
+  display:inline-block;
+  text-decoration:none;
+  color:var(--blue);
+  font-weight:bold;
+}
+main{padding:28px;}
+section{margin-bottom:44px;}
+h2{color:var(--blue);margin-bottom:10px;}
+h3{color:var(--dark);}
+a{color:var(--blue);}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+.card{
+  border:1px solid var(--border);
+  background:#fafafa;
+  padding:18px;
+  border-radius:8px;
+}
+.metric{
+  font-size:30px;
+  font-weight:bold;
+  color:var(--blue);
+  margin:6px 0;
+}
+.panel{
+  border:1px solid var(--border);
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+}
+label{font-weight:bold;display:block;margin-bottom:4px;}
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #bbb;
+  border-radius:5px;
+  font:inherit;
+}
+textarea{min-height:92px;resize:vertical;}
+button{
+  background:var(--blue);
+  color:white;
+  border:none;
+  padding:11px 16px;
+  border-radius:5px;
+  font-weight:bold;
+  cursor:pointer;
+  margin:10px 6px 0 0;
+}
+button.secondary{background:#666;}
+button.danger{background:var(--danger);}
+.table-wrap{overflow-x:auto;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:16px;
+  min-width:720px;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:10px;
+  text-align:left;
+  vertical-align:top;
+}
+th{background:#eef3f9;}
+.empty{
+  text-align:center;
+  color:#666;
+  padding:24px;
+}
+.success{
+  display:none;
+  background:var(--success);
+  border-left:4px solid #2e7d32;
+  padding:12px;
+  margin-top:16px;
+}
+.cta{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:12px 20px;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+  margin:8px 8px 8px 0;
+}
+footer{
+  margin-top:40px;
+  padding:25px;
+  background:#f1f1f1;
+  text-align:center;
+  font-size:14px;
+}
+@media(max-width:700px){
+  header h1{font-size:30px;}
+  main{padding:20px;}
+}
+@media print{
+  nav,.no-print,button{display:none!important;}
+  body{max-width:none;font-size:12pt;}
+  header{background:#fff;color:#000;text-align:left;padding:10px 0;}
+  main{padding:0;}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Typing Progress Dashboard</h1>
+  <p>Record typing tests, monitor WPM and accuracy, and see how your keyboard skills improve over time.</p>
+</header>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/typing-test-1-minute.html">1 Min Test</a>
+  <a href="/typing-test-5-minute.html">5 Min Test</a>
+  <a href="/typing-test-10-minute.html">10 Min Test</a>
+  <a href="/30-day-typing-challenge.html">30-Day Challenge</a>
+  <a href="/typing-practice-paragraphs.html">Paragraphs</a>
+  <a href="/about.html">About</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+
+<main>
+<section>
+  <h2>Your Progress at a Glance</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Tests Recorded</h3>
+      <div class="metric" id="testCount">0</div>
+      <p>Total saved typing sessions.</p>
+    </div>
+    <div class="card">
+      <h3>Best WPM</h3>
+      <div class="metric" id="bestWpm">—</div>
+      <p>Your fastest recorded result.</p>
+    </div>
+    <div class="card">
+      <h3>Average Accuracy</h3>
+      <div class="metric" id="avgAccuracy">—</div>
+      <p>Average across saved sessions.</p>
+    </div>
+    <div class="card">
+      <h3>Practice Time</h3>
+      <div class="metric" id="practiceMinutes">0 min</div>
+      <p>Total recorded test time.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Add a Typing Result</h2>
+  <div class="panel">
+    <form id="resultForm">
+      <div class="form-grid">
+        <div>
+          <label for="date">Date</label>
+          <input id="date" type="date" required>
+        </div>
+        <div>
+          <label for="duration">Test length</label>
+          <select id="duration" required>
+            <option value="1">1 minute</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+          </select>
+        </div>
+        <div>
+          <label for="wpm">WPM</label>
+          <input id="wpm" type="number" min="0" max="250" required>
+        </div>
+        <div>
+          <label for="accuracy">Accuracy (%)</label>
+          <input id="accuracy" type="number" min="0" max="100" step="0.1" required>
+        </div>
+      </div>
+      <div style="margin-top:16px;">
+        <label for="notes">Notes</label>
+        <textarea id="notes" maxlength="300" placeholder="Example: Focused on accuracy, struggled with punctuation, or felt more consistent today."></textarea>
+      </div>
+      <button type="submit">Save Result</button>
+      <button type="button" class="secondary" onclick="document.getElementById('resultForm').reset();setToday();">Clear Form</button>
+    </form>
+    <div class="success" id="saveMessage">Result saved on this device.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Saved Typing Results</h2>
+  <p>Your entries are stored in this browser using local storage. They are not uploaded or shared.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Length</th>
+          <th>WPM</th>
+          <th>Accuracy</th>
+          <th>Notes</th>
+          <th class="no-print">Action</th>
+        </tr>
+      </thead>
+      <tbody id="resultsBody"></tbody>
+    </table>
+  </div>
+  <div class="no-print">
+    <button type="button" onclick="window.print()">Print Progress</button>
+    <button type="button" class="danger" onclick="clearAllResults()">Delete All Results</button>
+  </div>
+</section>
+
+<section>
+  <h2>Keep Improving</h2>
+  <p>Use the dashboard after weekly check-ins or whenever you complete a typing test. Consistent records make it easier to see whether your speed, accuracy, and endurance are improving.</p>
+  <a class="cta" href="/typing-test-1-minute.html">Take a 1 Minute Test</a>
+  <a class="cta" href="/30-day-typing-challenge.html">Continue the 30-Day Challenge</a>
+</section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Free Typing Test Online. Track your progress and practice consistently.</p>
+</footer>
+
+<script>
+const STORAGE_KEY = "typingProgressDashboardResults";
+
+function getResults(){
+  try{
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    return Array.isArray(saved) ? saved : [];
+  }catch(error){
+    return [];
+  }
+}
+
+function saveResults(results){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(results));
+}
+
+function escapeHtml(value){
+  return String(value || "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function setToday(){
+  document.getElementById("date").value = new Date().toISOString().slice(0,10);
+}
+
+function render(){
+  const results = getResults().sort((a,b) => b.date.localeCompare(a.date));
+  const body = document.getElementById("resultsBody");
+
+  if(!results.length){
+    body.innerHTML = '<tr><td colspan="6" class="empty">No typing results saved yet.</td></tr>';
+  }else{
+    body.innerHTML = results.map(item => `
+      <tr>
+        <td>${escapeHtml(item.date)}</td>
+        <td>${escapeHtml(item.duration)} minute${Number(item.duration) === 1 ? "" : "s"}</td>
+        <td><strong>${escapeHtml(item.wpm)}</strong></td>
+        <td>${escapeHtml(item.accuracy)}%</td>
+        <td>${escapeHtml(item.notes)}</td>
+        <td class="no-print"><button type="button" class="danger" onclick="deleteResult('${item.id}')">Delete</button></td>
+      </tr>
+    `).join("");
+  }
+
+  document.getElementById("testCount").textContent = results.length;
+
+  if(results.length){
+    const best = Math.max(...results.map(r => Number(r.wpm)));
+    const averageAccuracy = results.reduce((sum,r) => sum + Number(r.accuracy), 0) / results.length;
+    const minutes = results.reduce((sum,r) => sum + Number(r.duration), 0);
+    document.getElementById("bestWpm").textContent = best;
+    document.getElementById("avgAccuracy").textContent = averageAccuracy.toFixed(1) + "%";
+    document.getElementById("practiceMinutes").textContent = minutes + " min";
+  }else{
+    document.getElementById("bestWpm").textContent = "—";
+    document.getElementById("avgAccuracy").textContent = "—";
+    document.getElementById("practiceMinutes").textContent = "0 min";
+  }
+}
+
+document.getElementById("resultForm").addEventListener("submit", function(event){
+  event.preventDefault();
+
+  const result = {
+    id: Date.now().toString(),
+    date: document.getElementById("date").value,
+    duration: document.getElementById("duration").value,
+    wpm: document.getElementById("wpm").value,
+    accuracy: document.getElementById("accuracy").value,
+    notes: document.getElementById("notes").value.trim()
+  };
+
+  const results = getResults();
+  results.push(result);
+  saveResults(results);
+  render();
+
+  this.reset();
+  setToday();
+
+  const message = document.getElementById("saveMessage");
+  message.style.display = "block";
+  setTimeout(() => message.style.display = "none", 2500);
+});
+
+function deleteResult(id){
+  if(!confirm("Delete this typing result?")) return;
+  saveResults(getResults().filter(item => item.id !== id));
+  render();
+}
+
+function clearAllResults(){
+  if(!confirm("Delete every saved typing result from this browser?")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  render();
+}
+
+setToday();
+render();
+</script>
+</body>
+</html>
