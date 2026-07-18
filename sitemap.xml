@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
@@ -16,9 +17,9 @@
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/30-day-typing-challenge.html</loc>
+    <loc>https://alansname1.github.io/complete-typing-improvement-guide.html</loc>
     <lastmod>2026-07-18</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
@@ -58,14 +59,14 @@
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/average-typing-speed-by-age.html</loc>
+    <loc>https://alansname1.github.io/average-typing-speed.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/average-typing-speed.html</loc>
+    <loc>https://alansname1.github.io/average-typing-speed-by-age.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -80,6 +81,13 @@
 
   <url>
     <loc>https://alansname1.github.io/typing-jobs-that-require-fast-keyboard-skills.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-test-online.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -103,11 +111,11 @@
     <loc>https://alansname1.github.io/typing-test-10-minute.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-test-online.html</loc>
+    <loc>https://alansname1.github.io/typing-test-accuracy.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -122,13 +130,6 @@
 
   <url>
     <loc>https://alansname1.github.io/typing-test-for-students.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/typing-test-accuracy.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -156,14 +157,35 @@
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-speed-levels.html</loc>
+    <loc>https://alansname1.github.io/typing-for-beginners.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/learn-touch-typing.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/keyboard-finger-placement.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://alansname1.github.io/typing-speed-chart.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/typing-speed-chart.html</loc>
+    <loc>https://alansname1.github.io/typing-speed-levels.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -177,45 +199,17 @@
   </url>
 
   <url>
-    <loc>https://alansname1.github.io/learn-touch-typing.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/keyboard-finger-placement.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
     <loc>https://alansname1.github.io/typing-practice-for-students.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://alansname1.github.io/typing-practice-for-children.html</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/typing-for-beginners.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://alansname1.github.io/complete-typing-improvement-guide.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
