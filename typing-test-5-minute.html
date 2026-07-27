@@ -1,501 +1,1531 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>5 Minute Typing Test | Free Accurate WPM Test Online</title>
+<title>5 Minute Typing Test | Free WPM and Accuracy Test</title>
 
-<meta name="description" content="Take a free 5 minute typing test online to measure WPM, accuracy, consistency, endurance, and typing speed with a longer practice test.">
+<meta name="description" content="Take a free 5 minute typing test to measure WPM, accuracy, errors, consistency, and typing endurance with a longer timed keyboard test.">
 
 <meta name="robots" content="index, follow">
+<meta name="author" content="Alan">
+<meta name="theme-color" content="#0b4f9c">
 
 <link rel="canonical" href="https://alansname1.github.io/typing-test-5-minute.html">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="5 Minute Typing Test | Free WPM and Accuracy Test">
+<meta property="og:description" content="Measure WPM, accuracy, errors, consistency, and endurance with a free five-minute typing test.">
+<meta property="og:url" content="https://alansname1.github.io/typing-test-5-minute.html">
+<meta property="og:site_name" content="Free Typing Test Online">
 
 <style>
+:root{
+--blue:#0b4f9c;
+--blue-dark:#083b75;
+--blue-light:#eaf3ff;
+--ink:#1d2939;
+--muted:#5f6b7a;
+--border:#d8e0ea;
+--surface:#f7f9fc;
+--success:#16794b;
+--radius:14px;
+}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,Helvetica,sans-serif;
-max-width:980px;
-margin:auto;
-padding:0;
-line-height:1.7;
-color:#222;
-background:#ffffff;
-}
-header{
-background:#0d47a1;
-color:white;
-padding:30px 24px;
-text-align:center;
-}
-header h1{
 margin:0;
-font-size:34px;
-}
-header p{
-max-width:760px;
-margin:12px auto 0;
-font-size:18px;
-}
-nav{
-background:#f4f4f4;
-padding:14px;
-text-align:center;
-border-bottom:1px solid #ddd;
-}
-nav a{
-margin:0 10px;
-text-decoration:none;
-color:#0d47a1;
-font-weight:bold;
-}
-main{
-padding:26px;
-}
-section{
-margin-bottom:38px;
-}
-h2{
-color:#0d47a1;
-}
-h3{
-color:#16324f;
-}
-a{
-color:#0d47a1;
-}
-.typing-box{
-margin-top:25px;
-padding:20px;
-border:2px solid #d9e2ec;
-border-radius:10px;
-background:#f9fbfd;
-}
-#sampleText{
-font-size:18px;
-line-height:1.7;
+font-family:Arial,Helvetica,sans-serif;
+color:var(--ink);
 background:#fff;
-border:1px solid #d9e6f5;
-padding:16px;
-border-radius:10px;
-margin-bottom:15px;
+line-height:1.7;
 }
+
+a{
+color:var(--blue);
+}
+
+a:hover{
+text-decoration-thickness:2px;
+}
+
+.skip-link{
+position:absolute;
+left:-9999px;
+top:0;
+background:#000;
+color:#fff;
+padding:10px 14px;
+z-index:999;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+}
+
+.site-header{
+background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+color:#fff;
+}
+
+.hero{
+max-width:1120px;
+margin:0 auto;
+padding:54px 24px 48px;
+}
+
+.eyebrow{
+display:inline-block;
+margin:0 0 12px;
+padding:5px 11px;
+border:1px solid rgba(255,255,255,.35);
+border-radius:999px;
+font-size:.88rem;
+font-weight:700;
+}
+
+h1{
+margin:0;
+font-size:clamp(2.2rem,6vw,3.8rem);
+line-height:1.08;
+letter-spacing:-.035em;
+}
+
+.hero-copy{
+max-width:820px;
+margin:18px 0 0;
+font-size:1.12rem;
+color:#eaf3ff;
+}
+
+.site-nav{
+background:#fff;
+border-bottom:1px solid var(--border);
+box-shadow:0 3px 14px rgba(0,0,0,.04);
+}
+
+.nav-inner{
+max-width:1120px;
+margin:0 auto;
+padding:0 24px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:24px;
+}
+
+.brand{
+padding:16px 0;
+font-weight:800;
+color:var(--blue-dark);
+text-decoration:none;
+white-space:nowrap;
+}
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-end;
+gap:4px;
+}
+
+.nav-links a{
+padding:16px 10px;
+color:var(--ink);
+font-weight:700;
+text-decoration:none;
+font-size:.94rem;
+}
+
+main{
+max-width:1050px;
+margin:0 auto;
+padding:42px 24px 18px;
+}
+
+article{
+max-width:900px;
+margin:0 auto;
+}
+
+section{
+margin-bottom:50px;
+}
+
+h2{
+margin:0 0 14px;
+color:var(--blue-dark);
+font-size:clamp(1.6rem,3vw,2.1rem);
+line-height:1.2;
+}
+
+h3{
+margin:25px 0 9px;
+color:#173a5e;
+font-size:1.25rem;
+line-height:1.3;
+}
+
+p{
+margin:0 0 17px;
+}
+
+li{
+margin:8px 0;
+}
+
+.tip-box{
+margin:22px 0;
+padding:20px 22px;
+background:var(--blue-light);
+border-left:5px solid var(--blue);
+border-radius:10px;
+}
+
+.typing-box{
+margin-top:22px;
+padding:25px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+background:var(--surface);
+box-shadow:0 8px 24px rgba(16,24,40,.06);
+}
+
+.test-instructions{
+margin-bottom:16px;
+color:var(--muted);
+}
+
+#sampleText{
+max-height:300px;
+overflow-y:auto;
+padding:20px;
+background:#fff;
+border:1px solid var(--border);
+border-radius:10px;
+font-size:1.05rem;
+line-height:1.8;
+white-space:pre-wrap;
+}
+
 textarea{
 width:100%;
-min-height:150px;
-padding:15px;
-font-size:16px;
-box-sizing:border-box;
-border:1px solid #cbd5e1;
-border-radius:8px;
+min-height:180px;
+margin-top:16px;
+padding:16px;
+font-family:Arial,Helvetica,sans-serif;
+font-size:1rem;
+line-height:1.65;
+border:2px solid #cbd5e1;
+border-radius:10px;
 resize:vertical;
 }
+
+textarea:focus{
+outline:3px solid rgba(11,79,156,.16);
+border-color:var(--blue);
+}
+
+textarea:disabled{
+background:#eef2f6;
+cursor:not-allowed;
+}
+
 .controls{
-text-align:center;
-margin-top:20px;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:18px;
 }
-.controls button{
-padding:12px 18px;
-margin:0 6px;
-cursor:pointer;
-border:none;
+
+button{
+padding:12px 20px;
+border:0;
 border-radius:8px;
-background:#0d47a1;
-color:white;
-font-size:15px;
+background:var(--blue);
+color:#fff;
+font-size:1rem;
+font-weight:700;
+cursor:pointer;
 }
-.controls button:hover{
-background:#08306f;
+
+button:hover{
+background:var(--blue-dark);
 }
+
+button.secondary{
+background:#e8edf3;
+color:var(--ink);
+}
+
+button.secondary:hover{
+background:#dce4ec;
+}
+
 .stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:10px;
-margin-top:20px;
-text-align:center;
+grid-template-columns:repeat(5,minmax(0,1fr));
+gap:12px;
+margin-top:22px;
 }
-.stats div{
-background:#f8fbff;
-padding:12px;
+
+.stat{
+padding:15px 10px;
+background:#fff;
+border:1px solid var(--border);
 border-radius:10px;
-border:1px solid #e2e8f0;
-}
-#message{
-margin-top:18px;
-font-weight:bold;
 text-align:center;
-color:#0d47a1;
 }
-.cta{
+
+.stat-label{
+display:block;
+font-size:.82rem;
+color:var(--muted);
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.04em;
+}
+
+.stat-value{
+display:block;
+margin-top:4px;
+font-size:1.35rem;
+font-weight:800;
+color:var(--blue-dark);
+}
+
+#status{
+margin-top:18px;
+padding:12px 15px;
+border-radius:8px;
+background:#eef2f6;
+text-align:center;
+font-weight:700;
+}
+
+#status.running{
+background:var(--blue-light);
+color:var(--blue-dark);
+}
+
+#status.complete{
+background:#eaf7f0;
+color:var(--success);
+}
+
+.result-box{
+display:none;
+margin-top:22px;
+padding:22px;
+background:#fff;
+border:2px solid var(--blue);
+border-radius:12px;
+}
+
+.result-box.visible{
+display:block;
+}
+
+.result-box h3{
+margin-top:0;
+}
+
+.button-link{
 display:inline-block;
-background:#0d47a1;
-color:white;
-padding:12px 20px;
+padding:12px 18px;
+border-radius:8px;
+background:var(--blue);
+color:#fff;
+font-weight:700;
 text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-margin:8px 8px 8px 0;
 }
-.box{
-background:#f8f8f8;
-border-left:4px solid #0d47a1;
-padding:18px;
-margin:18px 0;
-}
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+margin-top:20px;
 }
+
 .card{
-border:1px solid #ddd;
-background:#fafafa;
-padding:18px;
-border-radius:6px;
+padding:22px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+background:#fff;
 }
+
+.card h3{
+margin-top:0;
+}
+
+.card p{
+color:var(--muted);
+}
+
+.table-wrap{
+overflow-x:auto;
+}
+
 table{
 width:100%;
 border-collapse:collapse;
-margin-top:15px;
+margin:20px 0 25px;
 }
-th,td{
-border:1px solid #ddd;
-padding:10px;
+
+th,
+td{
+padding:12px;
+border:1px solid var(--border);
 text-align:left;
+vertical-align:top;
 }
+
 th{
-background:#f1f5fb;
+background:var(--blue-light);
 }
-footer{
-margin-top:40px;
-padding:25px;
-background:#f1f1f1;
+
+.checklist{
+list-style:none;
+padding-left:0;
+}
+
+.checklist li{
+position:relative;
+padding-left:30px;
+}
+
+.checklist li::before{
+content:"✓";
+position:absolute;
+left:0;
+color:var(--success);
+font-weight:900;
+}
+
+details{
+border-bottom:1px solid var(--border);
+padding:15px 0;
+}
+
+summary{
+cursor:pointer;
+font-weight:800;
+color:#173a5e;
+}
+
+details p{
+margin:10px 0 0;
+color:var(--muted);
+}
+
+.author-box{
+display:grid;
+grid-template-columns:76px 1fr;
+gap:20px;
+align-items:start;
+padding:26px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+background:var(--blue-light);
+}
+
+.author-mark{
+width:76px;
+height:76px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fff;
+border:2px solid rgba(11,79,156,.18);
+color:var(--blue-dark);
+font-size:30px;
+font-weight:800;
+}
+
+.final-cta{
+padding:38px 24px;
 text-align:center;
-font-size:14px;
+background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+color:#fff;
+border-radius:var(--radius);
+}
+
+.final-cta h2{
+color:#fff;
+}
+
+.final-cta p{
+max-width:680px;
+margin:0 auto 20px;
+color:#eaf3ff;
+}
+
+footer{
+margin-top:44px;
+padding:34px 24px;
+background:#eef2f7;
+border-top:1px solid var(--border);
+text-align:center;
+font-size:.94rem;
+color:#4d5968;
+}
+
+footer a{
+margin:0 7px;
+}
+
+@media(max-width:850px){
+
+.nav-inner{
+display:block;
+}
+
+.brand{
+display:block;
+text-align:center;
+padding-bottom:7px;
+}
+
+.nav-links{
+justify-content:center;
+padding-bottom:10px;
+}
+
+.nav-links a{
+padding:8px;
+}
+
+.stats{
+grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:560px){
+
+.hero{
+padding:44px 18px;
+}
+
+main{
+padding:32px 16px 10px;
+}
+
+.typing-box{
+padding:16px;
+}
+
+.author-box{
+grid-template-columns:1fr;
+}
+
 }
 </style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebApplication",
+"name":"5 Minute Typing Test",
+"url":"https://alansname1.github.io/typing-test-5-minute.html",
+"applicationCategory":"EducationalApplication",
+"operatingSystem":"Any",
+"offers":{
+"@type":"Offer",
+"price":"0",
+"priceCurrency":"USD"
+},
+"description":"A free five-minute typing test that measures WPM, accuracy, characters typed, errors, consistency, and endurance."
+}
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"Why take a 5 minute typing test?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"A five-minute test can help show whether you maintain speed and accuracy beyond a short one-minute attempt."
+}
+},
+{
+"@type":"Question",
+"name":"Why is my 5 minute WPM lower than my 1 minute WPM?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Longer tests require sustained concentration, rhythm, and accuracy, so some typists may score lower over five minutes than during a short burst."
+}
+},
+{
+"@type":"Question",
+"name":"How is WPM calculated on this test?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"The test estimates WPM by dividing typed characters by five and adjusting the result for the elapsed test time."
+}
+},
+{
+"@type":"Question",
+"name":"Does accuracy matter on a 5 minute test?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Yes. Accuracy is important because frequent mistakes and corrections can reduce useful typing efficiency."
+}
+},
+{
+"@type":"Question",
+"name":"Should I practice 5 minute typing tests every day?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"You can use longer tests periodically to measure consistency, but focused practice on accuracy and recurring weaknesses should also be part of your routine."
+}
+}
+]
+}
+</script>
+
 </head>
 
 <body>
 
-<header>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+
+<div class="hero">
+
+<p class="eyebrow">Free 5 Minute Test • No Signup</p>
+
 <h1>5 Minute Typing Test</h1>
-<p>Measure your WPM, typing accuracy, consistency, and keyboard endurance with a longer free typing test.</p>
+
+<p class="hero-copy">
+Type continuously for five minutes to measure WPM, accuracy, errors, and longer-session consistency. This test is designed to show whether you can maintain control beyond a quick one-minute burst.
+</p>
+
+</div>
+
 </header>
 
-<nav>
-<a href="/">Home</a>
-<a href="/typing-test-1-minute.html">1 Min Test</a>
-<a href="/typing-test-10-minute.html">10 Min Test</a>
-<a href="/typing-practice-for-beginners.html">Beginners</a>
-<a href="/how-to-improve-typing-speed.html">Improve Speed</a>
-<a href="/about.html">About</a>
-<a href="/contact.html">Contact</a>
+<nav class="site-nav" aria-label="Main navigation">
+
+<div class="nav-inner">
+
+<a class="brand" href="/">Free Typing Test Online</a>
+
+<div class="nav-links">
+
+<a href="/typing-test-online.html">All Tests</a> <a href="/typing-test-1-minute.html">1 Min Test</a> <a href="/typing-test-10-minute.html">10 Min Test</a> <a href="/typing-progress-dashboard.html">Progress</a> <a href="/about.html">About</a> <a href="/contact.html">Contact</a>
+
+</div>
+
+</div>
+
 </nav>
 
-<main>
+<main id="main-content">
+
+<article>
 
 <section>
-<h2>Free 5 Minute Typing Speed Test</h2>
 
-<p>
-This free 5 minute typing test helps you measure your typing speed, words per minute, accuracy, and consistency over a longer practice session. A five minute test can be more realistic than a very short test because it shows whether you can maintain typing control over time.
+<h2>Start Your Free 5 Minute Typing Test</h2>
+
+<p class="test-instructions">
+Press <strong>Start Test</strong> and copy the passage as accurately as possible for five minutes. The passage is intentionally long enough for a complete test.
 </p>
-
-<p>
-Use this page for daily typing practice, school typing improvement, job preparation, office skills, remote work, data entry practice, and general keyboard training. No signup is required.
-</p>
-
-<div class="box">
-<strong>Tip:</strong> longer typing tests are useful for measuring consistency. Try to keep a steady rhythm instead of rushing at the beginning.
-</div>
-</section>
-
-<section>
-<h2>Start the 5 Minute Typing Test</h2>
 
 <div class="typing-box">
 
-<div id="sampleText">Click Start Test to begin.</div>
+<div id="sampleText" aria-live="polite">
+Press Start Test to load your passage.
+</div>
 
-<textarea id="inputBox" disabled placeholder="Start typing here..." oninput="handleTyping()"></textarea>
+<textarea
+id="inputBox"
+disabled
+placeholder="Your typing will go here..."
+aria-label="Five minute typing test input"
+autocomplete="off"
+autocorrect="off"
+autocapitalize="off"
+spellcheck="false"
+></textarea>
 
 <div class="controls">
-<button onclick="startTest()">Start Test</button>
-<button onclick="restartTest()">Restart</button>
+
+<button type="button" id="startButton">
+Start Test
+</button>
+
+<button type="button" class="secondary" id="restartButton">
+Restart
+</button>
+
 </div>
 
 <div class="stats">
-<div>Time <strong id="time">300</strong></div>
-<div>WPM <strong id="wpm">0</strong></div>
-<div>Accuracy <strong id="accuracy">100%</strong></div>
-<div>Chars <strong id="chars">0</strong></div>
+
+<div class="stat">
+<span class="stat-label">Time</span>
+<span class="stat-value" id="time">5:00</span>
 </div>
 
-<div id="message">Waiting to start</div>
+<div class="stat">
+<span class="stat-label">WPM</span>
+<span class="stat-value" id="wpm">0</span>
+</div>
+
+<div class="stat">
+<span class="stat-label">Accuracy</span>
+<span class="stat-value" id="accuracy">100%</span>
+</div>
+
+<div class="stat">
+<span class="stat-label">Characters</span>
+<span class="stat-value" id="chars">0</span>
+</div>
+
+<div class="stat">
+<span class="stat-label">Errors</span>
+<span class="stat-value" id="errors">0</span>
+</div>
 
 </div>
+
+<div id="status" aria-live="polite">
+Waiting to start
+</div>
+
+<div class="result-box" id="resultBox">
+
+<h3>Your 5 Minute Result</h3>
+
+<p>
+<strong>WPM:</strong> <span id="finalWpm">0</span><br>
+<strong>Accuracy:</strong> <span id="finalAccuracy">100%</span><br>
+<strong>Characters typed:</strong> <span id="finalChars">0</span><br>
+<strong>Character errors:</strong> <span id="finalErrors">0</span>
+</p>
+
+<p id="resultMessage"></p>
+
+<a class="button-link" href="/typing-progress-dashboard.html">
+Track This Result
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section>
+
 <h2>Why Use a 5 Minute Typing Test?</h2>
 
 <p>
-A 5 minute typing test gives a better picture of practical typing ability because it measures more than a short burst of speed. Many people can type quickly for 30 to 60 seconds, but a longer test shows whether they can stay accurate and focused.
+A one-minute test is useful for a quick baseline, but it may not show what happens when you have to maintain typing for longer.
 </p>
 
 <p>
-This makes the 5 minute format useful for students, job seekers, office workers, virtual assistants, customer service workers, writers, transcription beginners, and anyone who wants to improve typing endurance.
+Over five minutes, you may notice changes in:
 </p>
+
+<ul class="checklist">
+<li>Typing speed</li>
+<li>Accuracy</li>
+<li>Concentration</li>
+<li>Rhythm</li>
+<li>Keyboard watching</li>
+<li>Hand tension</li>
+<li>Error frequency</li>
+</ul>
+
+<p>
+Those changes make a five-minute test useful for measuring consistency rather than only short-term speed.
+</p>
+
 </section>
 
 <section>
-<h2>What This Typing Test Measures</h2>
+
+<h2>How This Test Calculates Your Result</h2>
 
 <div class="grid">
+
 <div class="card">
+
 <h3>WPM</h3>
-<p>Words per minute estimates your typing speed during the test.</p>
+
+<p>
+The test uses the common five-character word convention. Characters typed are divided by five and adjusted for elapsed time.
+</p>
+
 </div>
 
 <div class="card">
+
 <h3>Accuracy</h3>
-<p>Accuracy shows how closely your typing matches the sample passage.</p>
+
+<p>
+Each typed character is compared with the matching character in the sample passage.
+</p>
+
 </div>
 
 <div class="card">
+
 <h3>Characters</h3>
-<p>Character count shows how much text you typed during the session.</p>
+
+<p>
+This shows how many characters you entered, including spaces and punctuation.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Consistency</h3>
-<p>Longer tests help show whether you can maintain speed and control.</p>
+
+<h3>Errors</h3>
+
+<p>
+Errors count typed characters that do not match the corresponding character in the passage.
+</p>
+
 </div>
+
 </div>
+
 </section>
 
 <section>
-<h2>What Is a Good 5 Minute Typing Score?</h2>
+
+<h2>1 Minute vs 5 Minute Typing Results</h2>
+
+<p>
+It is normal for your five-minute result to differ from your one-minute result.
+</p>
+
+<div class="table-wrap">
 
 <table>
+
+<thead>
 <tr>
-<th>Typing Speed</th>
-<th>Level</th>
-<th>Meaning</th>
+<th>Pattern</th>
+<th>What It May Suggest</th>
 </tr>
+</thead>
+
+<tbody>
+
 <tr>
-<td>20–30 WPM</td>
-<td>Beginner</td>
-<td>You are still building keyboard familiarity.</td>
+<td>Similar WPM on both tests</td>
+<td>Your short-term and five-minute pace may be fairly consistent.</td>
 </tr>
+
 <tr>
-<td>35–45 WPM</td>
-<td>Average</td>
-<td>Useful for everyday computer tasks.</td>
+<td>5-minute WPM is slightly lower</td>
+<td>You may naturally settle into a more sustainable pace.</td>
 </tr>
+
 <tr>
-<td>50–60 WPM</td>
-<td>Good</td>
-<td>Strong practical typing speed for many school and work tasks.</td>
+<td>5-minute WPM is much lower</td>
+<td>Consistency, concentration, or endurance may need practice.</td>
 </tr>
+
 <tr>
-<td>60–80 WPM</td>
-<td>Strong</td>
-<td>Efficient speed when accuracy is also high.</td>
+<td>Accuracy falls during the longer test</td>
+<td>You may be rushing, losing focus, or becoming tense.</td>
 </tr>
+
 <tr>
-<td>80+ WPM</td>
-<td>Advanced</td>
-<td>Fast typing ability with good control and rhythm.</td>
+<td>Accuracy stays high but WPM falls</td>
+<td>Your control is good, but sustained pace may be the next skill to develop.</td>
 </tr>
+
+</tbody>
+
 </table>
 
+</div>
+
 <p>
-A 5 minute score may be slightly lower than a 1 minute score because it requires more endurance and focus. That is normal.
+Use the <a href="/typing-test-1-minute.html">1 Minute Typing Test</a> for comparison.
 </p>
+
 </section>
 
 <section>
-<h2>How To Improve Your 5 Minute Score</h2>
+
+<h2>How to Take the Test More Consistently</h2>
+
+<p>
+Try to create similar conditions when comparing sessions.
+</p>
+
+<ul class="checklist">
+<li>Use the same device and keyboard when possible.</li>
+<li>Sit in a comfortable position.</li>
+<li>Avoid starting at an unsustainable sprint.</li>
+<li>Keep your hands relaxed.</li>
+<li>Read slightly ahead of your current position.</li>
+<li>Focus on accuracy as well as speed.</li>
+</ul>
+
+<div class="tip-box">
+<strong>Useful strategy:</strong> Start at a pace you believe you can maintain for the full five minutes instead of trying to set a personal record in the first thirty seconds.
+</div>
+
+</section>
+
+<section>
+
+<h2>What Should You Practice After the Test?</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>What Happened?</th>
+<th>Useful Next Step</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Accuracy dropped steadily</td>
+<td><a href="/typing-accuracy-practice.html">Practice accuracy</a> and reduce your pace slightly.</td>
+</tr>
+
+<tr>
+<td>You made the same error repeatedly</td>
+<td>Practice that specific key or letter combination.</td>
+</tr>
+
+<tr>
+<td>You looked down frequently</td>
+<td><a href="/learn-touch-typing.html">Work on touch typing</a> and keyboard familiarity.</td>
+</tr>
+
+<tr>
+<td>Your pace became uneven</td>
+<td>Use paragraph practice and focus on rhythm.</td>
+</tr>
+
+<tr>
+<td>You stayed accurate but slowed down</td>
+<td>Practice sustaining a comfortable pace for longer sessions.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>How to Improve Your 5 Minute Score</h2>
+
+<p>
+A longer-test score usually improves through several smaller skills rather than one trick.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Improve Accuracy</h3>
+
+<p>
+Reduce repeated mistakes so corrections interrupt your rhythm less often.
+</p>
+
+<a href="/how-to-increase-typing-accuracy.html">
+Improve typing accuracy →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Use Paragraph Practice</h3>
+
+<p>
+Longer passages help you practice punctuation, rhythm, and sustained attention.
+</p>
+
+<a href="/typing-practice-paragraphs.html">
+Practice paragraphs →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Follow a Routine</h3>
+
+<p>
+Combine testing with focused exercises instead of taking timed tests repeatedly.
+</p>
+
+<a href="/best-daily-typing-practice-routine.html">
+View daily routine →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Track Progress</h3>
+
+<p>
+Compare several five-minute results to see whether your normal performance is improving.
+</p>
+
+<a href="/typing-progress-dashboard.html">
+Track your results →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>When Should You Try the 10 Minute Test?</h2>
+
+<p>
+Once five minutes feels comfortable, the <a href="/typing-test-10-minute.html">10 Minute Typing Test</a> can provide a longer challenge.
+</p>
+
+<p>
+It can help you observe whether:
+</p>
 
 <ul>
-<li>Practice regularly, even for a few minutes each day.</li>
-<li>Focus on accuracy before trying to type faster.</li>
-<li>Keep your fingers near the home row keys.</li>
-<li>Avoid looking down at the keyboard while typing.</li>
-<li>Try to keep a steady rhythm instead of rushing.</li>
-<li>Use longer tests to build endurance and consistency.</li>
+<li>Your WPM remains stable</li>
+<li>Accuracy changes later in the session</li>
+<li>Your hands become tense</li>
+<li>Your concentration changes</li>
+<li>You begin looking at the keyboard more often</li>
 </ul>
 
 <p>
-For more detail, read <a href="/how-to-improve-typing-speed.html">How to Improve Typing Speed</a>.
+You do not need to take a ten-minute test every day. Use it periodically when you want to evaluate longer-session endurance.
 </p>
+
 </section>
 
 <section>
-<h2>1 Minute vs 5 Minute Typing Test</h2>
+
+<h2>How Should You Interpret Your WPM?</h2>
 
 <p>
-A 1 minute typing test is useful for quick practice and fast feedback. A 5 minute typing test is better when you want to measure consistency, endurance, and realistic typing control.
+Do not judge your entire typing ability from one number.
 </p>
 
 <p>
-If your 1 minute score is much higher than your 5 minute score, you may need more consistency practice.
+Consider:
 </p>
 
-<a class="cta" href="/typing-test-1-minute.html">Try 1 Minute Typing Test</a>
+<ul>
+<li>Accuracy</li>
+<li>Test length</li>
+<li>Your normal range across several attempts</li>
+<li>Your purpose for typing</li>
+<li>Whether your results are improving</li>
+</ul>
+
+<p>
+Read <a href="/what-is-a-good-typing-speed-guide.html">What Is a Good Typing Speed?</a> for a fuller explanation.
+</p>
+
 </section>
 
 <section>
+
 <h2>Frequently Asked Questions</h2>
 
-<h3>Is a 5 minute typing test more accurate?</h3>
+<details>
+
+<summary>Is a 5 minute typing test better than a 1 minute test?</summary>
+
 <p>
-A 5 minute test can give a more realistic view of typing consistency than a very short test because it measures performance over a longer period.
+Neither is always better. A one-minute test is useful for quick feedback, while a five-minute test provides more information about sustained consistency.
 </p>
 
-<h3>What is a good 5 minute typing score?</h3>
+</details>
+
+<details>
+
+<summary>Why is my five-minute WPM lower?</summary>
+
 <p>
-Around 40 WPM is practical for many everyday tasks. A score of 50 to 60 WPM is generally good when accuracy is also strong.
+Longer tests require you to maintain pace and concentration for more time. A lower result may simply reflect a more sustainable typing pace.
 </p>
 
-<h3>Why is my 5 minute score lower than my 1 minute score?</h3>
+</details>
+
+<details>
+
+<summary>How is WPM calculated?</summary>
+
 <p>
-That is normal. Longer tests require more focus, rhythm, and endurance.
+This test estimates WPM using the convention of five typed characters per word and adjusts that value for elapsed time.
 </p>
 
-<h3>Should I practice with longer typing tests?</h3>
+</details>
+
+<details>
+
+<summary>Does accuracy matter?</summary>
+
 <p>
-Yes. Longer tests help build consistency and prepare you for real typing tasks at school, work, or job applications.
+Yes. Frequent mistakes can interrupt rhythm and create extra correction work, so WPM should be considered together with accuracy.
 </p>
+
+</details>
+
+<details>
+
+<summary>Should I practice with a 5 minute test every day?</summary>
+
+<p>
+You can use it regularly, but timed testing should not replace targeted practice. Work on specific weaknesses between tests.
+</p>
+
+</details>
+
+<details>
+
+<summary>Should I use my highest result?</summary>
+
+<p>
+A personal best can be motivating, but several results usually provide a better picture of your normal five-minute typing ability.
+</p>
+
+</details>
+
 </section>
 
 <section>
-<h2>More Typing Practice</h2>
 
-<ul>
-<li><a href="/typing-test-1-minute.html">1 Minute Typing Test</a></li>
-<li><a href="/typing-test-10-minute.html">10 Minute Typing Test</a></li>
-<li><a href="/typing-practice-paragraphs.html">Typing Practice Paragraphs</a></li>
-<li><a href="/typing-accuracy-practice.html">Typing Accuracy Practice</a></li>
-<li><a href="/typing-practice-for-beginners.html">Typing Practice for Beginners</a></li>
-</ul>
+<div class="author-box">
+
+<div class="author-mark" aria-hidden="true">A</div>
+
+<div>
+
+<h2>About This Typing Test</h2>
+
+<p>
+My name is Alan, and I created Free Typing Test Online to provide free typing tests and practical educational resources for people who want to improve their keyboard skills.
+</p>
+
+<p>
+This five-minute test is designed to complement the shorter one-minute test by giving you more time to observe consistency, accuracy, rhythm, and sustained typing performance.
+</p>
+
+<p>
+Learn more on the <a href="/about.html">About page</a> and read how site content is prepared on the <a href="/editorial-policy.html">Editorial Policy</a>.
+</p>
+
+<p>
+<strong>Written and reviewed by Alan • Last reviewed July 27, 2026</strong>
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+<section>
+
+<div class="final-cta">
+
+<h2>Ready for a Longer Challenge?</h2>
+
+<p>
+Try the ten-minute test when you want to measure sustained typing performance beyond five minutes.
+</p>
+
+<a class="button-link" href="/typing-test-10-minute.html">
+Start the 10 Minute Test
+</a>
+
+</div>
+
+</section>
+
+</article>
 
 </main>
 
 <footer>
-<p>© 2026 Free Typing Test Online</p>
+
+<p>
+<strong>Free Typing Test Online</strong>
+</p>
+
+<p>
+Free typing tests and educational keyboard resources for school, work, and everyday computer use.
+</p>
+
 <p>
 <a href="/">Home</a> |
 <a href="/about.html">About</a> |
 <a href="/contact.html">Contact</a> |
 <a href="/privacy-policy.html">Privacy Policy</a> |
 <a href="/terms.html">Terms of Service</a> |
+<a href="/editorial-policy.html">Editorial Policy</a> |
 <a href="/sitemap.xml">Sitemap</a>
 </p>
+
+<p>© 2026 Free Typing Test Online</p>
+
 </footer>
 
 <script>
-var passages = [
-"Typing every day helps improve speed and accuracy over time. A longer typing test can show how well you maintain focus and control.",
-"Consistent typing practice helps build rhythm, confidence, and stronger keyboard skills. Accuracy should come first, and speed can improve with time.",
-"A five minute typing test gives a more realistic view of your typing performance because it measures endurance as well as speed.",
-"Good typing habits can help students, workers, and job seekers complete computer tasks faster and with fewer mistakes.",
-"Typing with steady focus helps reduce errors and build confidence. Practice regularly and compare your results over time.",
-"Improving typing speed takes patience and repetition. Short daily practice sessions can lead to better accuracy and stronger keyboard control.",
-"A good typing test measures both speed and accuracy. Clean typing is more useful than fast typing with many mistakes."
+"use strict";
+
+const passageSections = [
+`Typing for several minutes requires a different approach than typing for only a few seconds. A short burst of speed can produce an impressive result, but longer sessions show whether your rhythm remains steady. During this test, avoid trying to type at your absolute maximum pace from the beginning. Instead, choose a comfortable speed that you believe you can maintain. Pay attention to accuracy, punctuation, and the words that cause hesitation. If your hands become tense, relax your shoulders and reduce your pace slightly. Consistent typing is often smoother than frantic typing, and smooth movements can make it easier to maintain accuracy over time.`,
+
+`Keyboard improvement usually comes from deliberate practice rather than simply repeating timed tests. A typing test measures what you can currently do, while practice helps change that ability. After finishing a test, review the result and look for one recurring weakness. Perhaps you frequently confuse neighboring keys, miss punctuation, reverse letters, or look down at the keyboard during difficult words. Those details are valuable because they tell you what to practice next. Spend several minutes working on the specific problem before testing again. Over time, this cycle of measuring, practicing, and retesting can provide a clearer path toward improvement.`,
+
+`Accuracy is an important part of useful typing because errors often require additional time to correct. A typist who moves very quickly but frequently presses the wrong keys may spend much of that saved time using Backspace. This does not mean you should type extremely slowly forever. Instead, practice at a pace where your movements feel controlled. When that pace becomes comfortable, increase it slightly while trying to maintain the same accuracy. Gradual improvements are easier to sustain than sudden bursts of uncontrolled speed. The goal is to develop a combination of pace, rhythm, and accuracy that feels reliable during real computer tasks.`,
+
+`Touch typing can reduce the amount of attention required to search for individual keys. Beginners often look down repeatedly because key locations are not yet familiar. With practice, common movements can become easier to reproduce without visual searching. This allows more attention to remain on the screen and the text being typed. Learning touch typing does not require perfect technique immediately. Start with consistent finger placement, reduce keyboard watching gradually, and focus on accurate movements. The raised marks on the F and J keys can help you relocate the home-row position without looking down. Familiarity develops through repetition, so patience is important.`,
+
+`Real computer work involves more than simple lowercase words. Emails, reports, school assignments, forms, and online communication include punctuation, capital letters, numbers, names, and sentences of different lengths. Practice passages should include this variety because it better reflects ordinary typing. When you encounter a difficult word, avoid panicking or suddenly accelerating. Read slightly ahead, type the word carefully, and continue. One difficult word does not ruin an entire test. Keeping a steady rhythm after a mistake is often more useful than becoming frustrated and allowing one error to create several more.`,
+
+`Longer typing tests can help reveal changes that short tests may hide. You might begin quickly and then slow down after several minutes. Accuracy may remain stable, or it may decrease as concentration changes. Some typists begin looking at the keyboard more often later in a session, while others maintain a consistent pace throughout. None of these observations should be treated as failure. They are information about your current typing habits. If your five-minute score is lower than your one-minute score, consider whether endurance, rhythm, or concentration deserves more attention during practice.`,
+
+`Tracking several results is more useful than relying on one personal best. Suppose you complete five tests and score forty-two, forty-five, forty-three, forty-four, and fifty words per minute. The score of fifty may be exciting, but the other attempts suggest that your normal performance is closer to the low or middle forties. That normal range is useful when measuring progress. If the range gradually rises while accuracy remains stable, your typing is improving in a more reliable way. Record both speed and accuracy so that one number does not hide important changes in your technique.`,
+
+`Students and workers often benefit from efficient keyboard use because so many tasks require written digital communication. School assignments, research notes, reports, customer messages, spreadsheets, documentation, and email all involve typing. Higher speed can save time, but typing ability is only useful when the finished text is accurate enough for the task. This is why practice should include realistic material rather than only simple speed drills. Longer sentences and paragraphs help develop concentration and rhythm, while targeted exercises can address specific weaknesses. A balanced routine usually produces more useful progress than focusing on WPM alone.`,
+
+`Good posture does not require sitting rigidly. The goal is to find a comfortable position that allows the hands and shoulders to remain relaxed. Excess tension can make typing feel harder during longer sessions. Keep the keyboard at a comfortable distance and avoid striking keys harder than necessary. Take breaks during extended computer use, especially if you notice fatigue or discomfort. Typing practice should never require you to ignore persistent pain. Comfort matters because sustainable practice depends on being able to repeat the activity without unnecessary strain.`,
+
+`Improvement often happens gradually enough that it is difficult to notice from one day to the next. This is why keeping a simple record can be helpful. Write down your test length, words per minute, accuracy, and one observation after each session. Your observation might say that punctuation felt easier, keyboard watching decreased, or your hands became tense near the end. After several weeks, these notes can reveal progress that a single score might miss. They can also show recurring problems that deserve more focused practice. The purpose of tracking is not to create pressure; it is to make your practice more informed.`
 ];
 
-var currentText = "";
-var timeLeft = 300;
-var timer = null;
-var testStarted = false;
+const TEST_SECONDS = 300;
 
-function getRandomPassage(){
-return passages[Math.floor(Math.random() * passages.length)];
+let currentText = "";
+let timer = null;
+let testStarted = false;
+let startedAt = null;
+
+const sampleText = document.getElementById("sampleText");
+const inputBox = document.getElementById("inputBox");
+const startButton = document.getElementById("startButton");
+const restartButton = document.getElementById("restartButton");
+
+const timeDisplay = document.getElementById("time");
+const wpmDisplay = document.getElementById("wpm");
+const accuracyDisplay = document.getElementById("accuracy");
+const charsDisplay = document.getElementById("chars");
+const errorsDisplay = document.getElementById("errors");
+
+const statusDisplay = document.getElementById("status");
+const resultBox = document.getElementById("resultBox");
+
+function shuffle(array){
+const copy = array.slice();
+
+for(let i = copy.length - 1; i > 0; i--){
+const j = Math.floor(Math.random() * (i + 1));
+[copy[i], copy[j]] = [copy[j], copy[i]];
 }
 
-function startTest(){
-clearInterval(timer);
-
-timeLeft = 300;
-testStarted = true;
-currentText = getRandomPassage();
-
-document.getElementById("sampleText").textContent = currentText;
-document.getElementById("inputBox").disabled = false;
-document.getElementById("inputBox").value = "";
-document.getElementById("inputBox").focus();
-
-document.getElementById("time").textContent = "300";
-document.getElementById("wpm").textContent = "0";
-document.getElementById("accuracy").textContent = "100%";
-document.getElementById("chars").textContent = "0";
-document.getElementById("message").textContent = "Test running...";
-
-timer = setInterval(function(){
-timeLeft--;
-document.getElementById("time").textContent = timeLeft;
-
-handleTyping();
-
-if(timeLeft <= 0){
-clearInterval(timer);
-testStarted = false;
-document.getElementById("inputBox").disabled = true;
-document.getElementById("message").textContent = "Test complete!";
-}
-},1000);
+return copy;
 }
 
-function restartTest(){
-clearInterval(timer);
+function buildLongPassage(){
 
-timeLeft = 300;
-testStarted = false;
-currentText = "";
+let sections = [];
+let pool = shuffle(passageSections);
 
-document.getElementById("sampleText").textContent = "Click Start Test to begin.";
-document.getElementById("inputBox").value = "";
-document.getElementById("inputBox").disabled = true;
-
-document.getElementById("time").textContent = "300";
-document.getElementById("wpm").textContent = "0";
-document.getElementById("accuracy").textContent = "100%";
-document.getElementById("chars").textContent = "0";
-document.getElementById("message").textContent = "Waiting to start";
+while(sections.join("\n\n").length < 7000){
+sections = sections.concat(pool);
+pool = shuffle(passageSections);
 }
 
-function handleTyping(){
-if(!testStarted && timeLeft > 0){
-return;
+return sections.join("\n\n");
 }
 
-var typedText = document.getElementById("inputBox").value;
-var typedLength = typedText.length;
-var elapsedSeconds = 300 - timeLeft;
+function formatTime(seconds){
 
-document.getElementById("chars").textContent = typedLength;
+const minutes = Math.floor(seconds / 60);
+const remaining = seconds % 60;
 
-if(elapsedSeconds > 0){
-var wordsTyped = typedText.trim().length > 0 ? typedText.trim().split(/\s+/).length : 0;
-var wpm = Math.round((wordsTyped / elapsedSeconds) * 60);
-document.getElementById("wpm").textContent = wpm;
+return minutes + ":" + String(remaining).padStart(2,"0");
 }
 
-var correctChars = 0;
+function resetStats(){
 
-for(var i = 0; i < typedText.length; i++){
+timeDisplay.textContent = "5:00";
+wpmDisplay.textContent = "0";
+accuracyDisplay.textContent = "100%";
+charsDisplay.textContent = "0";
+errorsDisplay.textContent = "0";
+}
+
+function calculateStats(){
+
+const typedText = inputBox.value;
+const typedLength = typedText.length;
+
+let correctChars = 0;
+
+for(let i = 0; i < typedLength; i++){
+
 if(typedText[i] === currentText[i]){
 correctChars++;
 }
+
 }
 
-var accuracy = typedLength > 0 ? Math.round((correctChars / typedLength) * 100) : 100;
-document.getElementById("accuracy").textContent = accuracy + "%";
+const errors = typedLength - correctChars;
+
+let elapsedSeconds = 0;
+
+if(startedAt){
+elapsedSeconds = Math.min(
+TEST_SECONDS,
+(Date.now() - startedAt) / 1000
+);
 }
+
+let wpm = 0;
+
+if(elapsedSeconds > 0){
+
+const standardizedWords = typedLength / 5;
+
+wpm = Math.round(
+standardizedWords / (elapsedSeconds / 60)
+);
+
+}
+
+const accuracy = typedLength > 0
+? Math.round((correctChars / typedLength) * 100)
+: 100;
+
+wpmDisplay.textContent = String(Math.max(0,wpm));
+accuracyDisplay.textContent = Math.max(0,accuracy) + "%";
+charsDisplay.textContent = String(typedLength);
+errorsDisplay.textContent = String(errors);
+
+return {
+wpm:Math.max(0,wpm),
+accuracy:Math.max(0,accuracy),
+chars:typedLength,
+errors:errors
+};
+}
+
+function startTest(){
+
+clearInterval(timer);
+
+currentText = buildLongPassage();
+
+testStarted = true;
+startedAt = Date.now();
+
+sampleText.textContent = currentText;
+
+inputBox.value = "";
+inputBox.disabled = false;
+inputBox.maxLength = currentText.length;
+
+resetStats();
+
+resultBox.classList.remove("visible");
+
+statusDisplay.textContent = "Test running...";
+statusDisplay.className = "running";
+
+startButton.disabled = true;
+
+inputBox.focus();
+
+timer = setInterval(function(){
+
+const elapsed = Math.floor(
+(Date.now() - startedAt) / 1000
+);
+
+const remaining =
+Math.max(0,TEST_SECONDS - elapsed);
+
+timeDisplay.textContent =
+formatTime(remaining);
+
+calculateStats();
+
+if(remaining <= 0){
+finishTest();
+}
+
+},250);
+}
+
+function finishTest(){
+
+if(!testStarted){
+return;
+}
+
+clearInterval(timer);
+
+testStarted = false;
+
+timeDisplay.textContent = "0:00";
+
+inputBox.disabled = true;
+startButton.disabled = false;
+
+const result = calculateStats();
+
+statusDisplay.textContent = "Test complete!";
+statusDisplay.className = "complete";
+
+document.getElementById("finalWpm").textContent =
+String(result.wpm);
+
+document.getElementById("finalAccuracy").textContent =
+result.accuracy + "%";
+
+document.getElementById("finalChars").textContent =
+String(result.chars);
+
+document.getElementById("finalErrors").textContent =
+String(result.errors);
+
+let message = "";
+
+if(result.chars === 0){
+
+message =
+"No text was entered. Restart the test when you are ready.";
+
+}
+else if(result.accuracy >= 98){
+
+message =
+"Excellent accuracy across a longer test. Compare this WPM with your one-minute result to see how consistent your pace is.";
+
+}
+else if(result.accuracy >= 95){
+
+message =
+"Strong accuracy. Review any repeated errors and compare this result with your previous five-minute tests.";
+
+}
+else if(result.accuracy >= 90){
+
+message =
+"You have a useful baseline. Slowing down slightly may help you maintain cleaner typing across the full five minutes.";
+
+}
+else{
+
+message =
+"Focus on accuracy and controlled rhythm before pushing for more speed. Review the mistakes that repeated most often.";
+
+}
+
+document.getElementById("resultMessage").textContent =
+message;
+
+resultBox.classList.add("visible");
+}
+
+function restartTest(){
+
+clearInterval(timer);
+
+testStarted = false;
+startedAt = null;
+currentText = "";
+
+sampleText.textContent =
+"Press Start Test to load your passage.";
+
+inputBox.value = "";
+inputBox.disabled = true;
+inputBox.removeAttribute("maxlength");
+
+resetStats();
+
+statusDisplay.textContent = "Waiting to start";
+statusDisplay.className = "";
+
+resultBox.classList.remove("visible");
+
+startButton.disabled = false;
+}
+
+inputBox.addEventListener("input",function(){
+
+if(!testStarted){
+return;
+}
+
+calculateStats();
+
+if(inputBox.value.length >= currentText.length){
+finishTest();
+}
+
+});
+
+inputBox.addEventListener("paste",function(event){
+
+if(testStarted){
+event.preventDefault();
+}
+
+});
+
+startButton.addEventListener("click",startTest);
+restartButton.addEventListener("click",restartTest);
+
+restartTest();
 </script>
 
 </body>
