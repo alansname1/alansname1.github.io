@@ -4,299 +4,1516 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Learn Touch Typing | Beginner Guide to Typing Without Looking</title>
+<title>Learn Touch Typing | Step-by-Step Beginner Guide</title>
 
-<meta name="description" content="Learn touch typing step by step. Improve typing speed, typing accuracy, finger placement, and keyboard confidence with beginner-friendly touch typing tips and exercises.">
+<meta name="description" content="Learn touch typing step by step with home row practice, finger placement, keyboard drills, accuracy exercises, and practical tips for typing without constantly looking at the keyboard.">
 
 <meta name="robots" content="index, follow">
+<meta name="author" content="Alan">
+<meta name="theme-color" content="#0b4f9c">
 
 <link rel="canonical" href="https://alansname1.github.io/learn-touch-typing.html">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learn Touch Typing | Step-by-Step Beginner Guide">
+<meta property="og:description" content="Learn touch typing with home row practice, finger placement, accuracy drills, and a simple step-by-step learning plan.">
+<meta property="og:url" content="https://alansname1.github.io/learn-touch-typing.html">
+<meta property="og:site_name" content="Free Typing Test Online">
 
 <style>
+:root{
+--blue:#0b4f9c;
+--blue-dark:#083b75;
+--blue-light:#eaf3ff;
+--ink:#1d2939;
+--muted:#5f6b7a;
+--border:#d8e0ea;
+--surface:#f7f9fc;
+--success:#16794b;
+--radius:14px;
+}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
+margin:0;
 font-family:Arial,Helvetica,sans-serif;
-max-width:900px;
-margin:auto;
-padding:0;
+color:var(--ink);
+background:#fff;
 line-height:1.7;
-color:#222;
-background:#ffffff;
 }
-header{
-background:#0d47a1;
-color:white;
-padding:30px 24px;
-text-align:center;
+
+a{
+color:var(--blue);
 }
-header h1{margin:0;font-size:34px;}
-header p{max-width:760px;margin:12px auto 0;font-size:18px;}
-nav{
-background:#f4f4f4;
-padding:14px;
-text-align:center;
-border-bottom:1px solid #ddd;
+
+a:hover{
+text-decoration-thickness:2px;
 }
-nav a{
-margin:0 10px;
+
+.skip-link{
+position:absolute;
+left:-9999px;
+top:0;
+background:#000;
+color:#fff;
+padding:10px 14px;
+z-index:999;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+}
+
+.site-header{
+background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+color:#fff;
+}
+
+.hero{
+max-width:1120px;
+margin:0 auto;
+padding:58px 24px 52px;
+}
+
+.eyebrow{
+display:inline-block;
+margin:0 0 12px;
+padding:5px 11px;
+border:1px solid rgba(255,255,255,.35);
+border-radius:999px;
+font-size:.88rem;
+font-weight:700;
+}
+
+h1{
+margin:0;
+max-width:900px;
+font-size:clamp(2.25rem,6vw,4rem);
+line-height:1.08;
+letter-spacing:-.035em;
+}
+
+.hero-copy{
+max-width:820px;
+margin:20px 0 0;
+font-size:1.15rem;
+color:#eaf3ff;
+}
+
+.button-row{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:28px;
+}
+
+.button{
+display:inline-block;
+padding:13px 20px;
+border-radius:9px;
+font-weight:700;
 text-decoration:none;
-color:#0d47a1;
-font-weight:bold;
+border:2px solid transparent;
 }
-main{padding:26px;}
-section{margin-bottom:38px;}
-h2{color:#0d47a1;}
-h3{color:#16324f;}
-a{color:#0d47a1;}
-.box{
-background:#f8f8f8;
-border-left:4px solid #0d47a1;
-padding:18px;
-margin:18px 0;
+
+.button-primary{
+background:#fff;
+color:var(--blue-dark);
 }
+
+.button-secondary{
+border-color:rgba(255,255,255,.65);
+color:#fff;
+}
+
+.site-nav{
+background:#fff;
+border-bottom:1px solid var(--border);
+box-shadow:0 3px 14px rgba(0,0,0,.04);
+}
+
+.nav-inner{
+max-width:1120px;
+margin:0 auto;
+padding:0 24px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:24px;
+}
+
+.brand{
+padding:16px 0;
+font-weight:800;
+color:var(--blue-dark);
+text-decoration:none;
+white-space:nowrap;
+}
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-end;
+gap:4px;
+}
+
+.nav-links a{
+padding:16px 10px;
+color:var(--ink);
+font-weight:700;
+text-decoration:none;
+font-size:.94rem;
+}
+
+main{
+max-width:1000px;
+margin:0 auto;
+padding:48px 24px 18px;
+}
+
+article{
+max-width:850px;
+margin:0 auto;
+}
+
+section{
+margin-bottom:52px;
+}
+
+h2{
+margin:0 0 14px;
+color:var(--blue-dark);
+font-size:clamp(1.65rem,3vw,2.15rem);
+line-height:1.2;
+}
+
+h3{
+margin:27px 0 9px;
+color:#173a5e;
+line-height:1.3;
+font-size:1.28rem;
+}
+
+p{
+margin:0 0 17px;
+}
+
+li{
+margin:8px 0;
+}
+
+.article-meta{
+margin-bottom:32px;
+padding:16px 18px;
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:10px;
+color:var(--muted);
+font-size:.95rem;
+}
+
+.intro{
+font-size:1.08rem;
+}
+
+.tip-box{
+margin:24px 0;
+padding:22px 24px;
+background:var(--blue-light);
+border-left:5px solid var(--blue);
+border-radius:10px;
+}
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+margin-top:22px;
 }
+
 .card{
-border:1px solid #ddd;
-background:#fafafa;
-padding:18px;
-border-radius:6px;
+border:1px solid var(--border);
+background:#fff;
+padding:22px;
+border-radius:var(--radius);
 }
+
+.card h3{
+margin:0 0 8px;
+}
+
+.card p{
+color:var(--muted);
+}
+
+.practice-box{
+margin:22px 0;
+padding:24px;
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+}
+
+.practice-box h3{
+margin-top:0;
+}
+
+.practice-text{
+padding:17px;
+background:#fff;
+border:1px solid var(--border);
+border-radius:9px;
+font-family:Georgia,"Times New Roman",serif;
+font-size:1.05rem;
+line-height:1.85;
+}
+
+.table-wrap{
+overflow-x:auto;
+}
+
 table{
 width:100%;
 border-collapse:collapse;
-margin-top:15px;
+margin:20px 0 25px;
+background:#fff;
 }
-th,td{
-border:1px solid #ddd;
-padding:10px;
+
+th,
+td{
+border:1px solid var(--border);
+padding:12px;
 text-align:left;
+vertical-align:top;
 }
-th{background:#f1f5fb;}
-footer{
-margin-top:40px;
-padding:25px;
-background:#f1f1f1;
+
+th{
+background:var(--blue-light);
+}
+
+.checklist{
+list-style:none;
+padding-left:0;
+}
+
+.checklist li{
+position:relative;
+padding-left:30px;
+}
+
+.checklist li::before{
+content:"✓";
+position:absolute;
+left:0;
+color:var(--success);
+font-weight:900;
+}
+
+details{
+border-bottom:1px solid var(--border);
+padding:15px 0;
+}
+
+summary{
+cursor:pointer;
+color:#173a5e;
+font-weight:800;
+}
+
+details p{
+margin:10px 0 0;
+color:var(--muted);
+}
+
+.author-box{
+display:grid;
+grid-template-columns:76px 1fr;
+gap:20px;
+align-items:start;
+padding:26px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+background:var(--blue-light);
+}
+
+.author-mark{
+width:76px;
+height:76px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fff;
+border:2px solid rgba(11,79,156,.18);
+color:var(--blue-dark);
+font-size:30px;
+font-weight:800;
+}
+
+.final-cta{
 text-align:center;
-font-size:14px;
+padding:42px 24px;
+color:#fff;
+background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+border-radius:var(--radius);
+}
+
+.final-cta h2{
+color:#fff;
+}
+
+.final-cta p{
+max-width:690px;
+margin:0 auto 20px;
+color:#eaf3ff;
+}
+
+footer{
+margin-top:44px;
+padding:34px 24px;
+background:#eef2f7;
+border-top:1px solid var(--border);
+text-align:center;
+font-size:.94rem;
+color:#4d5968;
+}
+
+footer a{
+margin:0 7px;
+}
+
+@media(max-width:850px){
+
+.nav-inner{
+display:block;
+}
+
+.brand{
+display:block;
+text-align:center;
+padding-bottom:7px;
+}
+
+.nav-links{
+justify-content:center;
+padding-bottom:10px;
+}
+
+.nav-links a{
+padding:8px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:560px){
+
+.hero{
+padding:46px 20px;
+}
+
+main{
+padding:36px 18px 10px;
+}
+
+.author-box{
+grid-template-columns:1fr;
+}
+
 }
 </style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Article",
+"headline":"Learn Touch Typing: Step-by-Step Beginner Guide",
+"description":"A step-by-step guide to touch typing, home row finger placement, keyboard practice, accuracy, and learning to type without constantly looking at the keyboard.",
+"url":"https://alansname1.github.io/learn-touch-typing.html",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://alansname1.github.io/learn-touch-typing.html"
+},
+"author":{
+"@type":"Person",
+"name":"Alan"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Free Typing Test Online",
+"url":"https://alansname1.github.io/"
+},
+"dateModified":"2026-07-27"
+}
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"What is touch typing?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Touch typing is a method of typing that relies on learned finger positions and keyboard familiarity so you do not need to visually search for every key."
+}
+},
+{
+"@type":"Question",
+"name":"Can beginners learn touch typing?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Yes. Beginners can learn touch typing gradually by practicing home row placement, using consistent finger movements, and reducing keyboard watching over time."
+}
+},
+{
+"@type":"Question",
+"name":"Do I need to stop looking at the keyboard immediately?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"No. Beginners can reduce keyboard watching gradually as key locations and finger movements become more familiar."
+}
+},
+{
+"@type":"Question",
+"name":"Should I focus on speed while learning touch typing?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Controlled and accurate movement is usually a better starting point. Speed can be increased gradually as the keyboard becomes more familiar."
+}
+},
+{
+"@type":"Question",
+"name":"How can I practice touch typing?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Practice home row placement, simple letter combinations, common words, complete sentences, punctuation, and short typing tests while trying to maintain consistent finger positions."
+}
+}
+]
+}
+</script>
+
 </head>
 
 <body>
 
-<header>
-<h1>Learn Touch Typing</h1>
-<p>Learn how to type without looking at the keyboard and build better typing speed, accuracy, and keyboard confidence.</p>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+
+<div class="hero">
+
+<p class="eyebrow">Touch Typing Lessons</p>
+
+<h1>Learn Touch Typing Step by Step</h1>
+
+<p class="hero-copy">
+Learn how to use consistent finger placement, build keyboard memory, reduce how often you look down, and develop smoother typing through simple touch typing exercises.
+</p>
+
+<div class="button-row">
+
+<a class="button button-primary" href="#lesson-one">
+Start Lesson 1
+</a>
+
+<a class="button button-secondary" href="/keyboard-finger-placement.html">
+View Finger Placement
+</a>
+
+</div>
+
+</div>
+
 </header>
 
-<nav>
-<a href="/">Home</a>
-<a href="/typing-test-1-minute.html">Typing Test</a>
-<a href="/typing-practice-for-beginners.html">Beginner Practice</a>
+<nav class="site-nav" aria-label="Main navigation">
+
+<div class="nav-inner">
+
+<a class="brand" href="/">Free Typing Test Online</a>
+
+<div class="nav-links">
+
+<a href="/typing-test-online.html">Typing Tests</a>
+<a href="/typing-for-beginners.html">Beginners</a>
 <a href="/keyboard-finger-placement.html">Finger Placement</a>
-<a href="/typing-tips.html">Typing Tips</a>
+<a href="/typing-exercises.html">Exercises</a>
+<a href="/typing-practice-paragraphs.html">Paragraphs</a>
 <a href="/about.html">About</a>
-<a href="/contact.html">Contact</a>
+
+</div>
+
+</div>
+
 </nav>
 
-<main>
+<main id="main-content">
+
+<article>
+
+<div class="article-meta">
+<strong>Written by Alan</strong> • Last reviewed July 27, 2026 • Free Typing Test Online
+</div>
 
 <section>
+
 <h2>What Is Touch Typing?</h2>
 
-<p>
-Touch typing is a typing method that allows you to type without constantly looking at the keyboard. Instead of searching for each key visually, your fingers learn where keys are located through repetition and muscle memory.
+<p class="intro">
+Touch typing is a method of typing that relies on learned finger positions and repeated movement instead of visually searching for every key.
 </p>
 
 <p>
-Learning touch typing can improve typing speed, reduce typing mistakes, and make computer work feel more comfortable over time.
+At first, beginners may still look at the keyboard frequently. That is normal.
 </p>
 
-<div class="box">
-<strong>Tip:</strong> Most beginners improve faster by focusing on accuracy first instead of trying to type as fast as possible immediately.
+<p>
+As you practice, familiar keys and movements can become easier to find without looking down.
+</p>
+
+<div class="tip-box">
+<strong>Important:</strong> touch typing does not mean you must never look at the keyboard. The goal is to depend on looking less as your keyboard memory improves.
 </div>
+
 </section>
 
 <section>
-<h2>Why Touch Typing Matters</h2>
 
-<p>
-Touch typing is useful because it helps your eyes stay on the screen while your fingers handle the keyboard. This can make writing emails, school assignments, job applications, reports, and online forms easier.
-</p>
-
-<p>
-When you rely less on looking down at the keyboard, you can notice mistakes sooner and keep a smoother rhythm.
-</p>
-</section>
-
-<section>
-<h2>Touch Typing Basics</h2>
+<h2>Why Learn Touch Typing?</h2>
 
 <div class="grid">
-<div class="card">
-<h3>Home Row</h3>
-<p>The home row is the starting position for your fingers. It helps your hands return to a consistent place after each key press.</p>
-</div>
 
 <div class="card">
-<h3>Finger Placement</h3>
-<p>Each finger is usually responsible for certain keys. This reduces guessing and helps build muscle memory.</p>
-</div>
 
-<div class="card">
-<h3>Accuracy First</h3>
-<p>Correct typing habits matter more than speed at first. Speed improves more naturally after accuracy becomes consistent.</p>
-</div>
-
-<div class="card">
-<h3>Daily Practice</h3>
-<p>Short daily practice sessions are usually more effective than rare long sessions.</p>
-</div>
-</div>
-</section>
-
-<section>
-<h2>Home Row Finger Placement</h2>
+<h3>Less Key Searching</h3>
 
 <p>
-On a standard keyboard, the left hand usually rests on A, S, D, and F. The right hand usually rests on J, K, L, and the semicolon key. The F and J keys often have small raised marks to help you find the home position without looking.
+Learning consistent finger positions can reduce the time spent visually searching for individual letters.
 </p>
+
+</div>
+
+<div class="card">
+
+<h3>Better Rhythm</h3>
+
+<p>
+Familiar movements can make transitions between letters and words smoother.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>More Screen Focus</h3>
+
+<p>
+Looking at the screen more often can make it easier to follow what you are typing.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Stronger Keyboard Habits</h3>
+
+<p>
+Using consistent fingers can help replace random hand movement with repeatable patterns.
+</p>
+
+</div>
+
+</div>
+
+<p>
+For more about the connection between touch typing and performance, read <a href="/how-touch-typing-improves-speed.html">How Touch Typing Improves Speed</a>.
+</p>
+
+</section>
+
+<section id="lesson-one">
+
+<h2>Lesson 1: Find the Home Row</h2>
+
+<p>
+The home row is the starting position used in traditional touch typing.
+</p>
+
+<div class="table-wrap">
 
 <table>
+
+<thead>
 <tr>
 <th>Hand</th>
-<th>Home Row Keys</th>
-<th>Purpose</th>
+<th>Finger</th>
+<th>Home Key</th>
 </tr>
+</thead>
+
+<tbody>
+
 <tr>
-<td>Left hand</td>
-<td>A, S, D, F</td>
-<td>Helps control many left-side keyboard letters.</td>
+<td>Left</td>
+<td>Pinky</td>
+<td>A</td>
 </tr>
+
 <tr>
-<td>Right hand</td>
-<td>J, K, L, ;</td>
-<td>Helps control many right-side keyboard letters.</td>
+<td>Left</td>
+<td>Ring finger</td>
+<td>S</td>
 </tr>
+
 <tr>
-<td>Thumbs</td>
-<td>Space bar</td>
-<td>Used for spaces between words.</td>
+<td>Left</td>
+<td>Middle finger</td>
+<td>D</td>
 </tr>
+
+<tr>
+<td>Left</td>
+<td>Index finger</td>
+<td>F</td>
+</tr>
+
+<tr>
+<td>Right</td>
+<td>Index finger</td>
+<td>J</td>
+</tr>
+
+<tr>
+<td>Right</td>
+<td>Middle finger</td>
+<td>K</td>
+</tr>
+
+<tr>
+<td>Right</td>
+<td>Ring finger</td>
+<td>L</td>
+</tr>
+
+<tr>
+<td>Right</td>
+<td>Pinky</td>
+<td>;</td>
+</tr>
+
+</tbody>
+
 </table>
 
+</div>
+
 <p>
-For more detail, visit the <a href="/keyboard-finger-placement.html">Keyboard Finger Placement</a> guide.
+The F and J keys usually contain raised marks. These marks help you return your hands to the correct position without needing to look down.
 </p>
+
+<p>
+Your thumbs can rest near the Spacebar.
+</p>
+
 </section>
 
 <section>
-<h2>How To Practice Touch Typing</h2>
+
+<h2>Lesson 2: Practice the Home Row</h2>
+
+<p>
+Before reaching for other keys, become comfortable with the starting position.
+</p>
+
+<div class="practice-box">
+
+<h3>Exercise A</h3>
+
+<div class="practice-text">
+asdf jkl;<br>
+asdf jkl;<br>
+asdf jkl;<br>
+asdf jkl;
+</div>
+
+</div>
+
+<div class="practice-box">
+
+<h3>Exercise B</h3>
+
+<div class="practice-text">
+sad dad fall ask<br>
+lad flask salad all<br>
+fall ask dad salad
+</div>
+
+</div>
+
+<p>
+Do not try to type quickly.
+</p>
+
+<p>
+Your goal is to feel which finger presses each key and return it to the home position.
+</p>
+
+</section>
+
+<section>
+
+<h2>Lesson 3: Reach Above the Home Row</h2>
+
+<p>
+Once the home row feels more familiar, begin reaching toward the top letter row.
+</p>
+
+<p>
+The traditional finger zones are:
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Finger</th>
+<th>Typical Keys</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Left pinky</td>
+<td>Q, A, Z</td>
+</tr>
+
+<tr>
+<td>Left ring</td>
+<td>W, S, X</td>
+</tr>
+
+<tr>
+<td>Left middle</td>
+<td>E, D, C</td>
+</tr>
+
+<tr>
+<td>Left index</td>
+<td>R, F, V, T, G, B</td>
+</tr>
+
+<tr>
+<td>Right index</td>
+<td>Y, H, N, U, J, M</td>
+</tr>
+
+<tr>
+<td>Right middle</td>
+<td>I, K, comma</td>
+</tr>
+
+<tr>
+<td>Right ring</td>
+<td>O, L, period</td>
+</tr>
+
+<tr>
+<td>Right pinky</td>
+<td>P, semicolon, slash and nearby keys</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>
+For a deeper breakdown, use the <a href="/keyboard-finger-placement.html">Keyboard Finger Placement Guide</a>.
+</p>
+
+</section>
+
+<section>
+
+<h2>Lesson 4: Return to the Home Row</h2>
+
+<p>
+One of the main touch typing habits is returning your fingers toward the home position after reaching for other keys.
+</p>
+
+<p>
+Try this sequence:
+</p>
 
 <ol>
-<li>Place your fingers on the home row.</li>
-<li>Type slowly and focus on accuracy.</li>
-<li>Try to look at the screen instead of the keyboard.</li>
-<li>Practice short words first.</li>
-<li>Move to sentences and paragraphs after you feel more comfortable.</li>
-<li>Take a short typing test to measure progress.</li>
+<li>Place your fingers on A S D F and J K L ;.</li>
+<li>Type one nearby key.</li>
+<li>Return the finger to its home key.</li>
+<li>Repeat slowly.</li>
 </ol>
+
+<div class="practice-box">
+
+<div class="practice-text">
+red red red<br>
+type type type<br>
+green green green<br>
+jump jump jump<br>
+milk milk milk
+</div>
+
+</div>
+
+<p>
+The purpose is not the words themselves. The purpose is learning the movement away from and back toward your starting position.
+</p>
+
 </section>
 
 <section>
-<h2>Beginner Touch Typing Exercises</h2>
 
-<div class="box">
-<p>Practice slowly:</p>
-<p><strong>asdf jkl; asdf jkl; asdf jkl;</strong></p>
+<h2>Lesson 5: Practice Common Words</h2>
+
+<p>
+Once single-letter movements become more familiar, use common words.
+</p>
+
+<div class="practice-box">
+
+<div class="practice-text">
+the and this that with from your have will time work make people practice typing keyboard
 </div>
 
-<div class="box">
-<p>Practice common movement:</p>
-<p><strong>the quick red fox can type with steady hands</strong></p>
 </div>
 
-<div class="box">
-<p>Practice accuracy:</p>
-<p><strong>clean typing builds confidence and better keyboard habits</strong></p>
-</div>
+<p>
+Repeat the line slowly.
+</p>
+
+<p>
+Notice which words make you:
+</p>
+
+<ul class="checklist">
+<li>Look down at the keyboard</li>
+<li>Pause for a long time</li>
+<li>Use the wrong finger</li>
+<li>Make the same mistake repeatedly</li>
+</ul>
+
+<p>
+Those words give you useful clues about what needs more practice.
+</p>
+
 </section>
 
 <section>
-<h2>Common Touch Typing Mistakes</h2>
+
+<h2>Lesson 6: Move to Complete Sentences</h2>
+
+<div class="practice-box">
+
+<div class="practice-text">
+Touch typing improves through patient practice. I will keep my hands relaxed, use consistent finger movements, and focus on accuracy before trying to increase speed.
+</div>
+
+</div>
+
+<p>
+Sentence practice adds:
+</p>
+
+<ul class="checklist">
+<li>Spaces</li>
+<li>Capital letters</li>
+<li>Punctuation</li>
+<li>Longer word sequences</li>
+<li>More realistic typing rhythm</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Lesson 7: Reduce Keyboard Watching Gradually</h2>
+
+<p>
+Do not force yourself to type an entire page without looking at the keyboard on your first day.
+</p>
+
+<p>
+Instead, try a gradual method.
+</p>
+
+<h3>Step 1</h3>
+
+<p>
+Look at the keyboard, place your fingers correctly, and type one easy word.
+</p>
+
+<h3>Step 2</h3>
+
+<p>
+Keep your eyes on the screen while typing two or three familiar words.
+</p>
+
+<h3>Step 3</h3>
+
+<p>
+When you lose your position, feel for the F and J markers before looking down.
+</p>
+
+<h3>Step 4</h3>
+
+<p>
+Look down briefly only when necessary, then return your eyes to the screen.
+</p>
+
+<h3>Step 5</h3>
+
+<p>
+Gradually increase how long you can type before checking the keyboard.
+</p>
+
+</section>
+
+<section>
+
+<h2>Lesson 8: Practice Capital Letters</h2>
+
+<p>
+Capital letters require coordination between Shift and the letter key.
+</p>
+
+<div class="practice-box">
+
+<div class="practice-text">
+Monday Tuesday Friday<br>
+Alan Jordan Taylor<br>
+Typing Practice<br>
+Free Typing Test Online
+</div>
+
+</div>
+
+<p>
+Try using the Shift key on the opposite side from the letter you are typing when practical.
+</p>
+
+<p>
+For example, you can use the right Shift key when capitalizing a letter typed with the left hand.
+</p>
+
+</section>
+
+<section>
+
+<h2>Lesson 9: Add Punctuation</h2>
+
+<div class="practice-box">
+
+<div class="practice-text">
+Can you type this sentence accurately? Yes, you can. Start slowly, stay relaxed, and don't rush through punctuation.
+</div>
+
+</div>
+
+<p>
+Practice:
+</p>
 
 <ul>
-<li>Trying to type too fast too soon.</li>
-<li>Looking down at the keyboard constantly.</li>
-<li>Using only one or two fingers for most keys.</li>
-<li>Ignoring accuracy and focusing only on WPM.</li>
-<li>Practicing once and stopping for several days.</li>
+<li>Periods</li>
+<li>Commas</li>
+<li>Question marks</li>
+<li>Apostrophes</li>
+<li>Colons</li>
+<li>Semicolons</li>
 </ul>
+
+<p>
+Real typing includes punctuation, so it should be part of your practice too.
+</p>
+
 </section>
 
 <section>
-<h2>Touch Typing and Typing Speed</h2>
+
+<h2>Lesson 10: Practice Paragraphs</h2>
 
 <p>
-Touch typing can help typing speed improve because your fingers learn more efficient movement patterns. However, speed should not be forced. A person who types slowly and accurately is building better long-term habits than someone who types quickly with many mistakes.
+Once short sentences feel easier, move to paragraphs.
 </p>
 
+<div class="practice-box">
+
+<div class="practice-text">
+Learning touch typing takes repetition. At first, every key may require conscious thought, but common movements can become easier with practice. Focus on consistent finger placement and accurate typing. As the keyboard becomes more familiar, try to reduce how often you look down and gradually increase your normal pace.
+</div>
+
+</div>
+
 <p>
-After practicing, use the <a href="/typing-test-1-minute.html">1 minute typing test</a> or <a href="/typing-test-5-minute.html">5 minute typing test</a> to check your progress.
+Use more passages on the <a href="/typing-practice-paragraphs.html">Typing Practice Paragraphs</a> page.
 </p>
+
 </section>
 
 <section>
+
+<h2>Touch Typing Mistakes to Avoid</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Better Approach</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Typing as fast as possible immediately</td>
+<td>Learn the correct movements first.</td>
+</tr>
+
+<tr>
+<td>Using random fingers</td>
+<td>Practice consistent finger zones.</td>
+</tr>
+
+<tr>
+<td>Trying never to look down</td>
+<td>Reduce keyboard watching gradually.</td>
+</tr>
+
+<tr>
+<td>Ignoring repeated mistakes</td>
+<td>Practice difficult keys separately.</td>
+</tr>
+
+<tr>
+<td>Taking only speed tests</td>
+<td>Combine tests with actual exercises.</td>
+</tr>
+
+<tr>
+<td>Practicing while tense</td>
+<td>Keep hands and shoulders relaxed.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>A 15-Minute Touch Typing Routine</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Time</th>
+<th>Practice</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>3 minutes</td>
+<td>Home row and finger placement</td>
+</tr>
+
+<tr>
+<td>3 minutes</td>
+<td>Common words</td>
+</tr>
+
+<tr>
+<td>3 minutes</td>
+<td>Sentences and punctuation</td>
+</tr>
+
+<tr>
+<td>3 minutes</td>
+<td>Paragraph practice</td>
+</tr>
+
+<tr>
+<td>1 minute</td>
+<td>Short typing test</td>
+</tr>
+
+<tr>
+<td>2 minutes</td>
+<td>Review mistakes</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>
+You do not need to follow this schedule exactly. The main idea is to combine technique practice with realistic typing.
+</p>
+
+</section>
+
+<section>
+
+<h2>How Long Does Touch Typing Take to Learn?</h2>
+
+<p>
+There is no fixed timeline.
+</p>
+
+<p>
+Your progress depends on:
+</p>
+
+<ul>
+<li>Your current keyboard experience</li>
+<li>How regularly you practice</li>
+<li>Whether you already use several fingers</li>
+<li>How much keyboard watching you currently do</li>
+<li>How accurately you practice</li>
+</ul>
+
+<p>
+Instead of asking whether you have completely “learned” touch typing, watch for practical signs of progress.
+</p>
+
+</section>
+
+<section>
+
+<h2>Signs Your Touch Typing Is Improving</h2>
+
+<ul class="checklist">
+<li>You find common keys without searching.</li>
+<li>You return to the home row more naturally.</li>
+<li>You look down less often.</li>
+<li>You use more fingers consistently.</li>
+<li>Your typing rhythm feels smoother.</li>
+<li>You make fewer repeated errors.</li>
+<li>You can type longer passages comfortably.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>When Should You Start Measuring WPM?</h2>
+
+<p>
+You can take a baseline test at any time, but avoid making WPM the main goal during every touch typing session.
+</p>
+
+<p>
+Use a short test occasionally to see whether your new technique is becoming more comfortable.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>1 Minute Test</h3>
+
+<p>
+Useful for a quick progress check.</p>
+
+<a href="/typing-test-1-minute.html">
+Start 1 minute →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>5 Minute Test</h3>
+
+<p>
+Useful when you want to see whether your technique stays consistent longer.
+</p>
+
+<a href="/typing-test-5-minute.html">
+Try 5 minutes →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Accuracy Practice</h3>
+
+<p>
+Use focused drills when mistakes increase as you learn new finger movements.
+</p>
+
+<a href="/typing-accuracy-practice.html">
+Practice accuracy →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Beginner Guide</h3>
+
+<p>
+Review broader beginner typing fundamentals and practice routines.
+</p>
+
+<a href="/typing-for-beginners.html">
+Beginner guide →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Touch Typing vs. Hunt-and-Peck Typing</h2>
+
+<p>
+Hunt-and-peck typing usually means searching visually for keys and pressing them with a small number of fingers.
+</p>
+
+<p>
+Touch typing uses more consistent finger positions and relies more heavily on learned keyboard movements.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Hunt-and-Peck</th>
+<th>Touch Typing</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Frequent visual key searching</td>
+<td>Increasing reliance on keyboard memory</td>
+</tr>
+
+<tr>
+<td>Often uses only a few fingers</td>
+<td>Uses multiple fingers consistently</td>
+</tr>
+
+<tr>
+<td>Hands may move widely</td>
+<td>Each finger generally works within a key zone</td>
+</tr>
+
+<tr>
+<td>Typing can include frequent pauses</td>
+<td>Practice aims for smoother rhythm</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
 <h2>Frequently Asked Questions</h2>
 
-<h3>Can beginners learn touch typing?</h3>
+<details>
+
+<summary>What is touch typing?</summary>
+
 <p>
-Yes. Beginners can learn touch typing by starting slowly, using home row placement, and practicing regularly.
+Touch typing is a method of typing that relies on learned finger positions and keyboard familiarity instead of visually searching for every key.
 </p>
 
-<h3>How long does it take to learn touch typing?</h3>
+</details>
+
+<details>
+
+<summary>Can beginners learn touch typing?</summary>
+
 <p>
-It depends on practice habits. Some people notice progress within days, while others need several weeks to feel comfortable.
+Yes. Beginners can learn gradually by practicing home row placement, consistent finger movements, simple words, sentences, and paragraphs.
 </p>
 
-<h3>Should I focus on speed or accuracy first?</h3>
+</details>
+
+<details>
+
+<summary>Do I need to stop looking at the keyboard immediately?</summary>
+
 <p>
-Accuracy should come first. Clean typing habits make speed easier to build later.
+No. Reduce keyboard watching gradually as key locations and movements become more familiar.
 </p>
 
-<h3>Do I need to stop looking at the keyboard right away?</h3>
+</details>
+
+<details>
+
+<summary>Should I focus on speed while learning?</summary>
+
 <p>
-No. Start by looking less often. Over time, try to keep your eyes on the screen for longer periods.
+Controlled and accurate movement is usually a better starting point. Increase speed gradually as your technique becomes more comfortable.
 </p>
+
+</details>
+
+<details>
+
+<summary>Do I have to use the correct finger for every key?</summary>
+
+<p>
+Consistent finger placement is one of the main ideas behind traditional touch typing. Beginners may need time to build the habit, so focus on gradual improvement rather than perfection from the first session.
+</p>
+
+</details>
+
+<details>
+
+<summary>How can I practice touch typing every day?</summary>
+
+<p>
+Use a short routine with home-row practice, common words, sentences, punctuation, paragraphs, and an occasional typing test.
+</p>
+
+</details>
+
 </section>
 
 <section>
-<h2>More Typing Resources</h2>
 
-<ul>
-<li><a href="/typing-practice-for-beginners.html">Typing Practice for Beginners</a></li>
-<li><a href="/typing-exercises.html">Typing Exercises</a></li>
-<li><a href="/typing-practice-paragraphs.html">Typing Practice Paragraphs</a></li>
-<li><a href="/typing-accuracy-practice.html">Typing Accuracy Practice</a></li>
-<li><a href="/how-to-improve-typing-speed.html">How to Improve Typing Speed</a></li>
-</ul>
+<div class="author-box">
+
+<div class="author-mark" aria-hidden="true">A</div>
+
+<div>
+
+<h2>About This Touch Typing Guide</h2>
+
+<p>
+My name is Alan, and I created Free Typing Test Online to provide free typing tests and practical educational resources for people who want to improve their keyboard skills.
+</p>
+
+<p>
+This guide focuses specifically on learning touch typing technique, including home row placement, finger zones, keyboard memory, reducing keyboard watching, and moving from letters to real paragraphs.
+</p>
+
+<p>
+Learn more on the <a href="/about.html">About page</a> and read how site content is prepared on the <a href="/editorial-policy.html">Editorial Policy</a>.
+</p>
+
+<p>
+<strong>Written and reviewed by Alan • Last reviewed July 27, 2026</strong>
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+<section>
+
+<div class="final-cta">
+
+<h2>Practice What You Learned</h2>
+
+<p>
+Start with finger placement and short exercises, then use a quick typing test when you are ready to measure your progress.
+</p>
+
+<div class="button-row" style="justify-content:center;">
+
+<a class="button button-primary" href="/keyboard-finger-placement.html">
+Practice Finger Placement
+</a>
+
+<a class="button button-secondary" href="/typing-test-1-minute.html">
+Take a 1 Minute Test
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</article>
 
 </main>
 
 <footer>
-<p>© 2026 Free Typing Test Online</p>
+
+<p>
+<strong>Free Typing Test Online</strong>
+</p>
+
+<p>
+Free typing tests and educational keyboard resources for school, work, and everyday computer use.
+</p>
+
 <p>
 <a href="/">Home</a> |
+<a href="/typing-test-online.html">Typing Tests</a> |
+<a href="/typing-exercises.html">Exercises</a> |
 <a href="/about.html">About</a> |
 <a href="/contact.html">Contact</a> |
+<a href="/editorial-policy.html">Editorial Policy</a> |
 <a href="/privacy-policy.html">Privacy Policy</a> |
 <a href="/terms.html">Terms of Service</a> |
 <a href="/sitemap.xml">Sitemap</a>
 </p>
+
+<p>© 2026 Free Typing Test Online</p>
+
 </footer>
 
 </body>
