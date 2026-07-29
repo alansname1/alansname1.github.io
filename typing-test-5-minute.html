@@ -605,6 +605,18 @@ grid-template-columns:1fr;
 }
 </script>
 
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://alansname1.github.io/"},
+  {"@type":"ListItem","position":2,"name":"5 Minute Typing Test","item":"https://alansname1.github.io/typing-test-5-minute.html"}
+ ]
+}
+</script>
+
 </head>
 
 <body>
@@ -1152,7 +1164,7 @@ My name is Alan, and I created Free Typing Test Online to provide free typing te
 </p>
 
 <p>
-This five-minute test is designed to complement the shorter one-minute test by giving you more time to observe consistency, accuracy, rhythm, and sustained typing performance.
+This five-minute test is designed to complement the shorter one-minute test by giving you more time to observe consistency, accuracy, rhythm, and sustained typing performance. I continue reviewing and improving these tests based on clarity, accessibility, and practical usefulness so they remain educational resources rather than simple score generators.
 </p>
 
 <p>
@@ -1332,7 +1344,7 @@ let wpm = 0;
 
 if(elapsedSeconds > 0){
 
-const standardizedWords = typedLength / 5;
+const standardizedWords = correctChars / 5;
 
 wpm = Math.round(
 standardizedWords / (elapsedSeconds / 60)
