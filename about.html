@@ -4,123 +4,706 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Free Typing Test Online | Typing Tests and Practice Resources</title>
+<title>About Free Typing Test Online | Our Purpose and Approach</title>
 
-<meta name="description" content="Learn about Free Typing Test Online, offering free typing tests, typing practice, touch typing guides, accuracy tips, and keyboard skill resources.">
+<meta name="description" content="Learn why Free Typing Test Online was created, how its typing guides and practice resources are developed, and what makes the website useful for learners.">
 
 <meta name="robots" content="index, follow">
+<meta name="author" content="Alan">
 <meta name="theme-color" content="#0b4f9c">
 
 <link rel="canonical" href="https://alansname1.github.io/about.html">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Free Typing Test Online">
+<meta property="og:description" content="Learn why Free Typing Test Online was created and how its typing tests, guides, and practice resources are developed.">
+<meta property="og:url" content="https://alansname1.github.io/about.html">
+<meta property="og:site_name" content="Free Typing Test Online">
+
 <style>
+:root{
+--blue:#0b4f9c;
+--blue-dark:#083b75;
+--blue-light:#eaf3ff;
+--ink:#1d2939;
+--muted:#5f6b7a;
+--border:#d8e0ea;
+--surface:#f7f9fc;
+--white:#fff;
+--success:#16794b;
+--shadow:0 10px 30px rgba(11,79,156,.10);
+--radius:14px;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
 body{
+margin:0;
 font-family:Arial,Helvetica,sans-serif;
-max-width:900px;
-margin:auto;
-padding:0;
+color:var(--ink);
+background:#fff;
 line-height:1.7;
-color:#222;
-background:#ffffff;
 }
-header{
-background:#0d47a1;
-color:white;
-padding:30px 24px;
+
+a{color:var(--blue)}
+
+a:hover{text-decoration-thickness:2px}
+
+.skip-link{
+position:absolute;
+left:-9999px;
+top:0;
+background:#000;
+color:#fff;
+padding:10px 14px;
+z-index:999;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+}
+
+.site-header{
+background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+color:#fff;
+}
+
+.hero{
+max-width:1120px;
+margin:0 auto;
+padding:64px 24px 58px;
+display:grid;
+grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+gap:34px;
+align-items:center;
+}
+
+.eyebrow{
+display:inline-block;
+margin:0 0 12px;
+padding:5px 11px;
+border:1px solid rgba(255,255,255,.35);
+border-radius:999px;
+font-size:.88rem;
+font-weight:700;
+}
+
+h1{
+margin:0;
+max-width:780px;
+font-size:clamp(2.35rem,6vw,4rem);
+line-height:1.06;
+letter-spacing:-.035em;
+}
+
+.hero-copy{
+max-width:760px;
+margin:20px 0 0;
+font-size:1.15rem;
+color:#eaf3ff;
+}
+
+.hero-panel{
+background:rgba(255,255,255,.11);
+border:1px solid rgba(255,255,255,.24);
+border-radius:var(--radius);
+padding:24px;
+}
+
+.hero-panel h2{
+margin:0 0 13px;
+color:#fff;
+font-size:1.35rem;
+}
+
+.hero-panel ul{
+margin:0;
+padding-left:22px;
+}
+
+.hero-panel li{margin:7px 0}
+
+.site-nav{
+background:#fff;
+border-bottom:1px solid var(--border);
+box-shadow:0 3px 14px rgba(0,0,0,.04);
+}
+
+.nav-inner{
+max-width:1120px;
+margin:0 auto;
+padding:0 24px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:24px;
+}
+
+.brand{
+padding:16px 0;
+font-weight:800;
+color:var(--blue-dark);
+text-decoration:none;
+white-space:nowrap;
+}
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-end;
+gap:4px;
+}
+
+.nav-links a{
+padding:16px 10px;
+color:var(--ink);
+font-weight:700;
+text-decoration:none;
+font-size:.94rem;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"]{
+color:var(--blue);
+}
+
+main{
+max-width:1120px;
+margin:0 auto;
+padding:48px 24px 18px;
+}
+
+section{margin-bottom:58px}
+
+h2{
+margin:0 0 13px;
+color:var(--blue-dark);
+font-size:clamp(1.65rem,3vw,2.15rem);
+line-height:1.2;
+letter-spacing:-.02em;
+}
+
+h3{
+margin:0 0 8px;
+color:#173a5e;
+line-height:1.3;
+}
+
+p{margin:0 0 16px}
+
+.section-intro{
+max-width:820px;
+color:var(--muted);
+font-size:1.05rem;
+}
+
+.trust-strip{
+margin-top:-20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+}
+
+.trust-item{
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+padding:18px;
 text-align:center;
+box-shadow:var(--shadow);
+font-weight:700;
 }
-header h1{margin:0;font-size:34px;}
-header p{max-width:760px;margin:12px auto 0;font-size:18px;}
-nav{background:#f4f4f4;padding:14px;text-align:center;border-bottom:1px solid #ddd;}
-nav a{margin:0 10px;text-decoration:none;color:#0d47a1;font-weight:bold;}
-nav a[aria-current="page"]{text-decoration:underline;}
-main{padding:26px;}
-section{margin-bottom:38px;}
-h2{color:#0d47a1;}
-a{color:#0d47a1;}
-.box{background:#f8f8f8;border-left:4px solid #0d47a1;padding:18px;margin:18px 0;}
-footer{margin-top:40px;padding:25px;background:#f1f1f1;text-align:center;font-size:14px;}
+
+.trust-item span{
+display:block;
+color:var(--success);
+font-size:1.15rem;
+margin-bottom:2px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:18px;
+}
+
+.card{
+border:1px solid var(--border);
+background:#fff;
+padding:22px;
+border-radius:var(--radius);
+box-shadow:0 5px 20px rgba(17,40,75,.055);
+}
+
+.card p{color:var(--muted)}
+
+.card-link{
+display:inline-block;
+margin-top:4px;
+font-weight:700;
+}
+
+.soft-section{
+padding:30px;
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+}
+
+.two-column{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.checklist{
+padding:0;
+margin:18px 0 0;
+list-style:none;
+}
+
+.checklist li{
+position:relative;
+margin:12px 0;
+padding-left:30px;
+}
+
+.checklist li::before{
+content:"✓";
+position:absolute;
+left:0;
+top:0;
+color:var(--success);
+font-weight:900;
+}
+
+.timeline{
+display:grid;
+gap:16px;
+margin-top:20px;
+}
+
+.timeline-item{
+padding:20px;
+border-left:4px solid var(--blue);
+background:#fff;
+border-radius:0 12px 12px 0;
+box-shadow:0 4px 18px rgba(17,40,75,.05);
+}
+
+.timeline-item h3{margin-bottom:6px}
+
+.quote-box{
+padding:28px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+background:var(--blue-light);
+}
+
+.quote-box p{
+font-size:1.1rem;
+color:#173a5e;
+}
+
+.link-list{
+columns:2;
+column-gap:34px;
+padding-left:20px;
+}
+
+.link-list li{
+break-inside:avoid;
+margin:0 0 10px;
+}
+
+details{
+border-bottom:1px solid var(--border);
+padding:15px 0;
+}
+
+summary{
+cursor:pointer;
+color:#173a5e;
+font-weight:800;
+}
+
+details p{
+margin:10px 0 0;
+color:var(--muted);
+}
+
+.author-box{
+display:grid;
+grid-template-columns:76px 1fr;
+gap:20px;
+align-items:start;
+padding:26px;
+border:1px solid var(--border);
+border-radius:var(--radius);
+background:var(--blue-light);
+}
+
+.author-mark{
+width:76px;
+height:76px;
+border-radius:50%;
+display:block;
+object-fit:cover;
+background:#fff;
+border:2px solid rgba(11,79,156,.18);
+}
+
+.final-cta{
+text-align:center;
+padding:42px 24px;
+color:#fff;
+background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+border-radius:var(--radius);
+}
+
+.final-cta h2{color:#fff}
+
+.final-cta p{
+max-width:690px;
+margin:0 auto 20px;
+color:#eaf3ff;
+}
+
+.button{
+display:inline-block;
+padding:13px 20px;
+border-radius:9px;
+font-weight:700;
+text-decoration:none;
+border:2px solid transparent;
+}
+
+.button-primary{
+background:#fff;
+color:var(--blue-dark);
+}
+
+footer{
+margin-top:44px;
+padding:34px 24px;
+background:#eef2f7;
+border-top:1px solid var(--border);
+text-align:center;
+font-size:.94rem;
+color:#4d5968;
+}
+
+footer nav{margin-top:10px}
+footer a{margin:0 7px}
+
+@media(max-width:850px){
+.hero{grid-template-columns:1fr}
+.trust-strip{grid-template-columns:repeat(2,1fr)}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.two-column{grid-template-columns:1fr}
+.nav-inner{display:block}
+.brand{display:block;text-align:center;padding-bottom:7px}
+.nav-links{justify-content:center;padding-bottom:10px}
+.nav-links a{padding:8px}
+}
+
+@media(max-width:560px){
+.hero{padding:48px 20px}
+main{padding:36px 18px 10px}
+.trust-strip,
+.grid{grid-template-columns:1fr}
+.link-list{columns:1}
+.soft-section{padding:23px 19px}
+.author-box{grid-template-columns:1fr}
+.nav-links a{font-size:.9rem}
+}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AboutPage",
+  "name":"About Free Typing Test Online",
+  "url":"https://alansname1.github.io/about.html",
+  "description":"Learn why Free Typing Test Online was created, how its typing resources are developed, and what makes the website useful for learners.",
+  "isPartOf":{
+    "@type":"WebSite",
+    "name":"Free Typing Test Online",
+    "url":"https://alansname1.github.io/"
+  },
+  "about":{
+    "@type":"Organization",
+    "name":"Free Typing Test Online",
+    "url":"https://alansname1.github.io/",
+    "logo":"https://alansname1.github.io/typing-logo.png",
+    "founder":{
+      "@type":"Person",
+      "name":"Alan"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://alansname1.github.io/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"About",
+      "item":"https://alansname1.github.io/about.html"
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
-<header>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+<div class="hero">
+<div>
+<p class="eyebrow">Independent educational typing resource</p>
 <h1>About Free Typing Test Online</h1>
-<p>Free typing tests, typing practice resources, and educational guides for building better keyboard skills.</p>
+<p class="hero-copy">A free, beginner-friendly website created to help people measure typing speed, improve accuracy, and build practical keyboard confidence for school, work, and everyday computer use.</p>
+</div>
+
+<aside class="hero-panel" aria-label="Website principles">
+<h2>What guides this website</h2>
+<ul>
+<li>Clear explanations without unnecessary jargon</li>
+<li>Free access without requiring an account</li>
+<li>Practical advice focused on real improvement</li>
+<li>Honest expectations instead of unrealistic promises</li>
+</ul>
+</aside>
+</div>
 </header>
 
-<nav aria-label="Main navigation">
-<a href="/">Home</a>
+<nav class="site-nav" aria-label="Main navigation">
+<div class="nav-inner">
+<a class="brand" href="/">Free Typing Test Online</a>
+<div class="nav-links">
 <a href="/typing-test-1-minute.html">1 Min Test</a>
 <a href="/typing-test-5-minute.html">5 Min Test</a>
 <a href="/typing-test-10-minute.html">10 Min Test</a>
-<a href="/learn-touch-typing.html">Typing Guide</a>
+<a href="/typing-progress-dashboard.html">Progress</a>
 <a href="/about.html" aria-current="page">About</a>
 <a href="/contact.html">Contact</a>
-<a href="/privacy-policy.html">Privacy</a>
-<a href="/terms.html">Terms</a>
+</div>
+</div>
 </nav>
 
-<main>
-<section>
-<h2>Our Purpose</h2>
-<p>Free Typing Test Online was created to provide simple typing tests and educational typing resources for people who want to improve practical keyboard skills.</p>
-<p>Typing is an important skill for students, job seekers, office workers, remote workers, writers, and anyone who uses a computer regularly. This website focuses on clear explanations, beginner-friendly practice, and useful typing improvement guides.</p>
-<p>Many typing websites focus only on speed scores. This site also focuses on accuracy, consistency, touch typing habits, keyboard familiarity, and practical typing skills that can be useful in school, work, and everyday computer use.</p>
-<div class="box"><strong>Last updated:</strong> July 2026</div>
+<main id="main-content">
+
+<section class="trust-strip" aria-label="Website values">
+<div class="trust-item"><span>Free</span>No payment required</div>
+<div class="trust-item"><span>Private</span>No account required</div>
+<div class="trust-item"><span>Practical</span>Useful skill building</div>
+<div class="trust-item"><span>Independent</span>Created and maintained by Alan</div>
 </section>
 
 <section>
-<h2>What You Can Do On This Website</h2>
-<ul>
-<li><a href="/typing-test-1-minute.html">1 Minute Typing Test</a></li>
-<li><a href="/typing-test-5-minute.html">5 Minute Typing Test</a></li>
-<li><a href="/typing-test-10-minute.html">10 Minute Typing Test</a></li>
-<li><a href="/typing-practice-paragraphs.html">Typing Practice Paragraphs</a></li>
-<li><a href="/typing-exercises.html">Typing Exercises</a></li>
-<li><a href="/typing-accuracy-practice.html">Typing Accuracy Practice</a></li>
+<h2>Why This Website Exists</h2>
+<p class="section-intro">Free Typing Test Online was created because typing is a basic digital skill that affects schoolwork, job applications, communication, office tasks, and everyday computer use.</p>
+
+<div class="two-column">
+<div>
+<p>Many typing websites focus almost entirely on producing a score. A score can be useful, but it does not explain why someone makes mistakes, how accuracy affects real performance, or what kind of practice is most helpful.</p>
+
+<p>I wanted to create a website that combines simple typing tests with clear educational resources. The goal is to help visitors understand both their current ability and the practical steps they can take to improve.</p>
+
+<p>The site is designed for people who may be new to typing practice, returning to computer use, preparing for keyboard-heavy work, or simply trying to become more comfortable and efficient.</p>
+</div>
+
+<div class="quote-box">
+<p><strong>The central idea:</strong> typing improvement should be understandable, measurable, and accessible without requiring a signup, paid course, or software installation.</p>
+<p><strong>Last reviewed:</strong> July 2026</p>
+</div>
+</div>
+</section>
+
+<section class="soft-section">
+<h2>What Makes This Site Different</h2>
+<p class="section-intro">The website is built around practical usefulness rather than inflated claims or unnecessary complexity.</p>
+
+<div class="grid">
+<article class="card">
+<h3>More Than a WPM Score</h3>
+<p>Typing speed matters, but so do accuracy, consistency, rhythm, and confidence. The guides explain how these pieces work together.</p>
+</article>
+
+<article class="card">
+<h3>No Signup Required</h3>
+<p>Visitors can use the typing tests and educational resources without creating an account or providing personal details.</p>
+</article>
+
+<article class="card">
+<h3>Beginner-Friendly Explanations</h3>
+<p>Articles are written in plain language so that students, adults, seniors, and new computer users can understand the advice.</p>
+</article>
+
+<article class="card">
+<h3>Practical Practice Options</h3>
+<p>The site includes short and long typing tests, practice paragraphs, accuracy exercises, touch-typing guidance, and progress resources.</p>
+</article>
+
+<article class="card">
+<h3>Honest Expectations</h3>
+<p>The website does not promise instant results. Typing improves through patient, repeated practice and attention to mistakes.</p>
+</article>
+
+<article class="card">
+<h3>Useful Internal Learning Paths</h3>
+<p>Related guides are linked together so visitors can move from testing to accuracy work, finger placement, daily routines, and progress tracking.</p>
+</article>
+</div>
+</section>
+
+<section>
+<h2>How the Content Is Created</h2>
+<p class="section-intro">The website's articles and guides are written and reviewed manually with an emphasis on clarity, usefulness, and consistency.</p>
+
+<div class="timeline">
+<div class="timeline-item">
+<h3>1. Start with a practical question</h3>
+<p>Each page is organized around a question or task that a real learner might have, such as improving accuracy, understanding WPM, or learning finger placement.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2. Explain the concept clearly</h3>
+<p>Technical ideas are translated into plain language. Examples, comparisons, and realistic benchmarks are added when they help the reader understand the topic.</p>
+</div>
+
+<div class="timeline-item">
+<h3>3. Add useful next steps</h3>
+<p>Pages include practical recommendations, exercises, or links to related resources so the reader can do something with the information.</p>
+</div>
+
+<div class="timeline-item">
+<h3>4. Review and improve</h3>
+<p>Content is revisited when wording can be clarified, links need updating, or the site can provide a more complete answer.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="author-box">
+<img class="author-mark" src="/typing-logo.png" alt="Free Typing Test Online logo" width="76" height="76" loading="lazy">
+<div>
+<h2>About the Creator</h2>
+<p>My name is Alan, and I created Free Typing Test Online to make practical typing help easier to access. I wanted a website where someone could check their typing speed, understand their accuracy, and immediately find useful guidance without being pushed into an account or paid product.</p>
+<p>I write and review the site's educational content with a focus on clear explanations and realistic advice. The site is intended to support students, job seekers, remote workers, office users, seniors, beginners, and anyone who wants to become more comfortable using a keyboard.</p>
+<p>I also continue improving the website's structure, accessibility, internal links, and learning resources so that it remains straightforward and useful.</p>
+</div>
+</div>
+</section>
+
+<section class="soft-section">
+<h2>What You Can Do Here</h2>
+<p class="section-intro">Visitors can begin with a typing test or choose a resource that matches a specific learning goal.</p>
+
+<ul class="link-list">
+<li><a href="/typing-test-1-minute.html">Take a 1 Minute Typing Test</a></li>
+<li><a href="/typing-test-5-minute.html">Take a 5 Minute Typing Test</a></li>
+<li><a href="/typing-test-10-minute.html">Take a 10 Minute Typing Test</a></li>
+<li><a href="/typing-progress-dashboard.html">Track Typing Progress</a></li>
+<li><a href="/typing-practice-paragraphs.html">Use Typing Practice Paragraphs</a></li>
+<li><a href="/typing-exercises.html">Try Focused Typing Exercises</a></li>
+<li><a href="/typing-accuracy-practice.html">Practice Typing Accuracy</a></li>
 <li><a href="/learn-touch-typing.html">Learn Touch Typing</a></li>
-<li><a href="/keyboard-finger-placement.html">Keyboard Finger Placement</a></li>
-<li><a href="/typing-test-for-beginners.html">Typing Test for Beginners</a></li>
-<li><a href="/average-typing-speed-by-age.html">Average Typing Speed by Age</a></li>
-<li><a href="/what-is-a-good-typing-speed.html">What Is a Good Typing Speed?</a></li>
+<li><a href="/keyboard-finger-placement.html">Learn Keyboard Finger Placement</a></li>
+<li><a href="/typing-test-for-beginners.html">Start with a Beginner Typing Test</a></li>
+<li><a href="/average-typing-speed-by-age.html">Review Average Typing Speed by Age</a></li>
+<li><a href="/what-is-a-good-typing-speed-guide.html">Learn What a Good Typing Speed Is</a></li>
 </ul>
-</section>
-
-<section><h2>Who This Website Is For</h2>
-<p>This website is designed for people who want practical typing help without complicated instructions. It can be useful for beginners, students, adults, seniors, job seekers, remote workers, and everyday computer users.</p>
-<p>The goal is to make typing practice easier to understand and easier to use. Visitors can check typing speed, measure accuracy, and learn better typing habits over time.</p>
-</section>
-
-<section><h2>About the Creator</h2>
-<p>My name is Alan, and I created Free Typing Test Online to provide free typing tests, typing practice resources, and educational guides for students, job seekers, remote workers, seniors, and everyday computer users.</p>
-<p>The goal of this website is to make typing practice accessible and easy to understand. The guides and resources on this site are regularly reviewed and updated to improve clarity, usability, and educational value.</p>
-<p>This website is intended to provide practical information about typing speed, typing accuracy, touch typing techniques, and keyboard skills through easy-to-follow guides and typing practice resources.</p>
-</section>
-
-<section><h2>Our Approach</h2>
-<p>The content on this website is written to be clear, practical, and educational. Pages are organized around typing tests, typing accuracy, touch typing, beginner practice, and general keyboard improvement.</p>
-<p>We avoid unrealistic promises. Typing improvement takes practice and consistency. The resources on this website are intended to help users build skill gradually over time.</p>
-<p>Whether you are preparing for school, office work, remote work, data entry, customer service, or simply want to type more comfortably, the goal is to provide useful information that supports steady improvement.</p>
 </section>
 
 <section>
-<h2>Website Information</h2>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/contact.html">Contact</a></li>
-<li><a href="/privacy-policy.html">Privacy Policy</a></li>
-<li><a href="/terms.html">Terms of Service</a></li>
-<li><a href="/editorial-policy.html">Editorial Policy</a></li>
-<li><a href="/sitemap.xml">Sitemap</a></li>
-</ul>
+<h2>Who This Website Is For</h2>
+<div class="grid">
+<article class="card">
+<h3>Students</h3>
+<p>Build keyboard confidence for essays, assignments, research, online learning, and computer-based testing.</p>
+</article>
+
+<article class="card">
+<h3>Job Seekers</h3>
+<p>Practice for office work, customer service, data entry, administration, remote work, and other keyboard-heavy roles.</p>
+</article>
+
+<article class="card">
+<h3>Beginners and Returning Users</h3>
+<p>Learn key locations, finger placement, accuracy habits, and comfortable keyboard use at a manageable pace.</p>
+</article>
+</div>
 </section>
+
+<section>
+<h2>Frequently Asked Questions</h2>
+
+<details>
+<summary>Is Free Typing Test Online completely free?</summary>
+<p>Yes. The typing tests and educational guides can be used without payment.</p>
+</details>
+
+<details>
+<summary>Do I need to create an account?</summary>
+<p>No. The website does not require an account to access its typing tests or learning resources.</p>
+</details>
+
+<details>
+<summary>Who writes the content?</summary>
+<p>The website and its educational content are created and reviewed by Alan.</p>
+</details>
+
+<details>
+<summary>How often is the website updated?</summary>
+<p>Pages are reviewed periodically and updated when information, wording, links, structure, or user experience can be improved.</p>
+</details>
+
+<details>
+<summary>Does the website promise a specific typing speed?</summary>
+<p>No. Improvement varies by experience, practice consistency, accuracy, keyboard familiarity, and other factors. The site provides guidance rather than guaranteed results.</p>
+</details>
+</section>
+
+<section class="final-cta">
+<h2>Start Building Better Keyboard Skills</h2>
+<p>Take a free typing test, focus on accuracy, and use the site's practice guides to build speed and confidence gradually.</p>
+<a class="button button-primary" href="/typing-test-1-minute.html">Start the Free Typing Test</a>
+</section>
+
 </main>
 
 <footer>
+<p><strong>Free Typing Test Online</strong></p>
+<p>Free typing tests and educational keyboard resources for school, work, and everyday computer use.</p>
+<nav aria-label="Footer navigation">
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Service</a>
+<a href="/editorial-policy.html">Editorial Policy</a>
+<a href="/sitemap.xml">Sitemap</a>
+</nav>
 <p>© 2026 Free Typing Test Online</p>
-<p><a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a> | <a href="/editorial-policy.html">Editorial Policy</a> | <a href="/sitemap.xml">Sitemap</a></p>
 </footer>
 </body>
 </html>
