@@ -7,7 +7,14 @@
 <title>Typing Progress Dashboard | Track WPM and Accuracy</title>
 <meta name="description" content="Track your typing speed, accuracy, practice time, and improvement over time with a free browser-based typing progress dashboard.">
 <meta name="robots" content="index, follow">
+<meta name="author" content="Alan">
+<meta name="theme-color" content="#0d47a1">
 <link rel="canonical" href="https://alansname1.github.io/typing-progress-dashboard.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Typing Progress Dashboard | Track WPM and Accuracy">
+<meta property="og:description" content="Record typing-test results, monitor WPM and accuracy, and track improvement privately in your browser.">
+<meta property="og:url" content="https://alansname1.github.io/typing-progress-dashboard.html">
+<meta property="og:site_name" content="Free Typing Test Online">
 
 <style>
 :root{
@@ -21,8 +28,7 @@
 *{box-sizing:border-box;}
 body{
   font-family:Arial,Helvetica,sans-serif;
-  max-width:1050px;
-  margin:auto;
+  margin:0;
   line-height:1.7;
   color:#222;
   background:#fff;
@@ -48,7 +54,7 @@ nav a{
   color:var(--blue);
   font-weight:bold;
 }
-main{padding:28px;}
+main{max-width:1050px;margin:0 auto;padding:28px;}
 section{margin-bottom:44px;}
 h2{color:var(--blue);margin-bottom:10px;}
 h3{color:var(--dark);}
@@ -145,6 +151,9 @@ footer{
   text-align:center;
   font-size:14px;
 }
+footer a{margin:0 6px;}
+.privacy-note{padding:14px 16px;background:#eef3f9;border-left:4px solid var(--blue);border-radius:6px;}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 @media(max-width:700px){
   header h1{font-size:30px;}
   main{padding:20px;}
@@ -156,9 +165,44 @@ footer{
   main{padding:0;}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Typing Progress Dashboard",
+  "url":"https://alansname1.github.io/typing-progress-dashboard.html",
+  "applicationCategory":"EducationalApplication",
+  "operatingSystem":"Any",
+  "browserRequirements":"Requires JavaScript and local storage",
+  "description":"A free browser-based dashboard for recording typing-test WPM, accuracy, duration, notes, and practice progress.",
+  "creator":{"@type":"Person","name":"Alan"},
+  "publisher":{"@type":"Organization","name":"Free Typing Test Online","url":"https://alansname1.github.io/"},
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "featureList":[
+    "Record WPM and accuracy",
+    "Track total practice time",
+    "Store results locally in the browser",
+    "Print saved progress",
+    "Delete individual or all records"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://alansname1.github.io/"},
+    {"@type":"ListItem","position":2,"name":"Typing Progress Dashboard","item":"https://alansname1.github.io/typing-progress-dashboard.html"}
+  ]
+}
+</script>
+
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
   <h1>Typing Progress Dashboard</h1>
   <p>Record typing tests, monitor WPM and accuracy, and see how your keyboard skills improve over time.</p>
@@ -169,34 +213,35 @@ footer{
   <a href="/typing-test-1-minute.html">1 Min Test</a>
   <a href="/typing-test-5-minute.html">5 Min Test</a>
   <a href="/typing-test-10-minute.html">10 Min Test</a>
+  <a href="/typing-progress-dashboard.html" aria-current="page">Progress</a>
   <a href="/30-day-typing-challenge.html">30-Day Challenge</a>
   <a href="/typing-practice-paragraphs.html">Paragraphs</a>
   <a href="/about.html">About</a>
   <a href="/contact.html">Contact</a>
 </nav>
 
-<main>
+<main id="main-content">
 <section>
   <h2>Your Progress at a Glance</h2>
-  <div class="grid">
+  <div class="grid" aria-label="Typing progress summary">
     <div class="card">
       <h3>Tests Recorded</h3>
-      <div class="metric" id="testCount">0</div>
+      <div class="metric" id="testCount" aria-live="polite">0</div>
       <p>Total saved typing sessions.</p>
     </div>
     <div class="card">
       <h3>Best WPM</h3>
-      <div class="metric" id="bestWpm">—</div>
+      <div class="metric" id="bestWpm" aria-live="polite">—</div>
       <p>Your fastest recorded result.</p>
     </div>
     <div class="card">
       <h3>Average Accuracy</h3>
-      <div class="metric" id="avgAccuracy">—</div>
+      <div class="metric" id="avgAccuracy" aria-live="polite">—</div>
       <p>Average across saved sessions.</p>
     </div>
     <div class="card">
       <h3>Practice Time</h3>
-      <div class="metric" id="practiceMinutes">0 min</div>
+      <div class="metric" id="practiceMinutes" aria-live="polite">0 min</div>
       <p>Total recorded test time.</p>
     </div>
   </div>
@@ -222,11 +267,12 @@ footer{
         </div>
         <div>
           <label for="wpm">WPM</label>
-          <input id="wpm" type="number" min="0" max="250" required>
+          <input id="wpm" type="number" min="0" max="250" step="1" inputmode="numeric" required aria-describedby="wpmHelp">
+          <small id="wpmHelp">Enter the completed test result as a whole number.</small>
         </div>
         <div>
           <label for="accuracy">Accuracy (%)</label>
-          <input id="accuracy" type="number" min="0" max="100" step="0.1" required>
+          <input id="accuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal" required>
         </div>
       </div>
       <div style="margin-top:16px;">
@@ -234,15 +280,15 @@ footer{
         <textarea id="notes" maxlength="300" placeholder="Example: Focused on accuracy, struggled with punctuation, or felt more consistent today."></textarea>
       </div>
       <button type="submit">Save Result</button>
-      <button type="button" class="secondary" onclick="document.getElementById('resultForm').reset();setToday();">Clear Form</button>
+      <button type="button" class="secondary" id="clearFormButton">Clear Form</button>
     </form>
-    <div class="success" id="saveMessage">Result saved on this device.</div>
+    <div class="success" id="saveMessage" role="status" aria-live="polite">Result saved on this device.</div>
   </div>
 </section>
 
 <section>
   <h2>Saved Typing Results</h2>
-  <p>Your entries are stored in this browser using local storage. They are not uploaded or shared.</p>
+  <p class="privacy-note"><strong>Private by default:</strong> Your entries are stored only in this browser using local storage. They are not uploaded to this website or shared with an account. Clearing browser data may remove them.</p>
   <div class="table-wrap">
     <table>
       <thead>
@@ -259,8 +305,8 @@ footer{
     </table>
   </div>
   <div class="no-print">
-    <button type="button" onclick="window.print()">Print Progress</button>
-    <button type="button" class="danger" onclick="clearAllResults()">Delete All Results</button>
+    <button type="button" id="printButton">Print Progress</button>
+    <button type="button" class="danger" id="deleteAllButton">Delete All Results</button>
   </div>
 </section>
 
@@ -270,10 +316,46 @@ footer{
   <a class="cta" href="/typing-test-1-minute.html">Take a 1 Minute Test</a>
   <a class="cta" href="/30-day-typing-challenge.html">Continue the 30-Day Challenge</a>
 </section>
+
+<section>
+  <h2>How to Use Your Results</h2>
+  <p>A single score can vary because of passage difficulty, concentration, keyboard type, fatigue, or corrections. Look for patterns across several sessions rather than judging progress from one attempt.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Compare Similar Tests</h3>
+      <p>Compare one-minute results with other one-minute results and longer tests with the same duration.</p>
+    </div>
+    <div class="card">
+      <h3>Track Accuracy With Speed</h3>
+      <p>A rising WPM is more useful when accuracy remains stable. Record both measures every time.</p>
+    </div>
+    <div class="card">
+      <h3>Use Notes</h3>
+      <p>Record recurring errors, keyboard changes, tension, or punctuation difficulty so the numbers have context.</p>
+    </div>
+    <div class="card">
+      <h3>Review Trends</h3>
+      <p>Weekly or monthly patterns usually provide a clearer picture than a personal best alone.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="panel">
+    <h2>About This Dashboard</h2>
+    <p>My name is Alan, and I created Free Typing Test Online to provide practical typing tools and educational guidance. This dashboard is designed to help you keep a simple, private record of speed, accuracy, duration, and practice observations.</p>
+    <p>Learn more on the <a href="/about.html">About page</a> and read how content is prepared on the <a href="/editorial-policy.html">Editorial Policy</a>.</p>
+    <p><strong>Written and reviewed by Alan • <time datetime="2026-07-29">Last reviewed July 29, 2026</time></strong></p>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <p>&copy; 2026 Free Typing Test Online. Track your progress and practice consistently.</p>
+  <p><strong>Free Typing Test Online</strong></p>
+  <p>Track typing progress and practice consistently.</p>
+  <p><a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a> | <a href="/editorial-policy.html">Editorial Policy</a> | <a href="/sitemap.xml">Sitemap</a></p>
+  <p>&copy; 2026 Free Typing Test Online</p>
 </footer>
 
 <script>
@@ -289,7 +371,13 @@ function getResults(){
 }
 
 function saveResults(results){
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(results));
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(results));
+    return true;
+  }catch(error){
+    alert("This browser could not save the result. Check whether local storage is available.");
+    return false;
+  }
 }
 
 function escapeHtml(value){
@@ -302,7 +390,11 @@ function escapeHtml(value){
 }
 
 function setToday(){
-  document.getElementById("date").value = new Date().toISOString().slice(0,10);
+  const now = new Date();
+  const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+    .toISOString()
+    .slice(0,10);
+  document.getElementById("date").value = localDate;
 }
 
 function render(){
@@ -343,20 +435,30 @@ function render(){
 document.getElementById("resultForm").addEventListener("submit", function(event){
   event.preventDefault();
 
+  const wpm = Number(document.getElementById("wpm").value);
+  const accuracy = Number(document.getElementById("accuracy").value);
+
+  if(!Number.isFinite(wpm) || !Number.isFinite(accuracy)){
+    return;
+  }
+
   const result = {
-    id: Date.now().toString(),
+    id: (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(),
     date: document.getElementById("date").value,
-    duration: document.getElementById("duration").value,
-    wpm: document.getElementById("wpm").value,
-    accuracy: document.getElementById("accuracy").value,
+    duration: Number(document.getElementById("duration").value),
+    wpm: Math.round(wpm),
+    accuracy: Math.round(accuracy * 10) / 10,
     notes: document.getElementById("notes").value.trim()
   };
 
   const results = getResults();
   results.push(result);
-  saveResults(results);
-  render();
 
+  if(!saveResults(results)){
+    return;
+  }
+
+  render();
   this.reset();
   setToday();
 
@@ -367,15 +469,31 @@ document.getElementById("resultForm").addEventListener("submit", function(event)
 
 function deleteResult(id){
   if(!confirm("Delete this typing result?")) return;
-  saveResults(getResults().filter(item => item.id !== id));
-  render();
+  if(saveResults(getResults().filter(item => item.id !== id))){
+    render();
+  }
 }
 
 function clearAllResults(){
   if(!confirm("Delete every saved typing result from this browser?")) return;
-  localStorage.removeItem(STORAGE_KEY);
-  render();
+  try{
+    localStorage.removeItem(STORAGE_KEY);
+    render();
+  }catch(error){
+    alert("This browser could not delete the saved results.");
+  }
 }
+
+document.getElementById("clearFormButton").addEventListener("click", function(){
+  document.getElementById("resultForm").reset();
+  setToday();
+});
+
+document.getElementById("printButton").addEventListener("click", function(){
+  window.print();
+});
+
+document.getElementById("deleteAllButton").addEventListener("click", clearAllResults);
 
 setToday();
 render();
