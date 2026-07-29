@@ -9,6 +9,25 @@
 <meta name="description" content="Follow a free 30-day typing challenge with daily practice activities, weekly milestones, progress tracking, typing tests, accuracy goals, and printable checklists.">
 
 <meta name="robots" content="index, follow">
+<meta name="author" content="Alan">
+<meta name="theme-color" content="#0b4f9c">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="30-Day Typing Challenge | Improve Speed and Accuracy">
+<meta property="og:description" content="Follow a free, interactive 30-day typing challenge with daily exercises, weekly milestones, saved progress, and printable checklists.">
+<meta property="og:url" content="https://alansname1.github.io/30-day-typing-challenge.html">
+<meta property="og:site_name" content="Free Typing Test Online">
+<meta property="og:image" content="https://alansname1.github.io/typing-logo.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="30-Day Typing Challenge">
+<meta name="twitter:description" content="Build typing speed, accuracy, rhythm, and endurance with a free interactive 30-day plan.">
+<meta name="twitter:image" content="https://alansname1.github.io/typing-logo.png">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
 <link rel="canonical" href="https://alansname1.github.io/30-day-typing-challenge.html">
 
@@ -332,6 +351,184 @@ border:1px solid #777;
 background:white;
 }
 }
+
+/* Modern site-wide refinements */
+:root{
+  --blue:#0b4f9c;
+  --blue-dark:#083b75;
+  --blue-light:#eaf3ff;
+  --ink:#1d2939;
+  --muted:#5f6b7a;
+  --surface:#f7f9fc;
+  --white:#fff;
+  --shadow:0 10px 30px rgba(11,79,156,.10);
+  --radius:14px;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  max-width:none;
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+}
+
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:0;
+  z-index:9999;
+  padding:10px 14px;
+  background:#000;
+  color:#fff;
+}
+
+.skip-link:focus{
+  left:10px;
+  top:10px;
+}
+
+header{
+  padding:64px 24px 58px;
+  background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+}
+
+header h1{
+  font-size:clamp(2.35rem,6vw,4.15rem);
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+
+header p{
+  color:#eaf3ff;
+}
+
+nav{
+  position:relative;
+  padding:10px 18px;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  box-shadow:0 3px 14px rgba(0,0,0,.04);
+}
+
+nav a{
+  padding:7px 5px;
+  color:var(--ink);
+}
+
+nav a:hover,
+nav a:focus-visible{
+  color:var(--blue);
+  text-decoration-thickness:2px;
+}
+
+main{
+  max-width:1120px;
+  margin:0 auto;
+  padding:48px 24px 18px;
+}
+
+section{
+  margin-bottom:58px;
+}
+
+h2{
+  color:var(--blue-dark);
+  font-size:clamp(1.65rem,3vw,2.15rem);
+  line-height:1.2;
+  letter-spacing:-.02em;
+}
+
+.card,
+.progress-panel{
+  border-radius:var(--radius);
+  box-shadow:0 5px 20px rgba(17,40,75,.055);
+}
+
+.card{
+  background:#fff;
+}
+
+.box,
+.success-box,
+.warning-box{
+  border-radius:0 10px 10px 0;
+}
+
+.table-wrapper{
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+.challenge-table,
+.tracker-table{
+  min-width:720px;
+}
+
+.day-check:focus-visible,
+input[type="number"]:focus-visible,
+button:focus-visible,
+a:focus-visible{
+  outline:3px solid #ffbf47;
+  outline-offset:3px;
+}
+
+button,
+.cta,
+.secondary-cta{
+  min-height:44px;
+}
+
+.progress-bar{
+  position:relative;
+}
+
+.author-box{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:20px;
+  align-items:start;
+  padding:26px;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--blue-light);
+}
+
+.author-mark{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+  border:2px solid rgba(11,79,156,.18);
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+
+footer{
+  padding:34px 24px;
+  background:#eef2f7;
+  border-top:1px solid var(--border);
+  color:#4d5968;
+}
+
+footer a{
+  display:inline-block;
+  margin:4px 7px;
+}
+
+@media(max-width:700px){
+  main{padding:36px 18px 10px}
+  header{padding:48px 20px}
+  .author-box{grid-template-columns:1fr}
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -354,7 +551,7 @@ background:white;
     "name": "Free Typing Test Online",
     "url": "https://alansname1.github.io/"
   },
-  "dateModified": "2026-07-28"
+  "dateModified": "2026-07-29"
 }
 </script>
 
@@ -399,16 +596,54 @@ background:white;
 }
 </script>
 
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Free Typing Test Online",
+  "url":"https://alansname1.github.io/",
+  "logo":"https://alansname1.github.io/typing-logo.png",
+  "founder":{
+    "@type":"Person",
+    "name":"Alan"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://alansname1.github.io/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"30-Day Typing Challenge",
+      "item":"https://alansname1.github.io/30-day-typing-challenge.html"
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header>
 <h1>30-Day Typing Challenge</h1>
 <p>Build speed, accuracy, rhythm, confidence, and keyboard control with a structured daily plan you can follow, track, and print.</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
 <a href="/">Home</a>
 <a href="/typing-test-1-minute.html">1 Min Test</a>
 <a href="/typing-test-5-minute.html">5 Min Test</a>
@@ -420,7 +655,7 @@ background:white;
 <a href="/contact.html">Contact</a>
 </nav>
 
-<main>
+<main id="main-content">
 
 <section>
 <h2>How the 30-Day Challenge Works</h2>
@@ -468,10 +703,10 @@ You can use the checkboxes to mark completed days. Your progress is saved automa
 <h3>Starting Results</h3>
 
 <label for="startWpm"><strong>Starting WPM:</strong></label>
-<input id="startWpm" type="number" min="0" max="250">
+<input id="startWpm" type="number" min="0" max="250" step="0.1" inputmode="decimal">
 
 <label for="startAccuracy"><strong>Starting accuracy:</strong></label>
-<input id="startAccuracy" type="number" min="0" max="100"> %
+<input id="startAccuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %
 
 <div>
 <button type="button" onclick="saveStartingResults()">Save Starting Results</button>
@@ -486,7 +721,7 @@ You can use the checkboxes to mark completed days. Your progress is saved automa
 
 <div class="progress-panel">
 <div class="progress-text" id="progressText">0 of 30 days completed</div>
-<div class="progress-bar" aria-label="Challenge progress">
+<div class="progress-bar" id="progressBar" role="progressbar" aria-label="Challenge progress" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0">
 <div class="progress-fill" id="progressFill"></div>
 </div>
 <p class="small">Check a box after finishing each day. Your progress is saved automatically on this device.</p>
@@ -510,49 +745,49 @@ You can use the checkboxes to mark completed days. Your progress is saved automa
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="1"></td>
+<td><input class="day-check" type="checkbox" data-day="1" aria-label="Mark Day 1 complete"></td>
 <td><strong>Day 1</strong></td>
 <td>Take a 1 minute typing test. Record your WPM and accuracy. Then type one short paragraph slowly.</td>
 <td>Establish a starting point.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="2"></td>
+<td><input class="day-check" type="checkbox" data-day="2" aria-label="Mark Day 2 complete"></td>
 <td><strong>Day 2</strong></td>
 <td>Practice home-row keys for 5 minutes, then type two beginner paragraphs.</td>
 <td>Improve finger placement.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="3"></td>
+<td><input class="day-check" type="checkbox" data-day="3" aria-label="Mark Day 3 complete"></td>
 <td><strong>Day 3</strong></td>
 <td>Type for 10 minutes without rushing. Correct errors carefully instead of ignoring them.</td>
 <td>Build accuracy awareness.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="4"></td>
+<td><input class="day-check" type="checkbox" data-day="4" aria-label="Mark Day 4 complete"></td>
 <td><strong>Day 4</strong></td>
 <td>Practice common letter combinations such as th, ing, tion, er, and re.</td>
 <td>Improve common movement patterns.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="5"></td>
+<td><input class="day-check" type="checkbox" data-day="5" aria-label="Mark Day 5 complete"></td>
 <td><strong>Day 5</strong></td>
 <td>Type one paragraph twice. On the second attempt, try to reduce mistakes.</td>
 <td>Learn through repetition.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="6"></td>
+<td><input class="day-check" type="checkbox" data-day="6" aria-label="Mark Day 6 complete"></td>
 <td><strong>Day 6</strong></td>
 <td>Practice punctuation, capital letters, commas, periods, apostrophes, and question marks.</td>
 <td>Improve real-world typing accuracy.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="7"></td>
+<td><input class="day-check" type="checkbox" data-day="7" aria-label="Mark Day 7 complete"></td>
 <td><strong>Day 7</strong></td>
 <td>Take a 1 minute test and compare it with Day 1. Review your most common mistakes.</td>
 <td>Complete the first weekly check.</td>
@@ -563,49 +798,49 @@ You can use the checkboxes to mark completed days. Your progress is saved automa
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="8"></td>
+<td><input class="day-check" type="checkbox" data-day="8" aria-label="Mark Day 8 complete"></td>
 <td><strong>Day 8</strong></td>
 <td>Type continuously for 5 minutes at a comfortable pace.</td>
 <td>Develop steady rhythm.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="9"></td>
+<td><input class="day-check" type="checkbox" data-day="9" aria-label="Mark Day 9 complete"></td>
 <td><strong>Day 9</strong></td>
 <td>Practice difficult words you often mistype. Repeat each word five times.</td>
 <td>Strengthen weak spots.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="10"></td>
+<td><input class="day-check" type="checkbox" data-day="10" aria-label="Mark Day 10 complete"></td>
 <td><strong>Day 10</strong></td>
 <td>Take a 5 minute typing test. Focus on maintaining accuracy from beginning to end.</td>
 <td>Measure consistency.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="11"></td>
+<td><input class="day-check" type="checkbox" data-day="11" aria-label="Mark Day 11 complete"></td>
 <td><strong>Day 11</strong></td>
 <td>Practice typing numbers, dates, and simple punctuation for 10 minutes.</td>
 <td>Improve practical keyboard control.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="12"></td>
+<td><input class="day-check" type="checkbox" data-day="12" aria-label="Mark Day 12 complete"></td>
 <td><strong>Day 12</strong></td>
 <td>Type two work-style paragraphs involving emails, reports, or office communication.</td>
 <td>Practice realistic text.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="13"></td>
+<td><input class="day-check" type="checkbox" data-day="13" aria-label="Mark Day 13 complete"></td>
 <td><strong>Day 13</strong></td>
 <td>Practice typing without looking down at the keyboard for short periods.</td>
 <td>Build keyboard memory.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="14"></td>
+<td><input class="day-check" type="checkbox" data-day="14" aria-label="Mark Day 14 complete"></td>
 <td><strong>Day 14</strong></td>
 <td>Take a 1 minute test and a 5 minute test. Compare speed, accuracy, and consistency.</td>
 <td>Complete the second weekly check.</td>
@@ -616,49 +851,49 @@ You can use the checkboxes to mark completed days. Your progress is saved automa
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="15"></td>
+<td><input class="day-check" type="checkbox" data-day="15" aria-label="Mark Day 15 complete"></td>
 <td><strong>Day 15</strong></td>
 <td>Complete three 1 minute tests with a short break between each test.</td>
 <td>Practice controlled speed.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="16"></td>
+<td><input class="day-check" type="checkbox" data-day="16" aria-label="Mark Day 16 complete"></td>
 <td><strong>Day 16</strong></td>
 <td>Type one paragraph at normal speed, then repeat it slightly faster while keeping accuracy high.</td>
 <td>Increase speed gradually.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="17"></td>
+<td><input class="day-check" type="checkbox" data-day="17" aria-label="Mark Day 17 complete"></td>
 <td><strong>Day 17</strong></td>
 <td>Practice words containing letters you commonly miss.</td>
 <td>Reduce repeated errors.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="18"></td>
+<td><input class="day-check" type="checkbox" data-day="18" aria-label="Mark Day 18 complete"></td>
 <td><strong>Day 18</strong></td>
 <td>Take a 5 minute test and try to keep a steady pace instead of starting too fast.</td>
 <td>Control pacing.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="19"></td>
+<td><input class="day-check" type="checkbox" data-day="19" aria-label="Mark Day 19 complete"></td>
 <td><strong>Day 19</strong></td>
 <td>Practice typing a realistic email, short report, or school paragraph.</td>
 <td>Apply typing skills to everyday tasks.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="20"></td>
+<td><input class="day-check" type="checkbox" data-day="20" aria-label="Mark Day 20 complete"></td>
 <td><strong>Day 20</strong></td>
 <td>Complete a 10 minute practice session with relaxed hands and shoulders.</td>
 <td>Improve comfort and endurance.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="21"></td>
+<td><input class="day-check" type="checkbox" data-day="21" aria-label="Mark Day 21 complete"></td>
 <td><strong>Day 21</strong></td>
 <td>Take a 1 minute test. Compare your result with Days 1, 7, and 14.</td>
 <td>Complete the third weekly check.</td>
@@ -669,63 +904,63 @@ You can use the checkboxes to mark completed days. Your progress is saved automa
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="22"></td>
+<td><input class="day-check" type="checkbox" data-day="22" aria-label="Mark Day 22 complete"></td>
 <td><strong>Day 22</strong></td>
 <td>Type for 10 minutes with consistent accuracy and minimal pauses.</td>
 <td>Build endurance.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="23"></td>
+<td><input class="day-check" type="checkbox" data-day="23" aria-label="Mark Day 23 complete"></td>
 <td><strong>Day 23</strong></td>
 <td>Repeat your most difficult paragraph from the previous weeks.</td>
 <td>Measure improvement on familiar text.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="24"></td>
+<td><input class="day-check" type="checkbox" data-day="24" aria-label="Mark Day 24 complete"></td>
 <td><strong>Day 24</strong></td>
 <td>Complete two 5 minute tests and compare consistency.</td>
 <td>Strengthen repeatable performance.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="25"></td>
+<td><input class="day-check" type="checkbox" data-day="25" aria-label="Mark Day 25 complete"></td>
 <td><strong>Day 25</strong></td>
 <td>Practice numbers, symbols, punctuation, and capital letters.</td>
 <td>Improve complete keyboard control.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="26"></td>
+<td><input class="day-check" type="checkbox" data-day="26" aria-label="Mark Day 26 complete"></td>
 <td><strong>Day 26</strong></td>
 <td>Type one long paragraph without looking at the keyboard.</td>
 <td>Strengthen touch typing habits.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="27"></td>
+<td><input class="day-check" type="checkbox" data-day="27" aria-label="Mark Day 27 complete"></td>
 <td><strong>Day 27</strong></td>
 <td>Take a 10 minute typing test and focus on maintaining form.</td>
 <td>Measure endurance.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="28"></td>
+<td><input class="day-check" type="checkbox" data-day="28" aria-label="Mark Day 28 complete"></td>
 <td><strong>Day 28</strong></td>
 <td>Review all recorded scores. Identify your biggest improvement and one remaining weakness.</td>
 <td>Evaluate progress honestly.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="29"></td>
+<td><input class="day-check" type="checkbox" data-day="29" aria-label="Mark Day 29 complete"></td>
 <td><strong>Day 29</strong></td>
 <td>Complete a relaxed practice session without chasing a score.</td>
 <td>Reinforce comfortable technique.</td>
 </tr>
 
 <tr class="day-row">
-<td><input class="day-check" type="checkbox" data-day="30"></td>
+<td><input class="day-check" type="checkbox" data-day="30" aria-label="Mark Day 30 complete"></td>
 <td><strong>Day 30</strong></td>
 <td>Take a final 1 minute test and 5 minute test. Record your final WPM and accuracy.</td>
 <td>Complete the challenge and measure results.</td>
@@ -786,32 +1021,32 @@ Use this simple log to record weekly scores. These values are also saved in your
 <tbody>
 <tr>
 <td>Starting score</td>
-<td><input id="logStartWpm" type="number" min="0" max="250"></td>
-<td><input id="logStartAccuracy" type="number" min="0" max="100"> %</td>
+<td><input id="logStartWpm" type="number" min="0" max="250" step="0.1" inputmode="decimal"></td>
+<td><input id="logStartAccuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %</td>
 </tr>
 
 <tr>
 <td>Day 7</td>
-<td><input id="log7Wpm" type="number" min="0" max="250"></td>
-<td><input id="log7Accuracy" type="number" min="0" max="100"> %</td>
+<td><input id="log7Wpm" type="number" min="0" max="250" step="0.1" inputmode="decimal"></td>
+<td><input id="log7Accuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %</td>
 </tr>
 
 <tr>
 <td>Day 14</td>
-<td><input id="log14Wpm" type="number" min="0" max="250"></td>
-<td><input id="log14Accuracy" type="number" min="0" max="100"> %</td>
+<td><input id="log14Wpm" type="number" min="0" max="250" step="0.1" inputmode="decimal"></td>
+<td><input id="log14Accuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %</td>
 </tr>
 
 <tr>
 <td>Day 21</td>
-<td><input id="log21Wpm" type="number" min="0" max="250"></td>
-<td><input id="log21Accuracy" type="number" min="0" max="100"> %</td>
+<td><input id="log21Wpm" type="number" min="0" max="250" step="0.1" inputmode="decimal"></td>
+<td><input id="log21Accuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %</td>
 </tr>
 
 <tr>
 <td>Day 30</td>
-<td><input id="log30Wpm" type="number" min="0" max="250"></td>
-<td><input id="log30Accuracy" type="number" min="0" max="100"> %</td>
+<td><input id="log30Wpm" type="number" min="0" max="250" step="0.1" inputmode="decimal"></td>
+<td><input id="log30Accuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %</td>
 </tr>
 </tbody>
 </table>
@@ -828,10 +1063,10 @@ Use this simple log to record weekly scores. These values are also saved in your
 
 <div class="progress-panel">
 <label for="finalWpm"><strong>Final WPM:</strong></label>
-<input id="finalWpm" type="number" min="0" max="250">
+<input id="finalWpm" type="number" min="0" max="250" step="0.1" inputmode="decimal">
 
 <label for="finalAccuracy"><strong>Final accuracy:</strong></label>
-<input id="finalAccuracy" type="number" min="0" max="100"> %
+<input id="finalAccuracy" type="number" min="0" max="100" step="0.1" inputmode="decimal"> %
 
 <div class="no-print">
 <button type="button" onclick="calculateImprovement()">Calculate Improvement</button>
@@ -890,6 +1125,40 @@ Finishing this challenge does not mean your typing practice has to stop. Use you
 </div>
 </section>
 
+
+<section aria-labelledby="who-heading">
+<h2 id="who-heading">Who This Challenge Is For</h2>
+<div class="grid">
+  <article class="card">
+    <h3>Beginners</h3>
+    <p>Build keyboard familiarity, accuracy, and confidence through manageable daily sessions.</p>
+  </article>
+  <article class="card">
+    <h3>Students</h3>
+    <p>Develop steadier typing for assignments, research, exams, and computer-based learning.</p>
+  </article>
+  <article class="card">
+    <h3>Job Seekers and Workers</h3>
+    <p>Practice practical keyboard skills used in email, data entry, customer support, reports, and remote work.</p>
+  </article>
+  <article class="card">
+    <h3>Returning Learners</h3>
+    <p>Rebuild speed and control after time away from regular keyboard use.</p>
+  </article>
+</div>
+</section>
+
+<section aria-labelledby="related-heading">
+<h2 id="related-heading">Related Typing Guides</h2>
+<div class="related-grid">
+  <article class="card"><h3><a href="/learn-touch-typing.html">Learn Touch Typing</a></h3><p>Understand the technique behind typing without watching the keyboard.</p></article>
+  <article class="card"><h3><a href="/keyboard-finger-placement.html">Keyboard Finger Placement</a></h3><p>Learn consistent hand and finger positions for better control.</p></article>
+  <article class="card"><h3><a href="/typing-speed-chart.html">Typing Speed Chart</a></h3><p>Compare general WPM ranges and skill levels.</p></article>
+  <article class="card"><h3><a href="/typing-wpm-chart.html">WPM Chart</a></h3><p>Use a simple reference when interpreting test scores.</p></article>
+  <article class="card"><h3><a href="/typing-accuracy-practice.html">Typing Accuracy Practice</a></h3><p>Focus on cleaner typing and fewer repeated errors.</p></article>
+</div>
+</section>
+
 <section>
 <h2>Frequently Asked Questions</h2>
 
@@ -919,33 +1188,34 @@ No. Improvement depends on your starting level, accuracy, consistency, technique
 </p>
 </section>
 
-<section>
-<h2>About This Challenge</h2>
-
-<p>
-This 30-day typing challenge was created for Free Typing Test Online as a practical, reusable resource for beginners, students, job seekers, remote workers, adults, and everyday computer users.
-</p>
-
-<p>
-The challenge combines typing tests, paragraph practice, accuracy exercises, progress tracking, and weekly milestones so visitors can follow a clear improvement plan instead of practicing randomly.
-</p>
-
-<p><em>Created by Alan. Last updated: July 2026.</em></p>
+<section aria-labelledby="about-challenge-heading">
+<div class="author-box">
+<img class="author-mark" src="/typing-logo.png" alt="Free Typing Test Online logo" width="76" height="76" loading="lazy">
+<div>
+<h2 id="about-challenge-heading">About This Challenge</h2>
+<p>This 30-day typing challenge was created by Alan for Free Typing Test Online as a practical, reusable resource for beginners, students, job seekers, remote workers, adults, and everyday computer users.</p>
+<p>It combines timed tests, paragraph practice, accuracy exercises, progress tracking, and weekly milestones so learners can follow a clear plan instead of practicing randomly.</p>
+<p>The page is reviewed manually for clarity, usefulness, accessibility, and working functionality. Read the <a href="/editorial-policy.html">Editorial Policy</a> to learn how content is prepared and maintained.</p>
+<p><strong>Created by Alan · Last reviewed <time datetime="2026-07-29">July 29, 2026</time></strong></p>
+</div>
+</div>
 </section>
 
 </main>
 
 <footer>
-<p>© 2026 Free Typing Test Online</p>
-
-<p>
-<a href="/">Home</a> |
-<a href="/about.html">About</a> |
-<a href="/contact.html">Contact</a> |
-<a href="/privacy-policy.html">Privacy Policy</a> |
-<a href="/terms.html">Terms of Service</a> |
+<p><strong>Free Typing Test Online</strong></p>
+<p>Free typing tests and practical keyboard-learning resources for school, work, and everyday computer use.</p>
+<nav aria-label="Footer navigation">
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+<a href="/editorial-policy.html">Editorial Policy</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Service</a>
 <a href="/sitemap.xml">Sitemap</a>
-</p>
+</nav>
+<p>© 2026 Free Typing Test Online</p>
 </footer>
 
 <script>
@@ -988,6 +1258,9 @@ document.getElementById("progressText").textContent =
 completed.length + " of 30 days completed (" + percent + "%)";
 
 document.getElementById("progressFill").style.width = percent + "%";
+const progressBar = document.getElementById("progressBar");
+progressBar.setAttribute("aria-valuenow", completed.length);
+progressBar.setAttribute("aria-valuetext", completed.length + " of 30 days completed");
 }
 
 function loadChallenge(){
