@@ -150,6 +150,11 @@ text-decoration:none;
 font-size:.94rem;
 }
 
+.nav-links a:hover,
+.nav-links a[aria-current="page"]{
+color:var(--blue);
+}
+
 main{
 max-width:1050px;
 margin:0 auto;
@@ -556,6 +561,23 @@ grid-template-columns:1fr;
 "price":"0",
 "priceCurrency":"USD"
 },
+"creator":{
+"@type":"Person",
+"name":"Alan"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Free Typing Test Online",
+"url":"https://alansname1.github.io/"
+},
+"browserRequirements":"Requires JavaScript and a modern web browser",
+"featureList":[
+"60-second typing timer",
+"Words-per-minute estimate",
+"Accuracy measurement",
+"Character and error counts",
+"No account required"
+],
 "description":"A free 60 second typing test that measures words per minute, accuracy, characters typed, and errors."
 }
 </script>
@@ -586,7 +608,7 @@ grid-template-columns:1fr;
 "name":"How is WPM calculated?",
 "acceptedAnswer":{
 "@type":"Answer",
-"text":"This test estimates WPM by dividing the number of characters typed by five and adjusting the result for the amount of elapsed time."
+"text":"This test estimates WPM by dividing correctly typed characters by five and adjusting the result for the amount of elapsed time."
 }
 },
 {
@@ -604,6 +626,33 @@ grid-template-columns:1fr;
 "@type":"Answer",
 "text":"Yes. Several attempts can provide a better picture of your normal performance than one unusually high or low score."
 }
+}
+]
+}
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"name":"Home",
+"item":"https://alansname1.github.io/"
+},
+{
+"@type":"ListItem",
+"position":2,
+"name":"Typing Tests",
+"item":"https://alansname1.github.io/typing-test-online.html"
+},
+{
+"@type":"ListItem",
+"position":3,
+"name":"1 Minute Typing Test",
+"item":"https://alansname1.github.io/typing-test-1-minute.html"
 }
 ]
 }
@@ -639,7 +688,7 @@ Type for 60 seconds and measure your WPM, accuracy, characters, and errors. Use 
 
 <div class="nav-links">
 
-<a href="/typing-test-online.html">All Tests</a> <a href="/typing-test-5-minute.html">5 Min Test</a> <a href="/typing-test-10-minute.html">10 Min Test</a> <a href="/typing-progress-dashboard.html">Progress</a> <a href="/about.html">About</a> <a href="/contact.html">Contact</a>
+<a href="/typing-test-online.html">All Tests</a> <a href="/typing-test-1-minute.html" aria-current="page">1 Min Test</a> <a href="/typing-test-5-minute.html">5 Min Test</a> <a href="/typing-test-10-minute.html">10 Min Test</a> <a href="/typing-progress-dashboard.html">Progress</a> <a href="/about.html">About</a> <a href="/contact.html">Contact</a>
 
 </div>
 
@@ -734,6 +783,8 @@ Waiting to start
 
 <p id="resultMessage"></p>
 
+<p><strong>How to use this result:</strong> Compare it with two more attempts rather than judging your ability from one score. Record both WPM and accuracy, then choose one practice focus for your next session.</p>
+
 <a class="button-link" href="/typing-progress-dashboard.html">
 Track This Result
 </a>
@@ -763,7 +814,7 @@ Your score includes:
 <h3>WPM</h3>
 
 <p>
-Words per minute is estimated using a standard five-character word length. The number of typed characters is divided by five and adjusted for elapsed time.
+Words per minute is estimated using a standard five-character word length. Correctly typed characters are divided by five and adjusted for elapsed time, so errors do not increase the displayed WPM.
 </p>
 
 </div>
@@ -830,6 +881,42 @@ Your normal performance range is often more informative than your highest score.
 <strong>Example:</strong> Scores of 41, 44, and 42 WPM suggest a normal short-test range around the low 40s, even though 44 WPM is your personal best from those attempts.
 </div>
 
+</section>
+
+<section>
+<h2>Common Mistakes During a 1 Minute Test</h2>
+<p>A short timer can make people change their normal technique. These mistakes can make the score less useful:</p>
+<div class="grid">
+<div class="card">
+<h3>Starting Too Fast</h3>
+<p>A rushed first sentence often creates early errors and broken rhythm. Begin at a controlled pace and let speed build naturally.</p>
+</div>
+<div class="card">
+<h3>Watching the Timer</h3>
+<p>Repeatedly checking the countdown interrupts concentration. Keep your attention on the passage and let the test end automatically.</p>
+</div>
+<div class="card">
+<h3>Ignoring Accuracy</h3>
+<p>Fast typing with frequent mistakes is not the same as efficient typing. Use the accuracy score to judge whether your pace is controlled.</p>
+</div>
+<div class="card">
+<h3>Retaking Without Practice</h3>
+<p>Repeated tests may improve familiarity without fixing weak keys. Review your errors and practice before taking another group of tests.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Who Should Use This Test?</h2>
+<p>This 60-second test is useful for anyone who wants a quick, repeatable measure of keyboard performance.</p>
+<ul class="checklist">
+<li>Beginners establishing their first typing baseline</li>
+<li>Students practicing for computer-based schoolwork</li>
+<li>Job seekers preparing for keyboard-heavy roles</li>
+<li>Remote and office workers checking everyday typing comfort</li>
+<li>Experienced typists tracking changes in speed and accuracy</li>
+</ul>
+<p>For a more complete picture of sustained performance, combine this result with the <a href="/typing-test-5-minute.html">5 Minute Typing Test</a>.</p>
 </section>
 
 <section>
@@ -1093,7 +1180,7 @@ Yes. A one-minute test provides a quick measurement of WPM and accuracy. Longer 
 <summary>How is WPM calculated?</summary>
 
 <p>
-This test estimates WPM using the standard convention of five typed characters per word and adjusts the calculation for elapsed time.
+This test estimates WPM using the standard convention of five correctly typed characters per word and adjusts the calculation for elapsed time.
 </p>
 
 </details>
@@ -1155,7 +1242,7 @@ My name is Alan, and I created Free Typing Test Online to provide free typing te
 </p>
 
 <p>
-This 1-minute test is designed as a quick baseline tool. The scoring is intended to help you compare your own sessions and identify what to practice next rather than treating one score as a complete measurement of typing ability.
+I designed this 1-minute test as a quick baseline tool rather than a final judgment of typing ability. It reports speed and accuracy together because a high WPM score is less useful when it depends on frequent mistakes. The passages are long enough to prevent most users from running out of text during the timer.
 </p>
 
 <p>
@@ -1163,7 +1250,7 @@ Learn more on the <a href="/about.html">About page</a> and read how site content
 </p>
 
 <p>
-<strong>Written and reviewed by Alan • Last reviewed July 27, 2026</strong>
+<strong>Written and reviewed by Alan • Last reviewed <time datetime="2026-07-27">July 27, 2026</time></strong>
 </p>
 
 </div>
@@ -1269,7 +1356,7 @@ errorsDisplay.textContent = "0";
 
 function calculateStats(){
 const typedText = inputBox.value;
-const typedLength = typedText.length;
+const typedLength = Math.min(typedText.length, currentText.length);
 
 let correctChars = 0;
 
@@ -1293,7 +1380,7 @@ TEST_SECONDS,
 let wpm = 0;
 
 if(elapsedSeconds > 0){
-const standardizedWords = typedLength / 5;
+const standardizedWords = correctChars / 5;
 wpm = Math.round(standardizedWords / (elapsedSeconds / 60));
 }
 
