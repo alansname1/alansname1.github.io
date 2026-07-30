@@ -14,7 +14,7 @@ Free Typing Test Online is a free educational website that helps people improve 
 
 ## Website
 
-https://alansname1.github.io/
+[Free Typing Test Online](https://alansname1.github.io/)
 
 ## License
 
